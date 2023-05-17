@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 
 import '../../../../assets/styles/css/particles/header.css'
 import { images } from '../../../../assets/images/imgs'
+import { Translater } from '../Translater'
 
 export const Header = () => {
   const twitter = 'https://twitter.com/masarykuni?lang=cs'
@@ -16,18 +17,23 @@ export const Header = () => {
         </Link>
 
         <ul>
+          <li
+            className='app-color-border'
+            style={{background: "none"}}>
+              <Translater />
+          </li>
           <li>
-            <a href={twitter}>
+            <a href={twitter} target='_blank'>
               <img src={images.particals.header.twitter} alt="twitter" />
             </a>
           </li>
           <li>
-            <a href={facebook}>
+            <a href={facebook} target='_blank'>
               <img src={images.particals.header.facebook} alt="facebook" />
             </a>
           </li>
           <li>
-            <a href={linkedin}>
+            <a href={linkedin} target='_blank'>
               <img src={images.particals.header.linkedin} alt="linkedin" />
             </a>
           </li>

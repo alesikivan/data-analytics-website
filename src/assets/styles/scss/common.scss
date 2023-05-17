@@ -1,7 +1,7 @@
 @import './utils/variables.scss';
 
 html,
-body, 
+body,
 #root {
   height: 100%;
 }
@@ -51,6 +51,26 @@ ul li {
   list-style-type: none;
 }
 
+.app-font-bold {
+  font-family: 'Bold';
+}
+
+.app-color {
+  color: $appColor;
+}
+
+.app-color-border {
+  border: 1.7px solid $appColor;
+}
+
+.app-hover {
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 @media (max-width: 490px) {
   .app-container {
     width: 100%;
@@ -58,3 +78,4 @@ ul li {
     padding-top: 15px;
   }
 }
+

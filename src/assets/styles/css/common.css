@@ -48,6 +48,25 @@ ul li {
   list-style-type: none;
 }
 
+.app-font-bold {
+  font-family: "Bold";
+}
+
+.app-color {
+  color: #0D7D74;
+}
+
+.app-color-border {
+  border: 1.7px solid #0D7D74;
+}
+
+.app-hover {
+  transition: 0.3s;
+}
+.app-hover:hover {
+  opacity: 0.8;
+}
+
 @media (max-width: 490px) {
   .app-container {
     width: 100%;
