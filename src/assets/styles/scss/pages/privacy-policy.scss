@@ -1,0 +1,32 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.privacy-policy-page {
+  @include flex-column;
+  gap: 20px;
+
+  section {
+    @include flex-column;
+    align-items: flex-start;
+    gap: 20px;
+
+    b {
+      font-family: 'Bold';
+    }
+
+    h3, h4 {
+      align-self: center;
+    }
+  }
+
+  margin-bottom: 30px;
+
+  a {
+    color: #337ab7;
+    text-decoration: underline;
+  }
+}
+
+.text-center {
+  text-align: center;
+}

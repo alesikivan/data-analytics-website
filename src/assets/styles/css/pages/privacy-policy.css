@@ -1,0 +1,34 @@
+.privacy-policy-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.privacy-policy-page section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.privacy-policy-page section b {
+  font-family: "Bold";
+}
+.privacy-policy-page section h3, .privacy-policy-page section h4 {
+  align-self: center;
+}
+.privacy-policy-page a {
+  color: #337ab7;
+  text-decoration: underline;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*# sourceMappingURL=privacy-policy.css.map */

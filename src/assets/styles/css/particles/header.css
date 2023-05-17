@@ -1,0 +1,79 @@
+.main-header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9098039216);
+  padding: 20px;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-header .cover {
+  width: 100%;
+  max-width: 1350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1350px) {
+  .main-header .cover {
+    min-width: auto;
+  }
+}
+.main-header .cover .logo img {
+  height: auto;
+  max-width: 90px;
+}
+.main-header .cover ul {
+  display: flex;
+  gap: 25px;
+}
+.main-header .cover ul li {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  background-color: #0D7D74;
+  padding: 2px;
+  border-radius: 50%;
+}
+.main-header .cover ul li a {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.main-header .cover ul li a img {
+  height: auto;
+  max-width: 16px;
+}
+.main-header .cover .special-link {
+  background-color: #0D7D74;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Bold";
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+.main-header .cover .special-link:hover {
+  box-shadow: -3px -3px 7px #e4e3e3, 3px 3px 7px #a8aeb4;
+}
+.main-header .cover .menu-button {
+  display: none;
+}
+.main-header .burger-menu {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .main-header .cover ul {
+    gap: 10px;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

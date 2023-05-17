@@ -1,0 +1,58 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.application {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-container {
+  max-width: 900px !important;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  margin-top: 101px; /* Header height */
+  padding: 0 20px;
+  padding-top: 20px;
+  align-items: center;
+  flex: 1 0 auto;
+}
+
+.main-footer, .main-header {
+  flex-shrink: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.5s all;
+  user-select: none;
+}
+
+input, button, textarea {
+  outline: none;
+  font-family: "Regular", Arial;
+}
+
+button {
+  user-select: none;
+  cursor: pointer;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+@media (max-width: 490px) {
+  .app-container {
+    width: 100%;
+    padding: 0 20px;
+    padding-top: 15px;
+  }
+}
+
+/*# sourceMappingURL=common.css.map */
