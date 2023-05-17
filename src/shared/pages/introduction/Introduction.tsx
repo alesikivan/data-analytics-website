@@ -5,14 +5,14 @@ import { Form } from "./components/form/Form"
 
 import '../../../assets/styles/css/pages/introduction.css'
 import { useNavigate } from "react-router-dom"
+import { translater } from "../../../utils/localization/localization"
 
 export const Introduction = () => {
   const [doneInterfaceVisible, setDoneInterfaceVisible] = useState(false)
-  const novigat = useNavigate()
+  const navigate = useNavigate()
 
   return (
     <main className="introduction">
-
       {
         doneInterfaceVisible
           ? <SuccessfullySaved
@@ -25,14 +25,18 @@ export const Introduction = () => {
 
               <section className="information">
                 <h1 className="introduction-header">
-                  Welcome to Data Analytics Program!
+                  {
+                    translater("introductionPageHeader")
+                  }
                 </h1>
 
                 <button
-                  onClick={() => novigat("/")}
-                  className="w-full border-round-md app-color-border p-2 mb-3 app-font-bold app-color app-hover"
+                  onClick={() => navigate("/")}
+                  className="w-full app-button mb-3"
                   style={{background: "none"}}>
-                    Full information about Data Analytics programme
+                    {
+                      translater("introductionPageInformationButton")
+                    }
                 </button>
 
                 <Form

@@ -8,7 +8,7 @@ export type ITranslater = {
   className?: string
 }
 
-export const Translater = ({ style, className }: ITranslater) => {
+export const Translater = () => {
   const { lang } = useSelector((state: RootState) => state.language)
 
   const changeLanguage = () => {

@@ -12,27 +12,27 @@ export const Header = () => {
   return (
     <header className='main-header'>
       <div className='cover'>
-        <Link to="/" className='logo'>
+        <Link to="/" className='logo app-hover'>
           <img src={images.logo} alt="logo" />
         </Link>
 
         <ul>
           <li
-            className='app-color-border'
+            className='app-color-border app-hover'
             style={{background: "none"}}>
               <Translater />
           </li>
-          <li>
+          <li className='app-hover'>
             <a href={twitter} target='_blank'>
               <img src={images.particals.header.twitter} alt="twitter" />
             </a>
           </li>
-          <li>
+          <li className='app-hover'>
             <a href={facebook} target='_blank'>
               <img src={images.particals.header.facebook} alt="facebook" />
             </a>
           </li>
-          <li>
+          <li className='app-hover'>
             <a href={linkedin} target='_blank'>
               <img src={images.particals.header.linkedin} alt="linkedin" />
             </a>

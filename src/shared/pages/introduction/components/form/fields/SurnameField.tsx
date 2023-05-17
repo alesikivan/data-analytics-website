@@ -1,9 +1,10 @@
 import { useField } from "react-form"
+import { translater } from "../../../../../../utils/localization/localization"
 
 const validate = (value: string) => {
-  if (!value) return 'Name can not be empty'
+  if (!value) return translater("introductionPageFormSurnameFieldValidate").toString()
 
-  if (!value.trim()) return 'Name can not be empty'
+  if (!value.trim()) return translater("introductionPageFormSurnameFieldValidate").toString()
 
   return false
 }
@@ -19,12 +20,13 @@ export const SurnameField = () => {
 
   return (
     <>
-      <input 
+      <input
         {...getInputProps()}
-        className={`surname ${isTouched && error ? 'error' : ''}`} 
-        type="text" 
-        name="surname" 
-        placeholder="Enter surname"/>
+        className={`surname ${isTouched && error ? 'error' : ''}`}
+        type="text"
+        name="surname"
+        placeholder={translater("introductionPageFormSurnameFieldPlaceholder").toString()}
+      />
     </>
   )
 }

@@ -3,12 +3,20 @@
 
 .privacy-policy-page {
   @include flex-column;
-  gap: 20px;
+  gap: 15px;
+
+  h2, p {
+    margin: 0;
+  }
 
   section {
     @include flex-column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 15px;
+
+    .privacy-policy-article {
+      margin-top: 33px;
+    }
 
     b {
       font-family: 'Bold';
@@ -16,6 +24,10 @@
 
     h3, h4 {
       align-self: center;
+    }
+
+    p, h3, h4 {
+      margin: 0;
     }
   }
 

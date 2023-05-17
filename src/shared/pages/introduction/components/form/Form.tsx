@@ -10,6 +10,7 @@ import { SurnameField } from "./fields/SurnameField"
 import { HubSpotLoginRequest, MessageServerResponse } from "../../../../../api/interfaces"
 import { API } from "../../../../../api/index"
 import { images } from "../../../../../assets/images/imgs"
+import { translater } from "../../../../../utils/localization/localization"
 
 type Props = {
   showDoneInterface: Function
@@ -28,7 +29,7 @@ const defaultUserData = {
 }
 
 type PrivacyTerms = {
-  selected: boolean, 
+  selected: boolean,
   isTouched: boolean
 }
 
@@ -43,7 +44,7 @@ const defaultPrivacyTerms = { selected: false, isTouched: false }
 export const Form = ({ showDoneInterface }: Props) => {
   const [user, setUser] = useState<User>(defaultUserData)
   const [privacyTerms, setPrivacyTerms] = useState<PrivacyTerms>(defaultPrivacyTerms)
-  const [loading, setLoading] = useState(false) 
+  const [loading, setLoading] = useState(false)
 
   const reset = () => {
     setUser(defaultUserData)
@@ -85,9 +86,9 @@ export const Form = ({ showDoneInterface }: Props) => {
   return (
     <Form>
       <span className="description">
-        Let's join and work with us! 
-        <br />
-        Leave your email and we will notify you when the program starts. The main goal is to make our future better.
+        {
+          translater("introductionPageFormDescription")
+        }
       </span>
 
       <div className="line">
@@ -100,27 +101,37 @@ export const Form = ({ showDoneInterface }: Props) => {
       <div className="sex-toggle">
         <div onClick={() => setUser(prev => ({ ...prev, isMaleSex: true }))} className="sex">
           <img src={images.home.sex.male[user.isMaleSex ? 'active' : 'unactive']} alt="male" />
-          <span className="male">male</span>
+          <span className="male">
+            {
+              translater("introductionPageFormSexToggleMale")
+            }
+          </span>
         </div>
 
         <div onClick={() => setUser(prev => ({ ...prev, isMaleSex: false }))} className="sex">
           <img src={images.home.sex.female[user.isMaleSex ? 'unactive' : 'active']} alt="female" />
-          <span className="female">female</span>
+          <span className="female">
+            {
+              translater("introductionPageFormSexToggleFemale")
+            }
+          </span>
         </div>
       </div>
 
-      <button 
+      <button
         className={clsx({
           'send-button': true,
           'loading': loading,
           'disabled': !fieldsAreValid
         })} >
-          Notify me
+          {
+            translater("introductionPageFormSendButton")
+          }
       </button>
 
       <div className="policy-area">
-        <div 
-          onClick={() => setPrivacyTerms(prev => ({selected: !prev.selected, isTouched: true }) )} 
+        <div
+          onClick={() => setPrivacyTerms(prev => ({selected: !prev.selected, isTouched: true }))}
           className={
             clsx({
               "flag-area": true,
@@ -134,7 +145,16 @@ export const Form = ({ showDoneInterface }: Props) => {
           }
         </div>
 
-        <span>I agree with the <Link to="/privacy-policy">Terms</Link>.</span>
+        <span>
+          {
+            translater("introductionPageFormPrivacyPolicy")
+          }
+          <Link to="/privacy-policy">
+            {
+              translater("introductionPageFormPrivacyPolicyLink")
+            }
+          </Link>
+        </span>
       </div>
     </Form>
   )

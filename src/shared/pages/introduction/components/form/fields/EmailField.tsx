@@ -1,11 +1,12 @@
 import { useField } from "react-form"
 import clsx from "clsx"
+import { translater } from "../../../../../../utils/localization/localization"
 
 const validate = (value: string) => {
-  if (!value.trim()) return 'Email can not be empty'
+  if (!value.trim()) return translater("introductionPageFormEmailFieldValidate").toString()
 
   const emailRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  if (!emailRegExp.test(value)) 
+  if (!emailRegExp.test(value))
     return 'Invalid email format'
 
   return false
@@ -22,15 +23,15 @@ export const EmailField = () => {
 
   return (
     <>
-      <input 
+      <input
         {...getInputProps()}
         className={clsx({
           'email': true,
           'error': isTouched && error
-        })} 
-        type="text" 
-        name="email" 
-        placeholder="Enter your email address"/>
+        })}
+        type="text"
+        name="email"
+        placeholder={translater("introductionPageFormEmailFieldPlaceholder").toString()}/>
     </>
   )
 }
