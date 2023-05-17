@@ -33,7 +33,7 @@ main.introduction article .information form .description {
   line-height: 24px;
   font-size: 15px;
   font-family: bold;
-  color: rgba(47, 46, 67, 0.9215686275);
+  color: #2f2e43eb;
 }
 main.introduction article .information form input {
   width: 100%;
@@ -49,7 +49,7 @@ main.introduction article .information form input {
   border: 1.5px solid #f2f2f2;
 }
 main.introduction article .information form input::placeholder {
-  color: rgba(56, 123, 116, 0.4901960784);
+  color: #387B747D;
 }
 main.introduction article .information form input.name, main.introduction article .information form input.surname, main.introduction article .information form input.email {
   background-repeat: no-repeat;
@@ -69,7 +69,7 @@ main.introduction article .information form input.email {
   background-image: url("/src/assets/images/pages/home/email-field-preview.svg");
 }
 main.introduction article .information form input.error {
-  border-color: rgba(255, 76, 76, 0.568627451);
+  border-color: #ff4c4c91;
 }
 main.introduction article .information form .line {
   width: 100%;
@@ -77,10 +77,10 @@ main.introduction article .information form .line {
   gap: 15px;
 }
 main.introduction article .information form .line input {
-  width: calc(100% - 40px);
+  width: 100%;
 }
 main.introduction article .information form input[name=email] {
-  width: calc(100% - 40px);
+  width: 100%;
 }
 main.introduction article .information form .sex-toggle {
   width: 100%;
@@ -161,6 +161,7 @@ main.introduction article .information form .policy-area span {
   font-size: 15px;
 }
 main.introduction article .information form .policy-area span a {
+  color: #060506c4;
   text-decoration: underline;
   transition: 0.3s;
 }
@@ -169,21 +170,21 @@ main.introduction article .information form .policy-area span a:hover {
 }
 
 @media (max-width: 850px) {
-  main.home-page article .background-image img {
+  main.introduction article .background-image img {
     max-width: 300px;
   }
 }
 @media (max-width: 750px) {
-  main.home-page article {
+  main.introduction article {
     justify-content: center;
   }
-  main.home-page article .background-image {
+  main.introduction article .background-image {
     display: none;
   }
-  main.home-page article .information .introduction-header {
+  main.introduction article .information .introduction-header {
     display: block;
   }
-  main.home-page article .information form .description {
+  main.introduction article .information form .description {
     text-align: center;
     font-size: 13px;
     line-height: 21px;

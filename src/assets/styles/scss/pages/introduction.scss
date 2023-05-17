@@ -92,12 +92,12 @@ main.introduction {
           gap: 15px;
 
           input {
-            width: calc(100% - 40px);
+            width: 100%;
           }
         }
 
         input[name="email"] {
-          width: calc(100% - 40px);
+          width: 100%;
         }
 
         .sex-toggle {
@@ -180,6 +180,7 @@ main.introduction {
             font-size: 15px;
 
             a {
+              color: $textColor;
               text-decoration: underline;
               transition: 0.3s;
 
@@ -195,7 +196,7 @@ main.introduction {
 }
 
 @media (max-width: 850px) {
-  main.home-page {
+  main.introduction {
     article {
       .background-image {
         img {
@@ -207,7 +208,7 @@ main.introduction {
 }
 
 @media (max-width: 750px) {
-  main.home-page {
+  main.introduction {
     article {
       justify-content: center;
 
