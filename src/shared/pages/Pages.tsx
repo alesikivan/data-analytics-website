@@ -4,7 +4,7 @@ import { NotFound } from "./not-found/NotFound"
 import { Home } from "./home/Home"
 import { MainLayout } from "../layouts/MainLayout"
 import { PrivacyPolicy } from "./privacy-policy/PrivacyPolicy"
-import { Introduction } from "./introduction/Introduction"
+import { SignUp } from "./sign-up/SignUp"
 
 export const Pages = () => {
 
@@ -13,7 +13,7 @@ export const Pages = () => {
 
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
-        <Route path="introduction" element={<Introduction />} />
+        <Route path="sign-up" element={<SignUp />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
       </Route>
 

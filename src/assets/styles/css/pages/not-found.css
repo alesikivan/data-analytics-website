@@ -1,3 +1,8 @@
+.not-found-img {
+  height: auto;
+  max-width: 340px;
+}
+
 main .error_message {
   text-transform: uppercase;
   margin-top: 120px;
@@ -22,7 +27,7 @@ main .link-block {
   justify-content: center;
 }
 main .link-block a {
-  border-radius: 30px 0 30px 0;
+  border-radius: 10px;
   margin-top: 20px;
   padding: 10px 40px;
   font-family: "Bold";

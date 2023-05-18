@@ -13,6 +13,8 @@ import check from '../images/pages/home/check.svg'
 
 import success from '../images/pages/home/success.svg'
 
+import notFound from '../images/pages/not-found/not-found.svg'
+
 export const images = {
   logo,
   particals: {
@@ -38,5 +40,6 @@ export const images = {
   },
   successfullySaved: {
     success
-  }
+  },
+  notFound
 }

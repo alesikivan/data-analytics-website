@@ -3,11 +3,11 @@ import { SuccessfullySaved } from "./components/SuccessfullySaved"
 import { images } from "../../../assets/images/imgs"
 import { Form } from "./components/form/Form"
 
-import '../../../assets/styles/css/pages/introduction.css'
+import '../../../assets/styles/css/pages/sign-up.css'
 import { useNavigate } from "react-router-dom"
 import { translater } from "../../../utils/localization/localization"
 
-export const Introduction = () => {
+export const SignUp = () => {
   const [doneInterfaceVisible, setDoneInterfaceVisible] = useState(false)
   const navigate = useNavigate()
 
