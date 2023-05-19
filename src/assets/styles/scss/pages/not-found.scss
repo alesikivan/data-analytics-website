@@ -32,9 +32,10 @@ main {
       margin-top: 20px;
       padding: 10px 40px;
       font-family: 'Bold';
-      background-color: $appColor;
+      border: 2px solid $appColor;
+      border-color: $appColor;
       font-size: 17px;
-      color: #fff;
+      color: $appColor;
       transition: 0.4s;
 
       &:hover {
@@ -55,16 +56,16 @@ main {
     .error_message {
       text-align: center;
       margin-top: 70px;
-  
+
       span {
         font-size: 4em;
       }
-  
+
       p {
         font-size: 1.5em;
       }
     }
-  
+
     .link-block {
       a {
         font-size: 0.8em;
