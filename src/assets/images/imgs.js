@@ -16,6 +16,13 @@ import future from '../images/pages/companies/future.svg'
 import relationship from '../images/pages/companies/relationship.svg'
 import reputation from '../images/pages/companies/reputation.svg'
 
+import prestigious from '../images/pages/muni/prestigious.svg'
+import study from '../images/pages/muni/study.svg'
+import city from '../images/pages/muni/city.svg'
+import rocket from '../images/pages/muni/rocket.svg'
+import lang from '../images/pages/muni/lang.svg'
+import accomodation from '../images/pages/muni/accomodation.svg'
+
 import background from '../images/pages/home/background.svg'
 import unactiveSexMale from '../images/pages/home/unactive-sex-male.svg'
 import unactiveSexFemale from '../images/pages/home/unactive-sex-female.svg'
@@ -43,7 +50,14 @@ export const images = {
     future,
     relationship,
     reputation
-
+  },
+  muni: {
+    prestigious,
+    study,
+    city,
+    rocket,
+    lang,
+    accomodation
   },
   home: {
     preview,

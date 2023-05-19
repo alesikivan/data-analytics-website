@@ -1,0 +1,42 @@
+.muni-description {
+  font-size: 15px;
+}
+
+.information {
+  min-height: 147px;
+}
+
+.statistic {
+  gap: 35px;
+}
+.statistic div span {
+  font-size: 14px;
+}
+
+.muni-content {
+  gap: 20px;
+}
+.muni-content section {
+  gap: 12px;
+}
+.muni-content section h2 {
+  margin: 0;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+.muni-content section img {
+  height: auto;
+  max-width: 30px;
+}
+.muni-content section span {
+  font-size: 15px;
+  line-height: 23px;
+  max-width: 250px;
+}
+.muni-content section span b {
+  font-family: "Bold";
+  color: #0D7D74;
+}
+
+/*# sourceMappingURL=muni.css.map */

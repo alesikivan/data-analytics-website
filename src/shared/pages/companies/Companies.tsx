@@ -61,9 +61,10 @@ export const Companies = () => {
 
       <article className="w-full content flex flex-wrap align-items-start justify-content-center">
         {
-          blocks.map((block: companiesBlocks) => {
+          blocks.map((block: companiesBlocks, index: number) => {
             return (
               <motion.section 
+                key={index}
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}

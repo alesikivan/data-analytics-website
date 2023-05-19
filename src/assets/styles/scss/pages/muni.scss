@@ -1,0 +1,50 @@
+@import '../utils/variables.scss';
+
+.muni-description {
+  font-size: 15px;
+}
+
+.information {
+  min-height: 147px;
+}
+
+.statistic {
+  gap: 35px;
+
+  div {
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+.muni-content {
+  gap: 20px;
+
+  section {
+    gap: 12px;
+
+    h2 {
+      margin: 0;
+      margin-top: 2px;
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    img {
+      height: auto;
+      max-width: 30px;
+    }
+
+    span {
+      font-size: 15px;
+      line-height: 23px;
+      max-width: 250px;
+
+      b {
+        font-family: 'Bold';
+        color: $appColor;
+      }
+    }
+  }
+}
