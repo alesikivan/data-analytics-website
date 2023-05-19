@@ -9,12 +9,12 @@
 }
 .main-header .cover {
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .main-header .cover {
     min-width: auto;
   }
@@ -67,7 +67,7 @@
   display: none;
 }
 .main-header ul.menu {
-  gap: 60px;
+  gap: 45px;
 }
 .main-header ul.menu li a.active {
   position: relative;

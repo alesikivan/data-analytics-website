@@ -9,7 +9,7 @@ export const MainLayout = () => (
     <div className="application">
       <Header />
       
-      <div className="app-container mt-0 mb-2">
+      <div className="app-container pb-6 mt-0 mb-2">
         <ScrollToTop />
 
         <Outlet />

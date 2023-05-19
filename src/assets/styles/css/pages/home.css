@@ -5,7 +5,7 @@
   padding: 12px 20px;
 }
 .introduction div section .programme-preview {
-  max-width: 450px;
+  max-width: 460px;
 }
 
 .app-content {
@@ -20,11 +20,14 @@
 .app-content section div.reverse {
   flex-direction: row;
 }
+.app-content section div div .description {
+  line-height: 23px;
+}
 .app-content section div div .get-started-button {
   padding: 12px 20px;
 }
 .app-content section div div .programme-preview {
-  max-width: 330px;
+  max-width: 360px;
 }
 
 /*# sourceMappingURL=home.css.map */

@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+import { motion } from 'framer-motion/dist/framer-motion'
+
 import { images } from "../../../assets/images/imgs"
 import '../../../assets/styles/css/pages/companies.css'
 
@@ -12,7 +15,7 @@ export const Companies = () => {
     {
       img: images.companies.benefits,
       title: 'Benefits',
-      description: 'Access to funding and grants: Collaborating with universities can help a company access grants and funding for research projects or the development of ideas.'
+      description: 'Access to funding and grants: collaborating with universities can help a company access grants and funding for research projects or the development of ideas.'
     },
     {
       img: images.companies.talant,
@@ -27,7 +30,7 @@ export const Companies = () => {
     {
       img: images.companies.future,
       title: 'Future employees',
-      description: 'The proposed development of courses across research programs and universities to better align their purpose with qualified employees and work plans requires the development of appropriate skills.'
+      description: 'Promote the competition/program of study from the start with your self-created "problems" - and reap the benefits: solve business problems on the one hand, and attract new Data Scientists to your organization on the other. With the MDA program you create an easy entry into your company!'
     },
     {
       img: images.companies.relationship,
@@ -45,24 +48,36 @@ export const Companies = () => {
       <h1 className="app-header-color text-4xl text-center app-font-bold m-0 ms-auto">
         Best Solutions & 
         <br />
-        value for your business
+        value for <span className="app-font-bold app-color">your business</span>
       </h1>
 
-      <article className="content flex flex-wrap align-items-center justify-content-space-around">
+      <div className="w-full flex align-items-center justify-content-center mt-5">
+        <Link 
+          className="app-button app-bg-color text-white px-4 mx-auto text-base" 
+          to="/sign-up">
+            Get in touch!
+        </Link>
+      </div>
+
+      <article className="w-full content flex flex-wrap align-items-start justify-content-center">
         {
           blocks.map((block: companiesBlocks) => {
             return (
-              <section className="max-w-13rem">
+              <motion.section 
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                className="max-w-18rem mt-5 flex flex-column align-items-center justify-content-start">
                 <img src={ block.img } alt="business" />
                 
-                <h2>
+                <h2 className="text-center app-header-color app-font-bold text-xl m-0">
                   { block.title }
                 </h2>
 
-                <span>
+                <span className="text-center app-gray-color">
                   { block.description }
                 </span>
-              </section>
+              </motion.section>
             )
           })
         }

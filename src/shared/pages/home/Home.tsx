@@ -57,7 +57,7 @@ export const Home = () => {
                 Student's benefits
               </h1>
 
-              <span className="description text-base app-gray-color max-w-28rem">
+              <span className="description text-base app-gray-color max-w-30rem">
                 Data Science is a rapidly growing field, and demand for data analysts is skyrocketing. Starting salaries of Data Analyts in USA range from 60.000 to 100.000+/year and in Europe - from 45.000-65.000 Euro. We are offering a unique elite hybrid bachelors program in Data Analytics, taugh in English, remotely with bi-annual in-person sessions. 
               </span>
               
@@ -82,7 +82,7 @@ export const Home = () => {
                 Companies Integration
               </h1>
 
-              <span className="description text-base app-gray-color max-w-28rem">
+              <span className="description text-base app-gray-color max-w-30rem">
                 More and more companies are integrating Data Science into their business units. As a result of these investments in digital transformation and integration of digital technologies, numerous data science tasks have emerged. Regardless of sources, formats, use cases, and challenges, they want to extract maximum value from the world of data - with the support of Data Scientists. But a supply of Data Scientists in particular is still low, and finding new professionals can be exhausting and expensive.
               </span>
               
@@ -107,7 +107,7 @@ export const Home = () => {
                 Masaryk University
               </h1>
 
-              <span className="description text-base app-gray-color max-w-28rem">
+              <span className="description text-base app-gray-color max-w-30rem">
                 At this point we’re inviting interested prospective applicants for an introductory hybrid workshop (online first round with an in-person final round) to work on the company-sponsored trial projects under faculty supervision, get to know our industrial partners and professors, and get a sense what this program would be about. - 
               </span>
               

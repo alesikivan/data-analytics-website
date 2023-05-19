@@ -1,9 +1,16 @@
 .content {
-  gap: 20px;
+  gap: 48px;
+}
+.content section {
+  gap: 12px;
 }
 .content section img {
   height: auto;
-  max-width: 50px;
+  max-width: 48px;
+}
+.content section span {
+  font-size: 15px;
+  line-height: 23px;
 }
 
 /*# sourceMappingURL=companies.css.map */

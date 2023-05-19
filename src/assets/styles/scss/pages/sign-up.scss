@@ -11,7 +11,7 @@ main.sign-up {
     .background-image {
       img {
         height: auto;
-        max-width: 400px;
+        max-width: 420px;
         user-select: none;
       }
     }
@@ -34,7 +34,7 @@ main.sign-up {
 
         .description {
           display: block;
-          max-width: 400px;
+          max-width: 500px;
           line-height: 24px;
           font-size: 15px;
           font-family: bold;
@@ -46,7 +46,6 @@ main.sign-up {
           background-color: #F2F2F2;
           border: none;
           border-radius: 7px;
-          min-height: 38px;
           padding: 0 10px;
           padding-left: 30px;
           color: $appColor;
@@ -113,7 +112,7 @@ main.sign-up {
 
             img {
               height: auto;
-              max-width: 21px;
+              max-width: 22px;
               user-select: none;
             }
 
@@ -128,7 +127,6 @@ main.sign-up {
         .send-button {
           width: 100%;
           background-color: $appColor;
-          min-height: 38px;
           border: none;
           border-radius: 7px;
           color: #fff;

@@ -119,8 +119,7 @@ export const Form = ({ showDoneInterface }: Props) => {
       </div>
 
       <button
-        className={clsx({
-          'send-button': true,
+        className={clsx('send-button app-elements-height', {
           'loading': loading,
           'disabled': !fieldsAreValid
         })} >

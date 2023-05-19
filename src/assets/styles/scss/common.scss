@@ -69,7 +69,7 @@ ul li {
 }
 
 .app-bg-color {
-  background-color: $appColor;
+  background-color: $appColor !important;
 }
 
 .app-gray-color {
@@ -94,6 +94,10 @@ ul li {
 
 .app-text-shadow {
   text-shadow: 2px 2px 2px #0000002e;
+}
+
+.app-elements-height {
+  min-height: 43px;
 }
 
 .app-button {

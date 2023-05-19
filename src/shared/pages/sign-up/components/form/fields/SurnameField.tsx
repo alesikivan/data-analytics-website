@@ -22,7 +22,7 @@ export const SurnameField = () => {
     <>
       <input
         {...getInputProps()}
-        className={`surname ${isTouched && error ? 'error' : ''}`}
+        className={`app-elements-height surname ${isTouched && error ? 'error' : ''}`}
         type="text"
         name="surname"
         placeholder={translater("introductionPageFormSurnameFieldPlaceholder").toString()}

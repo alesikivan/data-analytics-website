@@ -21,7 +21,7 @@ export const NameField = () => {
   return (
     <input
       {...getInputProps()}
-      className={`name ${isTouched && error ? 'error' : ''}`}
+      className={`app-elements-height name ${isTouched && error ? 'error' : ''}`}
       type="text"
       name="name"
       placeholder={translater("introductionPageFormNameFieldPlaceholder").toString()}

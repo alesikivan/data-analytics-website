@@ -13,7 +13,7 @@
 
     section {
       .programme-preview {
-        max-width: 450px;
+        max-width: 460px;
       }
     }
   }
@@ -34,6 +34,10 @@
       }
 
       div {
+        .description {
+          line-height: 23px;
+        }
+
         .get-started-button {
           padding: 12px 20px;
         }
@@ -41,7 +45,7 @@
 
       div {
         .programme-preview {
-          max-width: 330px;
+          max-width: 360px;
         }
       }
     }

@@ -25,8 +25,7 @@ export const EmailField = () => {
     <>
       <input
         {...getInputProps()}
-        className={clsx({
-          'email': true,
+        className={clsx('email app-elements-height', {
           'error': isTouched && error
         })}
         type="text"

@@ -33,8 +33,7 @@ export const SignUp = () => {
 
                 <button
                   onClick={() => navigate("/")}
-                  className="w-full app-button mb-3"
-                  style={{background: "none"}}>
+                  className="w-full app-button mb-3 app-elements-height">
                     {
                       translater("introductionPageInformationButton")
                     }

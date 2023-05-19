@@ -1,10 +1,19 @@
+
+
 .content {
-  gap: 20px;
-  
+  gap: 48px;
+
   section {
+    gap: 12px;
+
     img {
       height: auto;
-      max-width: 50px;
+      max-width: 48px;
+    }
+
+    span {
+      font-size: 15px;
+      line-height: 23px;
     }
   }
 }
