@@ -11,6 +11,15 @@ body,
   align-items: center;
 }
 
+.app-width-limit {
+  max-width: 900px !important;
+  padding: 20px;
+}
+
+.app-header-color {
+  color: #3f3d56;
+}
+
 .app-container {
   max-width: 900px !important;
   width: 100%;
@@ -53,6 +62,18 @@ ul li {
 
 .app-color {
   color: #0D7D74;
+}
+
+.app-bg-color {
+  background-color: #0D7D74;
+}
+
+.app-gray-color {
+  color: #676767;
+}
+
+.app-border-radius {
+  border-radius: 5px;
 }
 
 .app-color-border {

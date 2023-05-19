@@ -77,6 +77,36 @@
     }
   }
 
+  ul.menu {
+    gap: 60px;
+
+    li {
+      a.active {
+        position: relative;
+
+        span {
+          color: $appColor;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &::after {
+          content: "";
+          height: 2.5px;
+          width: 100%;
+          background-color: $appColor;
+          border-radius: 2px;
+
+          position: absolute;
+          bottom: -6px;
+          left: 0;
+        }
+      }
+    }
+  }
+
   .burger-menu {
     display: none;
   }

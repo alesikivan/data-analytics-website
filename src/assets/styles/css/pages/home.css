@@ -1,0 +1,27 @@
+.introduction section .get-started-button {
+  padding: 12px 20px;
+}
+.introduction section .programme-preview {
+  max-width: 450px;
+}
+
+.app-content {
+  margin-top: 50px;
+  gap: 50px;
+}
+.app-content section div {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.app-content section div.reverse {
+  flex-direction: row;
+}
+.app-content section div div .get-started-button {
+  padding: 12px 20px;
+}
+.app-content section div div .programme-preview {
+  max-width: 330px;
+}
+
+/*# sourceMappingURL=home.css.map */

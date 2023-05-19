@@ -32,7 +32,7 @@ main .link-block a {
   padding: 10px 40px;
   font-family: "Bold";
   background-color: #0D7D74;
-  font-size: 1.2em;
+  font-size: 17px;
   color: #fff;
   transition: 0.4s;
 }
@@ -41,6 +41,9 @@ main .link-block a:hover {
 }
 
 @media (max-width: 500px) {
+  .not-found-img {
+    max-width: 300px;
+  }
   main .error_message {
     text-align: center;
     margin-top: 70px;

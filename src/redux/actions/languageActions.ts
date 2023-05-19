@@ -8,7 +8,7 @@ export const setEnglishLanguage = () => {
     payload: 'en'
   }
 
-  localStorage.setItem('language', 'en')
+  localStorage.setItem('app-language', 'en')
 
   return store.dispatch(language)
 }
@@ -19,7 +19,7 @@ export const setCzechLanguage = () => {
     payload: 'cs'
   }
 
-  localStorage.setItem('language', 'cs')
+  localStorage.setItem('app-language', 'cs')
 
   return store.dispatch(language)
 }

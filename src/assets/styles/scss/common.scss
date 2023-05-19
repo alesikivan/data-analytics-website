@@ -14,8 +14,17 @@ body,
   align-items: center;
 }
 
+.app-width-limit {
+  max-width: $maxWidth !important;
+  padding: $appPadding;
+}
+
+.app-header-color {
+  color: $headerColor;
+}
+
 .app-container {
-  max-width: 900px !important;
+  max-width: $maxWidth !important;
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
@@ -57,6 +66,18 @@ ul li {
 
 .app-color {
   color: $appColor;
+}
+
+.app-bg-color {
+  background-color: $appColor;
+}
+
+.app-gray-color {
+  color: $grayColor;
+}
+
+.app-border-radius {
+  border-radius: $borderRadius;
 }
 
 .app-color-border {

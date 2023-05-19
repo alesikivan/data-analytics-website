@@ -1,15 +1,15 @@
-main.introduction article {
+main.sign-up article {
   width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
-main.introduction article .background-image img {
+main.sign-up article .background-image img {
   height: auto;
   max-width: 400px;
   user-select: none;
 }
-main.introduction article .information .introduction-header {
+main.sign-up article .information .introduction-header {
   width: 100%;
   text-align: center;
   display: none;
@@ -18,7 +18,7 @@ main.introduction article .information .introduction-header {
   color: #0D7D74;
   font-size: 25px;
 }
-main.introduction article .information form {
+main.sign-up article .information form {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -27,7 +27,7 @@ main.introduction article .information form {
   align-items: flex-start;
   gap: 15px;
 }
-main.introduction article .information form .description {
+main.sign-up article .information form .description {
   display: block;
   max-width: 400px;
   line-height: 24px;
@@ -35,7 +35,7 @@ main.introduction article .information form .description {
   font-family: bold;
   color: rgba(47, 46, 67, 0.9215686275);
 }
-main.introduction article .information form input {
+main.sign-up article .information form input {
   width: 100%;
   background-color: #F2F2F2;
   border: none;
@@ -48,41 +48,41 @@ main.introduction article .information form input {
   font-size: 15px;
   border: 1.5px solid #f2f2f2;
 }
-main.introduction article .information form input::placeholder {
+main.sign-up article .information form input::placeholder {
   color: rgba(56, 123, 116, 0.4901960784);
 }
-main.introduction article .information form input.name, main.introduction article .information form input.surname, main.introduction article .information form input.email {
+main.sign-up article .information form input.name, main.sign-up article .information form input.surname, main.sign-up article .information form input.email {
   background-repeat: no-repeat;
   background-size: 12px;
   background-position-y: center;
   background-position-x: 10px;
 }
-main.introduction article .information form input.name {
+main.sign-up article .information form input.name {
   background-image: url("/src/assets/images/pages/home/name-field-preview.svg");
 }
-main.introduction article .information form input.surname {
+main.sign-up article .information form input.surname {
   background-image: url("/src/assets/images/pages/home/surname-field-preview.svg");
   background-size: 17px;
   background-position-x: 8px;
 }
-main.introduction article .information form input.email {
+main.sign-up article .information form input.email {
   background-image: url("/src/assets/images/pages/home/email-field-preview.svg");
 }
-main.introduction article .information form input.error {
+main.sign-up article .information form input.error {
   border-color: rgba(255, 76, 76, 0.568627451);
 }
-main.introduction article .information form .line {
+main.sign-up article .information form .line {
   width: 100%;
   display: flex;
   gap: 15px;
 }
-main.introduction article .information form .line input {
+main.sign-up article .information form .line input {
   width: 100%;
 }
-main.introduction article .information form input[name=email] {
+main.sign-up article .information form input[name=email] {
   width: 100%;
 }
-main.introduction article .information form .sex-toggle {
+main.sign-up article .information form .sex-toggle {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -90,7 +90,7 @@ main.introduction article .information form .sex-toggle {
   justify-content: center;
   gap: 20px;
 }
-main.introduction article .information form .sex-toggle .sex {
+main.sign-up article .information form .sex-toggle .sex {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -98,17 +98,17 @@ main.introduction article .information form .sex-toggle .sex {
   gap: 7px;
   cursor: pointer;
 }
-main.introduction article .information form .sex-toggle .sex img {
+main.sign-up article .information form .sex-toggle .sex img {
   height: auto;
   max-width: 21px;
   user-select: none;
 }
-main.introduction article .information form .sex-toggle .sex span {
+main.sign-up article .information form .sex-toggle .sex span {
   user-select: none;
   font-size: 15px;
   text-transform: capitalize;
 }
-main.introduction article .information form .send-button {
+main.sign-up article .information form .send-button {
   width: 100%;
   background-color: #0D7D74;
   min-height: 38px;
@@ -119,18 +119,18 @@ main.introduction article .information form .send-button {
   font-size: 15px;
   transition: 0.3s;
 }
-main.introduction article .information form .send-button:hover {
+main.sign-up article .information form .send-button:hover {
   opacity: 0.8;
 }
-main.introduction article .information form .send-button.disabled {
+main.sign-up article .information form .send-button.disabled {
   opacity: 0.7;
   transition: 0.3s;
   cursor: not-allowed;
 }
-main.introduction article .information form .send-button.disabled:hover {
+main.sign-up article .information form .send-button.disabled:hover {
   opacity: 0.7;
 }
-main.introduction article .information form .policy-area {
+main.sign-up article .information form .policy-area {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -138,7 +138,7 @@ main.introduction article .information form .policy-area {
   justify-content: center;
   gap: 10px;
 }
-main.introduction article .information form .policy-area .flag-area {
+main.sign-up article .information form .policy-area .flag-area {
   height: 20px;
   width: 20px;
   border: 1px solid #0D7D74;
@@ -149,23 +149,23 @@ main.introduction article .information form .policy-area .flag-area {
   align-items: center;
   justify-content: center;
 }
-main.introduction article .information form .policy-area .flag-area.error {
+main.sign-up article .information form .policy-area .flag-area.error {
   border-color: #E76161;
 }
-main.introduction article .information form .policy-area .flag-area .flag {
+main.sign-up article .information form .policy-area .flag-area .flag {
   height: auto;
   max-width: 15px;
   user-select: none;
 }
-main.introduction article .information form .policy-area span {
+main.sign-up article .information form .policy-area span {
   font-size: 15px;
 }
-main.introduction article .information form .policy-area span a {
+main.sign-up article .information form .policy-area span a {
   color: rgba(6, 5, 6, 0.768627451);
   text-decoration: underline;
   transition: 0.3s;
 }
-main.introduction article .information form .policy-area span a:hover {
+main.sign-up article .information form .policy-area span a:hover {
   opacity: 0.8;
 }
 

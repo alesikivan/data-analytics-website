@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import '../../../../assets/styles/css/particles/header.css'
 import { images } from '../../../../assets/images/imgs'
 import { Translater } from '../Translater'
+import { Menu } from './components/Menu'
 
 export const Header = () => {
   const twitter = 'https://twitter.com/masarykuni?lang=cs'
@@ -10,7 +11,7 @@ export const Header = () => {
   const linkedin = 'https://www.linkedin.com/school/masarykova-univerzita-brno'
 
   return (
-    <header className='main-header'>
+    <header className='main-header app-width-limit mx-auto flex flex-column'>
       <div className='cover'>
         <Link to="/" className='logo app-hover'>
           <img src={images.logo} alt="logo" />
@@ -39,6 +40,8 @@ export const Header = () => {
           </li>
         </ul>
       </div>
+
+      <Menu />
     </header>
   )
 }

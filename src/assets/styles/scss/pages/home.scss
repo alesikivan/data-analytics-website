@@ -1,0 +1,45 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.introduction {
+  section {
+    .get-started-button {
+      padding: 12px 20px;
+    }
+  }
+
+  section {
+    .programme-preview {
+      max-width: 450px;
+    }
+  }
+}
+
+.app-content {
+  margin-top: 50px;
+  gap: 50px;
+
+  section {
+    div {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      
+      &.reverse {
+        flex-direction: row;
+      }
+
+      div {
+        .get-started-button {
+          padding: 12px 20px;
+        }
+      }
+    
+      div {
+        .programme-preview {
+          max-width: 330px;
+        }
+      }
+    }
+  }
+}

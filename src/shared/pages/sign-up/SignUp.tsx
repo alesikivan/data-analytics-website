@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { SuccessfullySaved } from "./components/SuccessfullySaved"
 import { images } from "../../../assets/images/imgs"
 import { Form } from "./components/form/Form"
@@ -12,7 +12,7 @@ export const SignUp = () => {
   const navigate = useNavigate()
 
   return (
-    <main className="introduction">
+    <main className="sign-up">
       {
         doneInterfaceVisible
           ? <SuccessfullySaved

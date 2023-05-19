@@ -4,6 +4,11 @@ import facebook from '../images/pages/home/facebook.svg'
 import twitter from '../images/pages/home/twitter.svg'
 import linkedin from '../images/pages/home/linkedin.svg'
 
+import preview from '../images/pages/home/preview.svg'
+import companies from '../images/pages/home/companies.svg'
+import students from '../images/pages/home/students.svg'
+import uni from '../images/pages/home/uni.svg'
+
 import background from '../images/pages/home/background.svg'
 import unactiveSexMale from '../images/pages/home/unactive-sex-male.svg'
 import unactiveSexFemale from '../images/pages/home/unactive-sex-female.svg'
@@ -25,7 +30,11 @@ export const images = {
     }
   },
   home: {
+    preview,
     background,
+    companies,
+    students,
+    uni,
     check,
     sex: {
       male: {
