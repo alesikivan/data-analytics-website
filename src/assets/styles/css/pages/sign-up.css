@@ -170,21 +170,21 @@ main.sign-up article .information form .policy-area span a:hover {
 }
 
 @media (max-width: 850px) {
-  main.introduction article .background-image img {
+  main.sign-up article .background-image img {
     max-width: 300px;
   }
 }
 @media (max-width: 750px) {
-  main.introduction article {
+  main.sign-up article {
     justify-content: center;
   }
-  main.introduction article .background-image {
+  main.sign-up article .background-image {
     display: none;
   }
-  main.introduction article .information .introduction-header {
+  main.sign-up article .information .introduction-header {
     display: block;
   }
-  main.introduction article .information form .description {
+  main.sign-up article .information form .description {
     text-align: center;
     font-size: 13px;
     line-height: 21px;

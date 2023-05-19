@@ -1,0 +1,9 @@
+.content {
+  gap: 20px;
+}
+.content section img {
+  height: auto;
+  max-width: 50px;
+}
+
+/*# sourceMappingURL=companies.css.map */

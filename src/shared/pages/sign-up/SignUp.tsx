@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react"
+import {  useState } from "react"
+import { useNavigate } from "react-router-dom"
+
 import { SuccessfullySaved } from "./components/SuccessfullySaved"
-import { images } from "../../../assets/images/imgs"
+import { translater } from "../../../utils/localization/localization"
 import { Form } from "./components/form/Form"
+import { images } from "../../../assets/images/imgs"
 
 import '../../../assets/styles/css/pages/sign-up.css'
-import { useNavigate } from "react-router-dom"
-import { translater } from "../../../utils/localization/localization"
 
 export const SignUp = () => {
   const [doneInterfaceVisible, setDoneInterfaceVisible] = useState(false)

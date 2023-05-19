@@ -2,15 +2,19 @@
 @import '../utils/mixins.scss';
 
 .introduction {
-  section {
-    .get-started-button {
-      padding: 12px 20px;
+  div {
+    min-height: 380px;
+    
+    section {
+      .get-started-button {
+        padding: 12px 20px;
+      }
     }
-  }
 
-  section {
-    .programme-preview {
-      max-width: 450px;
+    section {
+      .programme-preview {
+        max-width: 450px;
+      }
     }
   }
 }
@@ -24,7 +28,7 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       align-items: center;
-      
+
       &.reverse {
         flex-direction: row;
       }
@@ -34,7 +38,7 @@
           padding: 12px 20px;
         }
       }
-    
+
       div {
         .programme-preview {
           max-width: 330px;

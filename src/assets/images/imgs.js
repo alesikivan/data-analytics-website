@@ -9,6 +9,13 @@ import companies from '../images/pages/home/companies.svg'
 import students from '../images/pages/home/students.svg'
 import uni from '../images/pages/home/uni.svg'
 
+import benefits from '../images/pages/companies/benefits.svg'
+import talant from '../images/pages/companies/talant.svg'
+import research from '../images/pages/companies/research.svg'
+import future from '../images/pages/companies/future.svg'
+import relationship from '../images/pages/companies/relationship.svg'
+import reputation from '../images/pages/companies/reputation.svg'
+
 import background from '../images/pages/home/background.svg'
 import unactiveSexMale from '../images/pages/home/unactive-sex-male.svg'
 import unactiveSexFemale from '../images/pages/home/unactive-sex-female.svg'
@@ -28,6 +35,15 @@ export const images = {
       twitter,
       linkedin
     }
+  },
+  companies: {
+    benefits,
+    talant,
+    research,
+    future,
+    relationship,
+    reputation
+
   },
   home: {
     preview,

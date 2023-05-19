@@ -1,7 +1,10 @@
-.introduction section .get-started-button {
+.introduction div {
+  min-height: 380px;
+}
+.introduction div section .get-started-button {
   padding: 12px 20px;
 }
-.introduction section .programme-preview {
+.introduction div section .programme-preview {
   max-width: 450px;
 }
 

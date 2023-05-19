@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom"
-import { images } from "../../../assets/images/imgs"
+import { motion } from 'framer-motion/dist/framer-motion'
 
+import { images } from "../../../assets/images/imgs"
 import '../../../assets/styles/css/pages/home.css'
 
-export const Home = () => {
+export const Home = () => {  
   return (
-    <main className="flex flex-column justify-content-start pb-6">
+    <main  className="flex flex-column justify-content-start pb-6">
       <article className="introduction mb-7">        
         <div className="app-width-limit mx-auto flex gap-2 mt-3">
-          <section className="flex flex-column  align-items-start gap-5">
+          <motion.section 
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-column  align-items-start gap-5">
             <h1 className="app-header-color text-6xl app-font-bold m-0">
               Data Analytics Programme
             </h1>
@@ -20,14 +25,17 @@ export const Home = () => {
             <Link 
               className="get-started-button app-hover app-bg-color app-font-bold app-border-radius text-white" 
               to={'/sign-up'}>Get started the programm!</Link>
-          </section>
+          </motion.section>
 
-          <section>
+          <motion.section
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}>
             <img 
               className="programme-preview"
               src={images.home.preview} 
               alt="programme-preview"></img>
-          </section>
+          </motion.section>
         </div>
       </article>
 
