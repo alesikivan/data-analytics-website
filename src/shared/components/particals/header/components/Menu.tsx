@@ -1,5 +1,5 @@
-import { useEffect } from "react"
 import { NavLink, useLocation } from "react-router-dom"
+import { translater } from "../../../../../utils/localization/localization"
 
 type MenuItem = {
   path: string,
@@ -8,31 +8,31 @@ type MenuItem = {
 
 export const Menu = () => {
   const location = useLocation()
-  
+
   const menuItems: MenuItem[] = [
     {
       path: '/',
-      title: 'Introduction'
+      title: translater("headerMenuIntroduction").toString()
     },
     {
       path: '/students',
-      title: 'Students'
+      title: translater("headerMenuStudents").toString()
     },
     {
       path: '/companies',
-      title: 'Companies'
+      title: translater("headerMenuCompanies").toString()
     },
     {
       path: '/muni',
-      title: 'MUNI'
+      title: translater("headerMenuMuni").toString()
     },
   ]
 
   return (
     <>
       {
-        location.pathname.includes('sign-up') 
-        ? '' 
+        location.pathname.includes('sign-up')
+        ? ''
         : (
           <ul className="menu flex mt-5">
             {
