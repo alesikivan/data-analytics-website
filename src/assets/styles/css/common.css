@@ -25,7 +25,8 @@ body,
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  margin-top: 101px; /* Header height */
+  margin-top: 101px;
+  /* Header height */
   padding: 0 20px;
   padding-top: 20px;
   align-items: center;
@@ -88,7 +89,7 @@ ul li {
 }
 
 .app-text-shadow {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1803921569);
+  text-shadow: 2px 2px 2px #0000002e;
 }
 
 .app-elements-height {
