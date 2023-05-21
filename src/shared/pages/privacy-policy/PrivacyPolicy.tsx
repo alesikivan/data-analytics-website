@@ -254,7 +254,7 @@ export const PrivacyPolicy = () => {
             <u>ICS Network and Cloud Storage:</u>
             <a
               className='mx-1'
-              href='http://92.118.150.71/api/docs/privacy-policy'
+              href={privacyPolicyLink}
               target='_blank'
               rel="muni-directive">
                 Data repositories operated by ICS
