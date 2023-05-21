@@ -1,5 +1,7 @@
 {
   "interceptorErrorNotification404": "Požadavek neexistuje: 404",
+  "interceptorErrorNotification": "Access Denied",
+  "interceptorErrorNotificationServer": "Undefiend server error",
   "startsWith": "Začíná s",
   "contains": "Obsahuje",
   "notContains": "Neobsahuje",

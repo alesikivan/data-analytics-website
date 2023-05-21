@@ -71,7 +71,9 @@ export const Form = ({ showDoneInterface }: Props) => {
 
         reset()
       })
-      .catch(() => setLoading(false))
+      .catch((error) => {
+        setLoading(false)
+      })
   }
 
   const {
