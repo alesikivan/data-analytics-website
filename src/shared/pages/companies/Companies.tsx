@@ -1,3 +1,4 @@
+import Parser from 'html-react-parser'
 import { Link } from "react-router-dom"
 import { motion } from 'framer-motion/dist/framer-motion'
 
@@ -15,32 +16,32 @@ export const Companies = () => {
     {
       img: images.companies.benefits,
       title: 'Benefits',
-      description: 'Access to funding and grants: collaborating with universities can help a company access grants and funding for research projects or the development of ideas.'
+      description: 'Access to funding and grants: collaborating with universities can help a company access <b>grants</b> and funding for <b>research projects</b> or the development of ideas.'
     },
     {
       img: images.companies.talant,
       title: 'Talented students',
-      description: 'To find and attract young professionals with large corporations and innovative initiatives that are valuable for business development for free.'
+      description: 'To find and attract <b>young professionals</b> with large corporations and innovative initiatives that are valuable for business development for free.'
     },
     {
       img: images.companies.research,
       title: 'Research',
-      description: 'Universities have access to academic resources and experts, enabling companies to conduct research and introduce new technologies or products.'
+      description: 'Universities have access to <b>academic resources and experts</b>, enabling companies to conduct research and introduce new technologies or products.'
     },
     {
       img: images.companies.future,
       title: 'Future employees',
-      description: 'Promote the competition/program of study from the start with your self-created "problems" - and reap the benefits: solve business problems on the one hand, and attract new Data Scientists to your organization on the other. With the MDA program you create an easy entry into your company!'
+      description: 'Promote the competition/program of study from the start with your self-created "problems" - and reap the benefits: <b>solve business problems</b> on the one hand, and attract new Data Scientists to your organization on the other. With the MDA program you create an easy entry into your company!'
     },
     {
       img: images.companies.relationship,
       title: 'Relationship',
-      description: 'Collaborating with universities helps companies establish and maintain relationships with academic experts and stock teams that can enable a healthy exchange of food and experience.'
+      description: 'Collaborating with universities helps companies establish and <b>maintain relationships with academic experts</b> and stock teams that can enable a healthy exchange of food and experience.'
     },
     {
       img: images.companies.reputation,
       title: 'Reputation',
-      description: 'Cooperation with universities can increase the credibility of the company, strengthen its innovative potential and attract additional investment from students, researchers.'
+      description: 'Cooperation with universities can <b>increase the credibility of the company</b>, strengthen its innovative potential and attract additional investment from students, researchers.'
     }
   ]
   return (
@@ -76,7 +77,9 @@ export const Companies = () => {
                 </h2>
 
                 <span className="text-center app-gray-color">
-                  { block.description }
+                  {
+                    Parser(block.description)
+                  }
                 </span>
               </motion.section>
             )

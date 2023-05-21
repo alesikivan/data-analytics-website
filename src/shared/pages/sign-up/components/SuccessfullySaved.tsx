@@ -1,8 +1,8 @@
-
-import { images } from '../../../../assets/images/imgs'
+import { motion } from 'framer-motion/dist/framer-motion'
 
 import '../../../../assets/styles/css/pages/successfully-saved.css'
 import { translater } from '../../../../utils/localization/localization'
+import { images } from '../../../../assets/images/imgs'
 
 type Props = {
   hideDoneInterface: Function
@@ -10,7 +10,11 @@ type Props = {
 
 export const SuccessfullySaved = ({ hideDoneInterface }: Props) => {
   return (
-    <div className="successfully-saved">
+    <motion.div 
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6 }}
+      className="successfully-saved">
       <img src={images.successfullySaved.success} alt="success" />
 
       <h3 className='title m-0'>
@@ -19,7 +23,7 @@ export const SuccessfullySaved = ({ hideDoneInterface }: Props) => {
         }
       </h3>
 
-      <span className='message'>
+      <span className='message app-gray-color'>
         {
           translater("introductionPageSuccessfullySavedMessage")
         }
@@ -30,6 +34,6 @@ export const SuccessfullySaved = ({ hideDoneInterface }: Props) => {
           translater("introductionPageSuccessfullySavedButton")
         }
       </button>
-    </div>
+    </motion.div>
   )
 }

@@ -33,6 +33,8 @@ type PrivacyTerms = {
   isTouched: boolean
 }
 
+type InformationProcessing = PrivacyTerms
+
 type FormData = {
   email: string,
   name: string,
@@ -40,10 +42,12 @@ type FormData = {
 }
 
 const defaultPrivacyTerms = { selected: false, isTouched: false }
+const defaultInformationProcessing = { selected: false, isTouched: false }
 
 export const Form = ({ showDoneInterface }: Props) => {
   const [user, setUser] = useState<User>(defaultUserData)
   const [privacyTerms, setPrivacyTerms] = useState<PrivacyTerms>(defaultPrivacyTerms)
+  const [informationProcessing, setInformationProcessing] = useState<InformationProcessing>(defaultInformationProcessing)
   const [loading, setLoading] = useState(false)
 
   const reset = () => {
@@ -76,8 +80,9 @@ export const Form = ({ showDoneInterface }: Props) => {
   } = useForm({
     onSubmit: async (values: FormData) => {
       setPrivacyTerms(prev => ({ ...prev, isTouched: true }))
+      setInformationProcessing(prev => ({ ...prev, isTouched: true }))
 
-      if (!loading && privacyTerms.selected) {
+      if (!loading && privacyTerms.selected && informationProcessing.selected) {
         sendData(values)
       }
     },
@@ -153,6 +158,29 @@ export const Form = ({ showDoneInterface }: Props) => {
               translater("introductionPageFormPrivacyPolicyLink")
             }
           </Link>
+        </span>
+      </div>
+
+      <div className="policy-area">
+        <div
+          onClick={() => setInformationProcessing(prev => ({selected: !prev.selected, isTouched: true }))}
+          className={
+            clsx({
+              "flag-area": true,
+              "error": informationProcessing.isTouched && !informationProcessing.selected
+            })
+          }>
+          {
+            informationProcessing.selected ? (
+              <img src={images.home.check} alt="check" className="flag" />
+            ) : ''
+          }
+        </div>
+
+        <span>
+          {
+            translater("introductionPageFormInformationProcessing")
+          }
         </span>
       </div>
     </Form>

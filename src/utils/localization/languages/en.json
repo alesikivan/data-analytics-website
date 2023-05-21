@@ -140,6 +140,7 @@
   "introductionPageFormSendButton": "Notify me",
   "introductionPageFormPrivacyPolicy": "I agree with the ",
   "introductionPageFormPrivacyPolicyLink": "Terms",
+  "introductionPageFormInformationProcessing": "Allow to process the information and contact that person with advertising and other material.",
   "introductionPageFormNameFieldPlaceholder": "Enter name...",
   "introductionPageFormNameFieldValidate": "Name field can not be empty.",
   "introductionPageFormSurnameFieldPlaceholder": "Enter surname...",

@@ -19,6 +19,10 @@ body,
   padding: $appPadding;
 }
 
+.app-line-height {
+  line-height: 22px;
+}
+
 .app-header-color {
   color: $headerColor;
 }
@@ -62,6 +66,10 @@ ul li {
 
 .app-font-bold {
   font-family: 'Bold';
+}
+
+.app-link-color {
+  color: $linkColor;
 }
 
 .app-color {

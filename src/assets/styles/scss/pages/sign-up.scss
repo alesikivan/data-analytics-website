@@ -151,12 +151,12 @@ main.sign-up {
 
         .policy-area {
           width: 100%;
-          @include flex;
+          display: flex;
           gap: 10px;
 
           .flag-area {
+            min-width: 20px;
             height: 20px;
-            width: 20px;
             border: 1px solid $appColor;
             border-radius: 4px;
             cursor: pointer;

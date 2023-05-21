@@ -23,6 +23,10 @@ import rocket from '../images/pages/muni/rocket.svg'
 import lang from '../images/pages/muni/lang.svg'
 import accomodation from '../images/pages/muni/accomodation.svg'
 
+import developer from '../images/pages/students/developer.svg'
+import idea from '../images/pages/students/lamp.svg'
+import structure from '../images/pages/students/structure.svg'
+
 import background from '../images/pages/home/background.svg'
 import unactiveSexMale from '../images/pages/home/unactive-sex-male.svg'
 import unactiveSexFemale from '../images/pages/home/unactive-sex-female.svg'
@@ -58,6 +62,11 @@ export const images = {
     rocket,
     lang,
     accomodation
+  },
+  students: {
+    developer,
+    idea,
+    structure
   },
   home: {
     preview,

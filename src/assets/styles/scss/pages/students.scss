@@ -1,0 +1,129 @@
+@import '../utils/variables.scss';
+
+.students-header {
+  font-size: 25px;
+  position: relative;
+  padding-left: 10px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 3px;
+    border-radius: 5px;
+    background-color: #ccc;
+    margin-right: 2px;
+    background-color: $appColor;
+  }
+}
+
+.ds-block {
+  min-height: 267px;
+
+  .data-science-img {
+    height: auto;
+    max-width: 300px;
+  }
+
+  span {
+    max-width: 600px;
+    font-size: 15px;
+
+    b {
+      font-family: 'Bold';
+      color: $appColor;
+    }
+  }
+}
+
+.info-block {
+  margin-top: 80px;
+
+  span {
+    max-width: 800px;
+    font-size: 15px;
+
+    b {
+      font-family: 'Bold';
+      color: $appColor;
+    }
+  }
+
+  .check {
+    margin-top: 2px;
+    margin-left: 2px;
+    height: auto;
+    max-width: 18px;
+  }
+}
+
+.structure-block {
+  margin-top: 80px;
+
+  span {
+    max-width: 500px;
+    font-size: 15px;
+
+    b.title {
+      font-family: 'Bold';
+      color: $headerColor;
+    }
+  }
+
+  .idea {
+    height: auto;
+    max-width: 32px;
+  }
+
+  .analytics-img {
+    height: auto;
+    max-width: 400px;
+  }
+
+  .program-finish {
+    max-width: 460px;
+
+    b {
+      font-family: 'Bold';
+      color: $appColor;
+    }
+  }
+}
+
+.description-block {
+  margin-top: 80px;
+  span {
+    max-width: 800px;
+    font-size: 15px;
+
+    b {
+      font-family: 'Bold';
+      color: $appColor;
+    }
+  }
+}
+
+.value-proposition {
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+.value-proposition-content {
+  gap: 50px 20px;
+  
+  span {
+    font-size: 15px;
+    max-width: 450px;
+    background-color: #cccccc1c;
+    padding: 18px;
+    border-radius: 13px;
+
+    b {
+      color: $appColor;
+      font-family: 'Bold';
+    }
+  }
+}

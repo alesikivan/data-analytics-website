@@ -44,13 +44,12 @@ export const Muni = () => {
     },
   ]
 
+  const website = 'https://www.muni.cz'
+
   return (
     <article className="muni flex flex-column">
       <section className="information flex flex-wrap gap-5 justify-content-between">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+        <div 
           className="flex flex-column">
           <h1 className="app-color text-4xl app-font-bold m-0">
             Masaryk University
@@ -58,13 +57,12 @@ export const Muni = () => {
 
           <span className="muni-description app-gray-color max-w-28rem mt-3">
             We believe that education is not just a matter of age or social status. We actively support research. We are open-minded and dedicated to influencing the lives of people around us.
+            
+            <a className='officiall-link ml-1' target='_blank' href={website}>Officiall website.</a>
           </span>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+        <div 
           className="statistic flex">
           <div className='flex flex-column align-items-center'>
             <b className='app-font-bold app-color text-3xl'>400</b>
@@ -80,7 +78,7 @@ export const Muni = () => {
             <b className='app-font-bold app-color text-3xl'>7K</b>
             <span className='max-w-5rem text-center muni-description mt-2 app-gray-color'>Graduates a year</span>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       <section className="w-full muni-content flex flex-wrap align-items-start justify-content-between mt-3">

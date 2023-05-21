@@ -12,5 +12,9 @@
   font-size: 15px;
   line-height: 23px;
 }
+.content section span b {
+  font-family: "Bold";
+  color: #0D7D74;
+}
 
 /*# sourceMappingURL=companies.css.map */
