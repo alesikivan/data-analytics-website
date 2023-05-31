@@ -20,12 +20,12 @@ export const Muni = () => {
     {
       img: images.muni.study,
       title: 'Study programms',
-      description: 'The university offers a great variety of study programmes in <b>Czech and English</b>, ranging from medicine, computer science, economics and business, life and social sciences, education and much more.'
+      description: 'The university offers a great variety of study programs in <b>Czech and English</b>, ranging from medicine, computer science, economics and business, life and social sciences, education and much more.'
     },
     {
       img: images.muni.lang,
       title: 'Multilanguage',
-      description: 'The university offers more than <b>80 full-degree programmes</b> taught in English and organizes exchanges throughout the continent.'
+      description: 'The university offers more than <b>80 full-degree programs</b> taught in English and organizes exchanges throughout the continent.'
     },
     {
       img: images.muni.city,
@@ -50,7 +50,7 @@ export const Muni = () => {
     <article className="muni flex flex-column">
       <section className="information flex flex-wrap gap-5 justify-content-between">
         <div 
-          className="flex flex-column">
+          className="muni-info flex flex-column">
           <h1 className="app-color text-4xl app-font-bold m-0">
             Masaryk University
           </h1>
@@ -81,7 +81,7 @@ export const Muni = () => {
         </div>
       </section>
 
-      <section className="w-full muni-content flex flex-wrap align-items-start justify-content-between mt-3">
+      <section className="w-full muni-content flex flex-wrap mt-3">
         {
           blocks.map((block: Blocks, index: number) => {
             return (

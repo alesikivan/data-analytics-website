@@ -12,7 +12,7 @@ export const Students = () => {
     '<b class="title" style="color: #19A7CE">Probability and Statistics</b> <b>- 20 credits</b>.',
     '<b class="title" style="color: #576CBC">Programming for Data Analytics</b> (script and object-oriented languages) <b>- 30 credits</b>.',
     '<b class="title" style="color: #F97B22">Professional practice</b> (capstone project) <b>- 30 credits</b>.',
-    'Two out of three specialization modules <b class="title" style="color: #B46060">(Complexity, Machine Learning, and AI, Data-driven applications)</b> <b>- 2x24 credits</b>.',
+    'Two out of specialization modules <b class="title" style="color: #B46060">(Complexity, Machine Learning, and AI, Data-driven applications)</b> <b>- 2x24 credits</b>.',
     '<b class="title" style="color: #D25380">Mathematical foundations of Data Analytics</b>, including advanced electives (optimization, modeling, geometry tracks) <b>- 60 credits</b>.',
   ]
   return (
@@ -50,7 +50,7 @@ export const Students = () => {
             <img
               className="data-science-img"
               src={images.students.developer}
-              alt="programme-preview"></img>
+              alt="program-preview"></img>
           </motion.div>
         </section>
       </article>
@@ -59,7 +59,7 @@ export const Students = () => {
         <section className="flex mt-5 gap-5 align-items-center justify-content-between">
           <div className="flex flex-column">
             <h2 className="m-0 app-header-color app-font-bold students-header">
-              Main facts about Study Program
+              Main facts about our Study Program
             </h2>
 
             <div className="mt-4 flex align-items-start gap-3">
@@ -80,7 +80,7 @@ export const Students = () => {
                 className="check" />
 
               <span className="app-gray-color app-line-height">
-                Students with strong prior programming or mathematical background could reduce their course load by up to 30 credits, <b>replacing select introductory courses with qualification exams/tests</b>.  This way the program schedule can be shortened down to 5 semesters.
+                Students with strong prior programming or mathematical background could reduce their course load by up to 30 credits, <b>replacing select introductory courses with qualification exams/tests</b>.  This way the program schedule can be shortened down to 6 semesters.
               </span>
             </div>
 
@@ -110,7 +110,7 @@ export const Students = () => {
       </article>
 
       <article className="structure-block">
-        <section className="flex mt-5 gap-5 align-items-center justify-content-between">
+        <section className="structure-block-info flex mt-5 gap-5 align-items-center justify-content-between">
           <div className="flex flex-column">
             <h2 className="mt-0 mb-1 app-header-color app-font-bold students-header">
               Study Structure
@@ -206,7 +206,7 @@ export const Students = () => {
           to={'/sign-up'}>Try it now!</Link>
       </div>
 
-      <article className='flex flex-wrap value-proposition-content align-items-start justify-content-between'>
+      <article className='flex flex-wrap value-proposition-content'>
         <span className='app-gray-color'>
           The students will get solid mathematical foundations, programming skills, understanding of machine learning and computer science, develop data analytics thinking, and soft-skills necessary for efficient communication of data-driven solutions. The students will also acquire <b>a deep understanding of algorithms and data structures</b>, enabling them to design efficient solutions to complex problems. 
         </span>

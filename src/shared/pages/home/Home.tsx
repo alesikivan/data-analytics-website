@@ -9,7 +9,7 @@ export const Home = () => {
   return (
     <main  className="flex flex-column justify-content-start pb-6">
       <article className="introduction mb-7">
-        <div className="app-width-limit mx-auto flex gap-2 mt-3">
+        <div className="home-info app-width-limit mx-auto flex gap-2 mt-3">
           <motion.section
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -41,9 +41,9 @@ export const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}>
               <img
-                className="programme-preview"
+                className="program-preview"
                 src={images.home.preview}
-                alt="programme-preview"></img>
+                alt="program-preview"></img>
           </motion.section>
         </div>
       </article>
@@ -64,7 +64,7 @@ export const Home = () => {
 
       <article className="app-content flex flex-column">
         <section>
-          <div className="app-width-limit mx-auto flex mt-3">
+          <div className="app-width-limit mx-auto gap-2 flex mt-3">
             <div className="flex flex-column align-items-start gap-3">
               <h1 className="app-header-color text-3xl app-font-bold m-0">
                 {
@@ -89,15 +89,15 @@ export const Home = () => {
 
             <div>
               <img
-                className="programme-preview"
+                className="program-preview"
                 src={images.home.students}
-                alt="programme-preview"></img>
+                alt="program-preview"></img>
             </div>
           </div>
         </section>
 
         <section>
-          <div className="app-width-limit mx-auto flex mt-3 reverse">
+          <div className="app-width-limit mx-auto gap-2 flex mt-3 reverse">
             <div className="flex flex-column align-items-start gap-3">
               <h1 className="app-header-color text-3xl app-font-bold m-0">
                 {
@@ -122,15 +122,15 @@ export const Home = () => {
 
             <div>
               <img
-                className="programme-preview"
+                className="program-preview"
                 src={images.home.companies}
-                alt="programme-preview"></img>
+                alt="program-preview"></img>
             </div>
           </div>
         </section>
 
         <section>
-          <div className="app-width-limit mx-auto flex mt-3">
+          <div className="app-width-limit mx-auto gap-2 flex mt-3">
             <div className="flex flex-column align-items-start gap-3">
               <h1 className="app-header-color text-3xl app-font-bold m-0">
                 {
@@ -155,9 +155,9 @@ export const Home = () => {
 
             <div>
               <img
-                className="programme-preview"
+                className="program-preview"
                 src={images.home.uni}
-                alt="programme-preview"></img>
+                alt="program-preview"></img>
             </div>
           </div>
         </section>

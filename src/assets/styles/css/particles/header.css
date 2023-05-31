@@ -1,6 +1,6 @@
 .main-header {
   width: 100%;
-  background-color: #ffffffe8;
+  background-color: rgba(255, 255, 255, 0.9098039216);
   padding: 20px;
   max-width: 900px;
   display: flex;
@@ -68,6 +68,7 @@
 }
 .main-header ul.menu {
   gap: 45px;
+  padding: 0;
 }
 .main-header ul.menu li a.active {
   position: relative;
@@ -95,6 +96,12 @@
 @media (max-width: 500px) {
   .main-header .cover ul {
     gap: 10px;
+  }
+  .main-header ul.menu {
+    padding: 0;
+    gap: 10px 15px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

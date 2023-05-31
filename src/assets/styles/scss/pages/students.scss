@@ -95,6 +95,7 @@
 
 .description-block {
   margin-top: 80px;
+
   span {
     max-width: 800px;
     font-size: 15px;
@@ -113,6 +114,9 @@
 
 .value-proposition-content {
   gap: 50px 20px;
+  align-items: start;
+  justify-content: space-between;
+
   
   span {
     font-size: 15px;
@@ -125,5 +129,70 @@
       color: $appColor;
       font-family: 'Bold';
     }
+  }
+}
+
+@media (max-width: 960px) {
+  .value-proposition-content {
+    gap: 20px;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
+
+@media (max-width: 750px) {
+  .ds-block {
+    min-height: 267px;
+    
+    section {
+      flex-direction: column-reverse !important;
+    }
+  
+    .data-science-img {
+      display: none;
+    }
+  
+    span {
+      max-width: 600px;
+      font-size: 15px;
+  
+      b {
+        font-family: 'Bold';
+        color: $appColor;
+      }
+    }
+  }
+
+  .info-block {
+    margin-top: 40px;
+  }
+
+  .structure-block {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .structure-block-info {
+      align-self: flex-start;
+    }
+  
+    section {
+      flex-direction: column;
+
+      .analytics-img {
+        height: auto;
+        max-width: 300px;
+      }
+    }
+  
+  }
+
+  .description-block {
+    margin-top: 35px;
+  }
+
+  .value-proposition {
+    margin-top: 40px;
   }
 }

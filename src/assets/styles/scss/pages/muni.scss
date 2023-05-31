@@ -24,6 +24,8 @@
 
 .muni-content {
   gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
 
   section {
     gap: 12px;
@@ -48,6 +50,51 @@
       b {
         font-family: 'Bold';
         color: $appColor;
+      }
+    }
+  }
+}
+
+@media (max-width: 815px) {
+  .information {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .muni-info {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1, span {
+        text-align: center;
+      }
+    }
+  }
+
+  .muni-content {
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 635px) {
+  .muni-content {
+    flex-direction: column;
+    align-items: center;
+
+    section {
+      flex-direction: column;
+      align-items: center !important;
+
+      div {
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center !important;
+        h2, span {
+          text-align: center;
+        }
       }
     }
   }

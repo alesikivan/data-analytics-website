@@ -12,7 +12,7 @@
     }
 
     section {
-      .programme-preview {
+      .program-preview {
         max-width: 450px;
       }
     }
@@ -44,10 +44,102 @@
       }
 
       div {
-        .programme-preview {
+        .program-preview {
           max-width: 340px;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .introduction {
+    h1 {
+      font-size: 45px !important;
+    }
+
+    div {
+      align-items: center;
+      section {
+        .program-preview {
+          max-width: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .introduction {
+    h1 {
+      text-align: center;
+    }
+
+    .home-info {
+      min-height: auto;
+    }
+
+    div {
+      align-items: center;
+
+      section {
+        align-items: center !important;
+
+        span {
+          text-align: center;
+        }
+
+        .program-preview {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .app-content {
+    margin-top: 5px;
+    gap: 5px;
+  
+    section {
+      div {
+        flex-direction: column-reverse;
+        justify-content: center !important;
+        align-items: center !important;
+  
+        &.reverse {
+          flex-direction: column-reverse;
+        }
+
+        h1 {
+          text-align: center;
+        }
+  
+        div {
+          .description {
+            text-align: center;
+            line-height: 23px;
+          }
+  
+          .get-started-button {
+            padding: 12px 20px;
+          }
+        }
+  
+        div {
+          .program-preview {
+            max-width: 200px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .introduction {
+    h1 {
+      font-size: 40px !important;
     }
   }
 }

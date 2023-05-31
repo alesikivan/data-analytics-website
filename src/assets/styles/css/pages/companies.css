@@ -17,4 +17,14 @@
   color: #0D7D74;
 }
 
+@media (max-width: 670px) {
+  .content {
+    gap: 20px;
+    margin-top: 15px;
+  }
+  .content section {
+    margin-top: 15px !important;
+  }
+}
+
 /*# sourceMappingURL=companies.css.map */

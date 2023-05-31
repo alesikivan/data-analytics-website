@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../scss/pages/companies.scss","../../scss/utils/variables.scss"],"names":[],"mappings":"AAEA;EACE;;AAEA;EACE;;AAEA;EACE;EACA;;AAGF;EACE;EACA;;AAEA;EACE;EACA,OCnBG","file":"companies.css"}
+{"version":3,"sourceRoot":"","sources":["../../scss/pages/companies.scss","../../scss/utils/variables.scss"],"names":[],"mappings":"AAEA;EACE;;AAEA;EACE;;AAEA;EACE;EACA;;AAGF;EACE;EACA;;AAEA;EACE;EACA,OCnBG;;;ADyBX;EACE;IACE;IACA;;EAEA;IACE","file":"companies.css"}

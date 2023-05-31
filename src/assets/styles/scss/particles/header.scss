@@ -79,6 +79,7 @@
 
   ul.menu {
     gap: 45px;
+    padding: 0;
 
     li {
       a.active {
@@ -119,5 +120,14 @@
         gap: 10px;
       }
     } 
+  }
+
+  .main-header {
+    ul.menu {
+      padding: 0;
+      gap: 10px 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 }

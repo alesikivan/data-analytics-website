@@ -96,17 +96,70 @@
 
 .value-proposition-content {
   gap: 50px 20px;
+  align-items: start;
+  justify-content: space-between;
 }
 .value-proposition-content span {
   font-size: 15px;
   max-width: 450px;
-  background-color: #cccccc1c;
+  background-color: rgba(204, 204, 204, 0.1098039216);
   padding: 18px;
   border-radius: 13px;
 }
 .value-proposition-content span b {
   color: #0D7D74;
   font-family: "Bold";
+}
+
+@media (max-width: 960px) {
+  .value-proposition-content {
+    gap: 20px;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+@media (max-width: 750px) {
+  .ds-block {
+    min-height: 267px;
+  }
+  .ds-block section {
+    flex-direction: column-reverse !important;
+  }
+  .ds-block .data-science-img {
+    display: none;
+  }
+  .ds-block span {
+    max-width: 600px;
+    font-size: 15px;
+  }
+  .ds-block span b {
+    font-family: "Bold";
+    color: #0D7D74;
+  }
+  .info-block {
+    margin-top: 40px;
+  }
+  .structure-block {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .structure-block .structure-block-info {
+    align-self: flex-start;
+  }
+  .structure-block section {
+    flex-direction: column;
+  }
+  .structure-block section .analytics-img {
+    height: auto;
+    max-width: 300px;
+  }
+  .description-block {
+    margin-top: 35px;
+  }
+  .value-proposition {
+    margin-top: 40px;
+  }
 }
 
 /*# sourceMappingURL=students.css.map */

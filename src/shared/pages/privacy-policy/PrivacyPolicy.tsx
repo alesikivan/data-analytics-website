@@ -227,15 +227,7 @@ export const PrivacyPolicy = () => {
 
           <p>
             <b>1.</b> The employer allows the use of various solutions for storing data. Different storages guarantee different levels of data security.
-            Before storing the data, employees should evaluate which storage is appropriate for which types of data. In case of any doubts regarding an appropriate storage, employees may consult the matter at
-            <a
-              className='ml-1'
-              href='https://it.muni.cz/formulare/konzultovat-reseni-a-zridit-uloziste'
-              target='_blank'
-              rel="muni-directive">
-                https://it.muni.cz/en/forms/consult-or-request-storagesolutions
-            </a>
-            .
+            Before storing the data, employees should evaluate which storage is appropriate for which types of data. In case of any doubts regarding an appropriate storage, employees may consult the matter at.
           </p>
 
           <p>
@@ -359,14 +351,7 @@ export const PrivacyPolicy = () => {
           </p>
 
           <p>
-            <b>4.</b> Employees will find further and more detailed information on data classification and storage at
-            <a
-              className='ml-1'
-              href='https://it.muni.cz/en/overviews/recommendations-for-the-usage-of-storages'
-              target='_blank'
-              rel="muni-directive">
-                https://it.muni.cz/en/overviews/recommendations-for-theusage-of-storages.
-            </a>
+            <b>4.</b> Employees will find further and more detailed information on data classification.
           </p>
         </section>
 
@@ -415,15 +400,7 @@ export const PrivacyPolicy = () => {
           </p>
 
           <p>
-            <b>3.</b> If an employee installs his/her own mail server, the server must be located in the university network. The mail server must comply with all the existing security regulations of the National Cyber and Information Security Agency at
-            <a
-              className='mx-1'
-              href='https://www.nukib.cz/cs/infoservis/dokumenty-a-publikace/podpurne-materialy/'
-              target='_blank'
-              rel="muni">
-                https://www.nukib.cz/cs/infoservis/dokumenty-a-publikace/podpurnematerialy/
-            </a>
-            and the requirements of the European Data Protection Regulation.
+            <b>3.</b> If an employee installs his/her own mail server, the server must be located in the university network. The mail server must comply with all the existing security regulations of the National Cyber and Information Security Agency and the requirements of the European Data Protection Regulation.
           </p>
 
           <p>

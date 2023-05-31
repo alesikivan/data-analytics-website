@@ -33,7 +33,7 @@ main.sign-up article .information form .description {
   line-height: 24px;
   font-size: 15px;
   font-family: bold;
-  color: #2f2e43eb;
+  color: rgba(47, 46, 67, 0.9215686275);
 }
 main.sign-up article .information form input {
   width: 100%;
@@ -48,7 +48,7 @@ main.sign-up article .information form input {
   border: 1.5px solid #f2f2f2;
 }
 main.sign-up article .information form input::placeholder {
-  color: #387B747D;
+  color: rgba(56, 123, 116, 0.4901960784);
 }
 main.sign-up article .information form input.name, main.sign-up article .information form input.surname, main.sign-up article .information form input.email {
   background-repeat: no-repeat;
@@ -68,7 +68,7 @@ main.sign-up article .information form input.email {
   background-image: url("/src/assets/images/pages/home/email-field-preview.png");
 }
 main.sign-up article .information form input.error {
-  border-color: #ff4c4c91;
+  border-color: rgba(255, 76, 76, 0.568627451);
 }
 main.sign-up article .information form .line {
   width: 100%;
@@ -156,7 +156,7 @@ main.sign-up article .information form .policy-area span {
   font-size: 15px;
 }
 main.sign-up article .information form .policy-area span a {
-  color: #060506c4;
+  color: rgba(6, 5, 6, 0.768627451);
   text-decoration: underline;
   transition: 0.3s;
 }
