@@ -17,5 +17,7 @@ export const setLocalizations = () => {
 export const translater = (key: string) => {
   const { language: { lang } }: RootState = store.getState()
 
+  console.log(key)
+
   return Parser( localeOption(key, lang) )
 }
