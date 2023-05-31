@@ -6,7 +6,7 @@ main.sign-up article {
 }
 main.sign-up article .background-image img {
   height: auto;
-  max-width: 420px;
+  max-width: 400px;
   user-select: none;
 }
 main.sign-up article .information .introduction-header {
@@ -33,7 +33,7 @@ main.sign-up article .information form .description {
   line-height: 24px;
   font-size: 15px;
   font-family: bold;
-  color: rgba(47, 46, 67, 0.9215686275);
+  color: #2f2e43eb;
 }
 main.sign-up article .information form input {
   width: 100%;
@@ -48,7 +48,7 @@ main.sign-up article .information form input {
   border: 1.5px solid #f2f2f2;
 }
 main.sign-up article .information form input::placeholder {
-  color: rgba(56, 123, 116, 0.4901960784);
+  color: #387B747D;
 }
 main.sign-up article .information form input.name, main.sign-up article .information form input.surname, main.sign-up article .information form input.email {
   background-repeat: no-repeat;
@@ -57,18 +57,18 @@ main.sign-up article .information form input.name, main.sign-up article .informa
   background-position-x: 10px;
 }
 main.sign-up article .information form input.name {
-  background-image: url("/src/assets/images/pages/home/name-field-preview.svg");
+  background-image: url("/src/assets/images/pages/home/name-field-preview.png");
 }
 main.sign-up article .information form input.surname {
-  background-image: url("/src/assets/images/pages/home/surname-field-preview.svg");
+  background-image: url("/src/assets/images/pages/home/surname-field-preview.png");
   background-size: 17px;
   background-position-x: 8px;
 }
 main.sign-up article .information form input.email {
-  background-image: url("/src/assets/images/pages/home/email-field-preview.svg");
+  background-image: url("/src/assets/images/pages/home/email-field-preview.png");
 }
 main.sign-up article .information form input.error {
-  border-color: rgba(255, 76, 76, 0.568627451);
+  border-color: #ff4c4c91;
 }
 main.sign-up article .information form .line {
   width: 100%;
@@ -156,7 +156,7 @@ main.sign-up article .information form .policy-area span {
   font-size: 15px;
 }
 main.sign-up article .information form .policy-area span a {
-  color: rgba(6, 5, 6, 0.768627451);
+  color: #060506c4;
   text-decoration: underline;
   transition: 0.3s;
 }

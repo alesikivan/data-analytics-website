@@ -1,42 +1,42 @@
-import logo from '../images/common/logo.svg'
+import logo from '../images/common/logo.png'
 
-import facebook from '../images/pages/home/facebook.svg'
-import twitter from '../images/pages/home/twitter.svg'
-import linkedin from '../images/pages/home/linkedin.svg'
+import facebook from '../images/pages/home/facebook.png'
+import twitter from '../images/pages/home/twitter.png'
+import linkedin from '../images/pages/home/linkedin.png'
 
-import preview from '../images/pages/home/preview.svg'
-import companies from '../images/pages/home/companies.svg'
-import students from '../images/pages/home/students.svg'
-import uni from '../images/pages/home/uni.svg'
+import preview from '../images/pages/home/preview.png'
+import companies from '../images/pages/home/companies.png'
+import students from '../images/pages/home/students.png'
+import uni from '../images/pages/home/uni.png'
 
-import benefits from '../images/pages/companies/benefits.svg'
-import talant from '../images/pages/companies/talant.svg'
-import research from '../images/pages/companies/research.svg'
-import future from '../images/pages/companies/future.svg'
-import relationship from '../images/pages/companies/relationship.svg'
-import reputation from '../images/pages/companies/reputation.svg'
+import benefits from '../images/pages/companies/benefits.png'
+import talant from '../images/pages/companies/talant.png'
+import research from '../images/pages/companies/research.png'
+import future from '../images/pages/companies/future.png'
+import relationship from '../images/pages/companies/relationship.png'
+import reputation from '../images/pages/companies/reputation.png'
 
-import prestigious from '../images/pages/muni/prestigious.svg'
-import study from '../images/pages/muni/study.svg'
-import city from '../images/pages/muni/city.svg'
-import rocket from '../images/pages/muni/rocket.svg'
-import lang from '../images/pages/muni/lang.svg'
-import accomodation from '../images/pages/muni/accomodation.svg'
+import prestigious from '../images/pages/muni/prestigious.png'
+import study from '../images/pages/muni/study.png'
+import city from '../images/pages/muni/city.png'
+import rocket from '../images/pages/muni/rocket.png'
+import lang from '../images/pages/muni/lang.png'
+import accomodation from '../images/pages/muni/accomodation.png'
 
-import developer from '../images/pages/students/developer.svg'
-import idea from '../images/pages/students/lamp.svg'
-import structure from '../images/pages/students/structure.svg'
+import developer from '../images/pages/students/developer.png'
+import idea from '../images/pages/students/lamp.png'
+import structure from '../images/pages/students/structure.png'
 
-import background from '../images/pages/home/background.svg'
-import unactiveSexMale from '../images/pages/home/unactive-sex-male.svg'
-import unactiveSexFemale from '../images/pages/home/unactive-sex-female.svg'
-import activeSexMale from '../images/pages/home/active-sex-male.svg'
-import activeSexFemale from '../images/pages/home/active-sex-female.svg'
-import check from '../images/pages/home/check.svg'
+import background from '../images/pages/home/background.png'
+import unactiveSexMale from '../images/pages/home/unactive-sex-male.png'
+import unactiveSexFemale from '../images/pages/home/unactive-sex-female.png'
+import activeSexMale from '../images/pages/home/active-sex-male.png'
+import activeSexFemale from '../images/pages/home/active-sex-female.png'
+import check from '../images/pages/home/check.png'
 
-import success from '../images/pages/home/success.svg'
+import success from '../images/pages/home/success.png'
 
-import notFound from '../images/pages/not-found/not-found.svg'
+import notFound from '../images/pages/not-found/not-found.png'
 
 export const images = {
   logo,
@@ -84,7 +84,7 @@ export const images = {
         active: activeSexFemale,
         unactive: unactiveSexFemale,
       }
-    }  
+    }
   },
   successfullySaved: {
     success

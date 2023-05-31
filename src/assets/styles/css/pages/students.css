@@ -100,7 +100,7 @@
 .value-proposition-content span {
   font-size: 15px;
   max-width: 450px;
-  background-color: rgba(204, 204, 204, 0.1098039216);
+  background-color: #cccccc1c;
   padding: 18px;
   border-radius: 13px;
 }

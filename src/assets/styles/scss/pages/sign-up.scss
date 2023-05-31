@@ -11,7 +11,7 @@ main.sign-up {
     .background-image {
       img {
         height: auto;
-        max-width: 420px;
+        max-width: 400px;
         user-select: none;
       }
     }
@@ -67,17 +67,17 @@ main.sign-up {
           }
 
           &.name {
-            background-image: url('/src/assets/images/pages/home/name-field-preview.svg');
+            background-image: url('/src/assets/images/pages/home/name-field-preview.png');
           }
 
           &.surname {
-            background-image: url('/src/assets/images/pages/home/surname-field-preview.svg');
+            background-image: url('/src/assets/images/pages/home/surname-field-preview.png');
             background-size: 17px;
             background-position-x: 8px;
           }
 
           &.email {
-            background-image: url('/src/assets/images/pages/home/email-field-preview.svg');
+            background-image: url('/src/assets/images/pages/home/email-field-preview.png');
           }
 
           &.error {
