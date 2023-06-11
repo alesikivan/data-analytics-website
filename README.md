@@ -8,5 +8,7 @@ Inside `.env` you need to put:
   SERVER_API="http://localhost:4000/api"
 ```
 
+Run `npm install` to install all packages and libs. 
+
 Run `npm start` for a dev server. 
 Navigate to `http://localhost:3000`.
