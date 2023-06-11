@@ -3,10 +3,11 @@ import { locale } from 'primereact/api'
 
 import { Pages } from './shared/pages/Pages'
 
-import './App.scss'
 import { Notifications } from './shared/components/particals/notifications/Notifications'
 import { RootState } from './redux/reducers/rootReducer'
 import { appUnilsInit } from './utils/initialization/app'
+
+import './App.scss'
 
 appUnilsInit()
 

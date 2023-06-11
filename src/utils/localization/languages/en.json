@@ -139,6 +139,8 @@
   "introductionPageFormDescription": "Let's join and work with us!<br />Leave your email and we will notify you when the program starts. The main goal is to make our future better.",
   "introductionPageFormSexToggleMale": "male",
   "introductionPageFormSexToggleFemale": "female",
+  "introductionPageFormTypeToggleStudent": "student",
+  "introductionPageFormTypeToggleCompany": "company",
   "introductionPageFormSendButton": "Notify me",
   "introductionPageFormPrivacyPolicy": "I agree with the ",
   "introductionPageFormPrivacyPolicyLink": "Terms",

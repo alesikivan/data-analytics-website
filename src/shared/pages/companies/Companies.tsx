@@ -1,9 +1,9 @@
 import Parser from 'html-react-parser'
 import { Link } from "react-router-dom"
-import { motion } from 'framer-motion/dist/framer-motion'
+import { motion } from 'framer-motion'
 
 import { images } from "../../../assets/images/imgs"
-import '../../../assets/styles/css/pages/companies.css'
+import '../../../assets/styles/scss/pages/companies.scss'
 
 type companiesBlocks = {
   img: string,

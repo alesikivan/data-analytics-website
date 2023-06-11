@@ -36,6 +36,15 @@ import check from '../images/pages/home/check.png'
 
 import success from '../images/pages/home/success.png'
 
+import nameFieldIcon from '../images/pages/home/name-field-preview.png'
+import surnameFieldIcon from '../images/pages/home/surname-field-preview.png'
+import emailldIcon from '../images/pages/home/email-field-preview.png'
+
+import unactiveTypeStudent from '../images/pages/home/unactive-type-student.png'
+import activeTypeStudent from '../images/pages/home/active-type-student.png'
+import unactiveTypeCompany from '../images/pages/home/unactive-type-company.png'
+import activeTypeCompany from '../images/pages/home/active-type-company.png'
+
 import notFound from '../images/pages/not-found/not-found.png'
 
 export const images = {
@@ -45,6 +54,13 @@ export const images = {
       facebook,
       twitter,
       linkedin
+    }
+  },
+  signUp: {
+    form: {
+      nameFieldIcon,
+      surnameFieldIcon,
+      emailldIcon
     }
   },
   companies: {
@@ -84,6 +100,12 @@ export const images = {
         active: activeSexFemale,
         unactive: unactiveSexFemale,
       }
+    },
+    type: {
+      unactiveTypeStudent,
+      activeTypeStudent,
+      unactiveTypeCompany,
+      activeTypeCompany
     }
   },
   successfullySaved: {

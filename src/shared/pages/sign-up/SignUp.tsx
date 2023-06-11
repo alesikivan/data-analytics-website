@@ -6,7 +6,7 @@ import { translater } from "../../../utils/localization/localization"
 import { Form } from "./components/form/Form"
 import { images } from "../../../assets/images/imgs"
 
-import '../../../assets/styles/css/pages/sign-up.css'
+import '../../../assets/styles/scss/pages/sign-up.scss'
 
 export const SignUp = () => {
   const [doneInterfaceVisible, setDoneInterfaceVisible] = useState(false)

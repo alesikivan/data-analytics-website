@@ -1,70 +1,63 @@
 import { useState } from "react"
-import { useForm } from "react-form"
 import { AxiosResponse } from "axios"
-import { Link } from "react-router-dom"
 import clsx from "clsx"
+import { SubmitHandler, useForm } from "react-hook-form"
 
-import { EmailField } from "./fields/EmailField"
-import { NameField } from "./fields/NameField"
-import { SurnameField } from "./fields/SurnameField"
-import { HubSpotLoginRequest, MessageServerResponse } from "../../../../../api/interfaces"
+import { Email } from "./fields/Email"
+import { Name } from "./fields/Name"
+import { Gender } from "./fields/Gender"
+import { Surname } from "./fields/Surname"
+import { ClientType, ClientGender, HubSpotLoginRequest, MessageServerResponse } from "../../../../../api/interfaces"
 import { API } from "../../../../../api/index"
-import { images } from "../../../../../assets/images/imgs"
 import { translater } from "../../../../../utils/localization/localization"
+import { PrivacyPolicy } from "./fields/PrivacyPolicy"
+import { Type } from "./fields/Type"
 
 type Props = {
   showDoneInterface: Function
 }
 
-type User = {
-  name: string,
-  surname: string,
-  isMaleSex: boolean
-}
-
-const defaultUserData = {
-  name: '',
-  surname: '',
-  isMaleSex: true
-}
-
-type PrivacyTerms = {
+export type PrivacyTerms = {
   selected: boolean,
   isTouched: boolean
 }
 
-type InformationProcessing = PrivacyTerms
+export type InformationProcessing = PrivacyTerms
 
-type FormData = {
-  email: string,
+export type FormData = {
   name: string,
-  surname: string
+  surname: string,
+  email: string,
+  gender: ClientGender, 
+  type: ClientType
+}
+
+const defaultFormValues: FormData = {
+  name: '', 
+  surname: '', 
+  email: '', 
+  gender: 'Male', 
+  type: 'Student'
 }
 
 const defaultPrivacyTerms = { selected: false, isTouched: false }
 const defaultInformationProcessing = { selected: false, isTouched: false }
 
 export const Form = ({ showDoneInterface }: Props) => {
-  const [user, setUser] = useState<User>(defaultUserData)
   const [privacyTerms, setPrivacyTerms] = useState<PrivacyTerms>(defaultPrivacyTerms)
   const [informationProcessing, setInformationProcessing] = useState<InformationProcessing>(defaultInformationProcessing)
   const [loading, setLoading] = useState(false)
 
   const reset = () => {
-    setUser(defaultUserData)
     setPrivacyTerms(defaultPrivacyTerms)
+    setInformationProcessing(defaultInformationProcessing)
   }
 
   const sendData = (values: FormData) => {
     setLoading(true)
 
-    const data: HubSpotLoginRequest = {
-      ...values,
-      gender: user.isMaleSex ? 'Male' : 'Female'
-    }
-
-    API.hubspotLogin(data)
-      .then((responce: AxiosResponse<MessageServerResponse>) => {
+    API.hubspotLogin(values)
+      .then((response: AxiosResponse<MessageServerResponse>) => {
         setLoading(false)
 
         showDoneInterface()
@@ -76,22 +69,29 @@ export const Form = ({ showDoneInterface }: Props) => {
       })
   }
 
-  const {
-    Form,
-    meta: { fieldsAreValid },
-  } = useForm({
-    onSubmit: async (values: FormData) => {
-      setPrivacyTerms(prev => ({ ...prev, isTouched: true }))
-      setInformationProcessing(prev => ({ ...prev, isTouched: true }))
-
-      if (!loading && privacyTerms.selected && informationProcessing.selected) {
-        sendData(values)
-      }
-    },
+  const form = useForm<FormData>({ 
+    mode: 'all',
+    defaultValues: defaultFormValues
   })
 
+  const {
+    handleSubmit,
+    formState: { isValid, submitCount }
+  } = form
+
+  const onSubmit: SubmitHandler<FormData> = data => {
+    setPrivacyTerms(prev => ({ ...prev, isTouched: true }))
+    setInformationProcessing(prev => ({ ...prev, isTouched: true }))
+
+    if (!loading && privacyTerms.selected && informationProcessing.selected) {
+      sendData(data)
+    }
+  }
+
+
   return (
-    <Form>
+    <form
+      onSubmit={ handleSubmit(onSubmit) }>
       <span className="description">
         {
           translater("introductionPageFormDescription")
@@ -99,92 +99,32 @@ export const Form = ({ showDoneInterface }: Props) => {
       </span>
 
       <div className="line">
-        <NameField />
-        <SurnameField />
+        <Name form={form} />
+        <Surname form={form} />
       </div>
 
-      <EmailField />
+      <Email form={form} />
 
-      <div className="sex-toggle">
-        <div onClick={() => setUser(prev => ({ ...prev, isMaleSex: true }))} className="sex">
-          <img src={images.home.sex.male[user.isMaleSex ? 'active' : 'unactive']} alt="male" />
-          <span className="male">
-            {
-              translater("introductionPageFormSexToggleMale")
-            }
-          </span>
-        </div>
-
-        <div onClick={() => setUser(prev => ({ ...prev, isMaleSex: false }))} className="sex">
-          <img src={images.home.sex.female[user.isMaleSex ? 'unactive' : 'active']} alt="female" />
-          <span className="female">
-            {
-              translater("introductionPageFormSexToggleFemale")
-            }
-          </span>
-        </div>
+      <div className="line">
+        <Type form={form} />
+        <Gender form={form} />
       </div>
 
       <button
         className={clsx('send-button app-elements-height', {
           'loading': loading,
-          'disabled': !fieldsAreValid
+          'disabled': submitCount > 0 && !isValid
         })} >
           {
             translater("introductionPageFormSendButton")
           }
       </button>
 
-      <div className="policy-area">
-        <div
-          onClick={() => setPrivacyTerms(prev => ({selected: !prev.selected, isTouched: true }))}
-          className={
-            clsx({
-              "flag-area": true,
-              "error": privacyTerms.isTouched && !privacyTerms.selected
-            })
-          }>
-          {
-            privacyTerms.selected ? (
-              <img src={images.home.check} alt="check" className="flag" />
-            ) : ''
-          }
-        </div>
-
-        <span>
-          {
-            translater("introductionPageFormPrivacyPolicy")
-          }
-          <Link to="/privacy-policy">
-            {
-              translater("introductionPageFormPrivacyPolicyLink")
-            }
-          </Link>
-        </span>
-      </div>
-
-      <div className="policy-area">
-        <div
-          onClick={() => setInformationProcessing(prev => ({selected: !prev.selected, isTouched: true }))}
-          className={
-            clsx({
-              "flag-area": true,
-              "error": informationProcessing.isTouched && !informationProcessing.selected
-            })
-          }>
-          {
-            informationProcessing.selected ? (
-              <img src={images.home.check} alt="check" className="flag" />
-            ) : ''
-          }
-        </div>
-
-        <span>
-          {
-            translater("introductionPageFormInformationProcessing")
-          }
-        </span>
-      </div>
-    </Form>
+      <PrivacyPolicy
+        informationProcessing={informationProcessing}
+        setInformationProcessing={setInformationProcessing}
+        privacyTerms={privacyTerms}
+        setPrivacyTerms={setPrivacyTerms}/>
+    </form>
   )
 }

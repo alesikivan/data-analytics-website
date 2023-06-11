@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
 
-import '../../../../assets/styles/css/particles/header.css'
 import { images } from '../../../../assets/images/imgs'
 import { Translater } from '../Translater'
 import { Menu } from './components/Menu'
+
+import '../../../../assets/styles/scss/particles/header.scss'
 
 export const Header = () => {
   const twitter = 'https://twitter.com/masarykuni?lang=cs'

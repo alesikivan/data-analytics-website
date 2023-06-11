@@ -1,8 +1,9 @@
-import { motion } from 'framer-motion/dist/framer-motion'
+import { motion } from 'framer-motion'
 
-import '../../../../assets/styles/css/pages/successfully-saved.css'
 import { translater } from '../../../../utils/localization/localization'
 import { images } from '../../../../assets/images/imgs'
+
+import '../../../../assets/styles/scss/pages/successfully-saved.scss'
 
 type Props = {
   hideDoneInterface: Function

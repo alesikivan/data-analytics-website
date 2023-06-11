@@ -1,9 +1,9 @@
 import Parser from 'html-react-parser'
-import { motion } from 'framer-motion/dist/framer-motion'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 import { images } from "../../../assets/images/imgs"
-import '../../../assets/styles/css/pages/students.css'
-import { Link } from 'react-router-dom'
+import '../../../assets/styles/scss/pages/students.scss'
 
 export const Students = () => {
   const structuresList = [

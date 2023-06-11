@@ -1,8 +1,8 @@
-import '../../../assets/styles/css/pages/privacy-policy.css'
+import '../../../assets/styles/scss/pages/privacy-policy.scss'
 
 export const PrivacyPolicy = () => {
 
-  const privacyPolicyLink = process.env.REACT_APP_SERVER + '/docs/privacy-policy'
+  const privacyPolicyLink = process.env.SERVER_API + '/docs/privacy-policy'
 
   return (
     <>

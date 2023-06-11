@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom"
 
-import '../../../assets/styles/css/pages/not-found.css'
 import { translater } from "../../../utils/localization/localization"
 import { images } from "../../../assets/images/imgs"
+
+import '../../../assets/styles/scss/pages/not-found.scss'
 
 export const NotFound = () => {
   return (

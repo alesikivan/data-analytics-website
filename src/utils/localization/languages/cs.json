@@ -139,6 +139,8 @@
   "introductionPageFormDescription": "Připojte se a pracujte s námi!<br />Zanechte svůj email a my vás upozorníme, až program začne. Hlavním cílem je zlepšit naši budoucnost.",
   "introductionPageFormSexToggleMale": "mužský",
   "introductionPageFormSexToggleFemale": "ženský",
+  "introductionPageFormTypeToggleStudent": "student",
+  "introductionPageFormTypeToggleCompany": "společnost",
   "introductionPageFormSendButton": "Informujte mě",
   "introductionPageFormPrivacyPolicy": "Souhlasím s ",
   "introductionPageFormPrivacyPolicyLink": "Podmínky",

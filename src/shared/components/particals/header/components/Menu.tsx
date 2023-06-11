@@ -31,7 +31,7 @@ export const Menu = () => {
   return (
     <>
       {
-        location.pathname.includes('sign-up')
+        ['/sign-up', '/privacy-policy'].includes(location.pathname)
         ? ''
         : (
           <ul className="menu flex mt-5">

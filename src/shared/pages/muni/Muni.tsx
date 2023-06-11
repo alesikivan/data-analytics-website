@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion/dist/framer-motion'
+import { motion } from 'framer-motion'
 import Parser from 'html-react-parser'
 
 import { images } from '../../../assets/images/imgs'
-import '../../../assets/styles/css/pages/muni.css'
+import '../../../assets/styles/scss/pages/muni.scss'
 
 type Blocks = {
   img: string,

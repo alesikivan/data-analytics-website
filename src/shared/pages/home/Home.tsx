@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
-import { motion } from 'framer-motion/dist/framer-motion'
+import { motion } from 'framer-motion'
 
 import { images } from "../../../assets/images/imgs"
-import '../../../assets/styles/css/pages/home.css'
 import { translater } from "../../../utils/localization/localization"
+
+import '../../../assets/styles/scss/pages/home.scss'
 
 export const Home = () => {
   return (

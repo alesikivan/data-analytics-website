@@ -1,16 +1,12 @@
-## Available Scripts
+# Data analytics website
 
-In the project directory, you can run:
+## Development server
 
-### `npm start`
+You need to create a `.env` file.
+Inside `.env` you need to put: 
+```js
+  SERVER_API="http://localhost:4000/api"
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Run `npm start` for a dev server. 
+Navigate to `http://localhost:3000`.
