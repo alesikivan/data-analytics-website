@@ -1,4 +1,8 @@
 import { motion } from 'framer-motion'
+import { RootState } from '../../../redux/reducers/rootReducer'
+import { store } from '../../../redux/store'
+import { localeOption } from 'primereact/api'
+import { translater } from '../../../utils/localization/localization'
 import Parser from 'html-react-parser'
 
 import { images } from '../../../assets/images/imgs'
@@ -11,36 +15,38 @@ type Blocks = {
 }
 
 export const Muni = () => {
+  const { language: { lang } }: RootState = store.getState()
+
   const blocks: Blocks[] = [
     {
       img: images.muni.prestigious,
-      title: 'Prestigious',
-      description: 'Masaryk University is one of the renowned and prestigious higher education institutions in Central Europe, <b>located in Brno</b>, the second largest city in the Czech Republic.'
+      title: localeOption("muniPagePrestigiousTitle", lang).toString(),
+      description: localeOption("muniPagePrestigiousDescription", lang).toString()
     },
     {
       img: images.muni.study,
-      title: 'Study programms',
-      description: 'The university offers a great variety of study programs in <b>Czech and English</b>, ranging from medicine, computer science, economics and business, life and social sciences, education and much more.'
+      title: localeOption("muniPageStudyTitle", lang).toString(),
+      description: localeOption("muniPageStudyDescription", lang).toString()
     },
     {
       img: images.muni.lang,
-      title: 'Multilanguage',
-      description: 'The university offers more than <b>80 full-degree programs</b> taught in English and organizes exchanges throughout the continent.'
+      title: localeOption("muniPageMultilanguageTitle", lang).toString(),
+      description: localeOption("muniPageMultilanguageDescription", lang).toString()
     },
     {
       img: images.muni.city,
-      title: 'Student-friendly city',
-      description: 'Brno is a modern, student-friendly city that offers a diverse cultural scene and a great student experience. It was voted as <b>the 6th most popular student city globally</b>. The city has a population of 380,000 and offers all the amenities and services of a bustling city without being too overcrowded.'
+      title: localeOption("muniPageCityTitle", lang).toString(),
+      description: localeOption("muniPageCityDescription", lang).toString()
     },
     {
       img: images.muni.rocket,
-      title: 'High-quility education',
-      description: "Students come to Brno to experience <b>high-quality education, cultural events, and excellent food and drinks</b>. Furthermore, Brno is a great starting point for exploring the nearby cities of Vienna, Budapest, and Prague, which can be reached in just three hours. Don't forget to check out the UNESCO site and learn more about its intriguing history!"
+      title: localeOption("muniPageEducationTitle", lang).toString(),
+      description: localeOption("muniPageEducationDescription", lang).toString()
     },
     {
       img: images.muni.accomodation,
-      title: 'Accomodation',
-      description: 'The MU Accommodation and Catering Services (SKM MU) are tasked with the administration of a total of 10 accommodation facilities, which provide facilities such as <b>gyms and other sports facilities, computer rooms, TV and common rooms</b>, table tennis halls and services such as internet access.'
+      title: localeOption("muniPageAccomodationTitle", lang).toString(),
+      description: localeOption("muniPageAccomodationDescription", lang).toString()
     },
   ]
 
@@ -52,31 +58,58 @@ export const Muni = () => {
         <div 
           className="muni-info flex flex-column">
           <h1 className="app-color text-4xl app-font-bold m-0">
-            Masaryk University
+            {
+              translater("muniPageTitle")
+            }
           </h1>
 
           <span className="muni-description app-gray-color max-w-28rem mt-3">
-            We believe that education is not just a matter of age or social status. We actively support research. We are open-minded and dedicated to influencing the lives of people around us.
-            
-            <a className='officiall-link ml-1' target='_blank' href={website}>Officiall website.</a>
+            { translater("muniPageDescription") }
+            <a className='officiall-link ml-1' target='_blank' href={website}>
+              { translater("muniPageDescriptionLink") }
+            </a>
           </span>
         </div>
 
         <div 
           className="statistic flex">
           <div className='flex flex-column align-items-center'>
-            <b className='app-font-bold app-color text-3xl'>400</b>
-            <span className='max-w-5rem text-center muni-description mt-2 app-gray-color'>Study programms</span>
+            <b className='app-font-bold app-color text-3xl'>
+              {
+                translater("muniPageStudyProgramsNumber")
+              }
+            </b>
+            <span className='max-w-5rem text-center muni-description mt-2 app-gray-color'>
+              {
+                translater("muniPageStudyPrograms")
+              }
+            </span>
           </div>
 
           <div className='flex flex-column align-items-center'>
-            <b className='app-font-bold app-color text-3xl'>30K</b>
-            <span className='max-w-5rem text-center muni-description mt-2 app-gray-color'>Students</span>
+            <b className='app-font-bold app-color text-3xl'>
+              {
+                translater("muniPageStudentsNumber")
+              }
+            </b>
+            <span className='max-w-5rem text-center muni-description mt-2 app-gray-color'>
+              {
+                translater("muniPageStudents")
+              }
+            </span>
           </div>
 
           <div className='flex flex-column align-items-center'>
-            <b className='app-font-bold app-color text-3xl'>7K</b>
-            <span className='max-w-5rem text-center muni-description mt-2 app-gray-color'>Graduates a year</span>
+            <b className='app-font-bold app-color text-3xl'>
+              {
+                translater("muniPageGraduatesNumber")
+              }
+            </b>
+            <span className='max-w-5rem text-center muni-description mt-2 app-gray-color'>
+              {
+                translater("muniPageGraduates")
+              }
+            </span>
           </div>
         </div>
       </section>
