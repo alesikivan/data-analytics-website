@@ -1,4 +1,5 @@
 import '../../../assets/styles/scss/pages/privacy-policy.scss'
+import { translater } from '../../../utils/localization/localization'
 
 export const PrivacyPolicy = () => {
 
@@ -436,7 +437,9 @@ export const PrivacyPolicy = () => {
           href={privacyPolicyLink}
           rel="noreferrer"
           target='_blank'>
-            Full version of Privacy Policy
+            {
+              translater("privacyPolicyButton")
+            }
         </a>
       </article>
     </>

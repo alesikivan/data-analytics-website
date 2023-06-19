@@ -4,6 +4,10 @@ import { motion } from 'framer-motion'
 
 import { images } from "../../../assets/images/imgs"
 import '../../../assets/styles/scss/pages/companies.scss'
+import { RootState } from '../../../redux/reducers/rootReducer'
+import { store } from '../../../redux/store'
+import { localeOption } from 'primereact/api'
+import { translater } from '../../../utils/localization/localization'
 
 type companiesBlocks = {
   img: string,
@@ -12,53 +16,48 @@ type companiesBlocks = {
 }
 
 export const Companies = () => {
+  const { language: { lang } }: RootState = store.getState()
+
   const blocks: companiesBlocks[] = [
     {
       img: images.companies.benefits,
-      title: 'Benefits',
-      description: 'Access to funding and grants: collaborating with universities can help a company access <b>grants</b> and funding for <b>research projects</b> or the development of ideas.'
+      title: localeOption("companiesPageBenefitsTitle", lang).toString(),
+      description: localeOption("companiesPageBenefitsDescription", lang).toString()
     },
     {
       img: images.companies.talant,
-      title: 'Talented students',
-      description: 'To find and attract <b>young professionals</b> with large corporations and innovative initiatives that are valuable for business development for free.'
+      title: localeOption("companiesPageTalentTitle", lang).toString(),
+      description: localeOption("companiesPageTalentDescription", lang).toString()
     },
     {
       img: images.companies.research,
-      title: 'Research',
-      description: 'Universities have access to <b>academic resources and experts</b>, enabling companies to conduct research and introduce new technologies or products.'
+      title: localeOption("companiesPageResearchTitle", lang).toString(),
+      description: localeOption("companiesPageResearchDescription", lang).toString()
     },
     {
       img: images.companies.future,
-      title: 'Future employees',
-      description: 'Promote the competition/program of study from the start with your self-created "problems" - and reap the benefits: <b>solve business problems</b> on the one hand, and attract new Data Scientists to your organization on the other. With the MDA program you create an easy entry into your company!'
+      title: localeOption("companiesPageFutureTitle", lang).toString(),
+      description: localeOption("companiesPageFutureDescription", lang).toString()
     },
     {
       img: images.companies.relationship,
-      title: 'Relationship',
-      description: 'Collaborating with universities helps companies establish and <b>maintain relationships with academic experts</b> and stock teams that can enable a healthy exchange of food and experience.'
+      title: localeOption("companiesPageRelationshipTitle", lang).toString(),
+      description: localeOption("companiesPageRelationshipDescription", lang).toString()
     },
     {
       img: images.companies.reputation,
-      title: 'Reputation',
-      description: 'Cooperation with universities can <b>increase the credibility of the company</b>, strengthen its innovative potential and attract additional investment from students, researchers.'
+      title: localeOption("companiesPageReputationTitle", lang).toString(),
+      description: localeOption("companiesPageReputationDescription", lang).toString()
     }
   ]
   return (
     <>
       <h1 className="app-header-color text-4xl text-center app-font-bold m-0 ms-auto">
-        Best Solutions & 
-        <br />
-        value for <span className="app-font-bold app-color">your business</span>
+        { translater("companiesPageTitle") } 
+          <span className="app-font-bold app-color">
+            { translater("companiesPageTitleSpecial") } 
+          </span>
       </h1>
-
-      <div className="w-full flex align-items-center justify-content-center mt-5">
-        <Link 
-          className="app-button app-bg-color text-white px-4 mx-auto text-base" 
-          to="/sign-up">
-            Get in touch!
-        </Link>
-      </div>
 
       <article className="w-full content flex flex-wrap align-items-start justify-content-center">
         {
@@ -86,6 +85,16 @@ export const Companies = () => {
           })
         }
       </article>
+
+      <div className="w-full flex align-items-center justify-content-center mt-5">
+        <Link 
+          className="app-button app-bg-color text-white px-4 mx-auto text-base" 
+          to="/sign-up">
+            {
+              translater("companiesPageButton")
+            }
+        </Link>
+      </div>
     </>
   )
 }

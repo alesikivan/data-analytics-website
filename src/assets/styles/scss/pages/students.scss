@@ -14,22 +14,35 @@
     height: 100%;
     width: 3px;
     border-radius: 5px;
-    background-color: #ccc;
     margin-right: 2px;
     background-color: $appColor;
   }
 }
 
+.students-title {
+  b {
+    font-family: 'Bold';
+    color: $appColor;
+  }
+}
+
 .ds-block {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
   min-height: 267px;
 
-  .data-science-img {
-    height: auto;
-    max-width: 300px;
+  .students-header {
+    text-align: center;
+
+    &::before {
+      display: none;
+    }
   }
 
   span {
-    max-width: 600px;
+    text-align: center;
+    max-width: 800px;
     font-size: 15px;
 
     b {
@@ -40,28 +53,32 @@
 }
 
 .info-block {
-  margin-top: 80px;
+  margin-top: 50px;
 
-  span {
-    max-width: 800px;
-    font-size: 15px;
+  .data-science-block {
+    min-width: 400px;
 
-    b {
-      font-family: 'Bold';
-      color: $appColor;
+    .check {
+      margin-top: 2px;
+      margin-left: 2px;
+      height: auto;
+      max-width: 18px;
     }
-  }
 
-  .check {
-    margin-top: 2px;
-    margin-left: 2px;
-    height: auto;
-    max-width: 18px;
+    span {
+      max-width: 800px;
+      font-size: 15px;
+  
+      b {
+        font-family: 'Bold';
+        color: $appColor;
+      }
+    }
   }
 }
 
 .structure-block {
-  margin-top: 80px;
+  margin-top: 60px;
 
   span {
     max-width: 500px;
@@ -94,7 +111,7 @@
 }
 
 .description-block {
-  margin-top: 80px;
+  margin-top: 60px;
 
   span {
     max-width: 800px;
@@ -109,7 +126,6 @@
 
 .value-proposition {
   margin-top: 70px;
-  margin-bottom: 30px;
 }
 
 .value-proposition-content {
@@ -140,6 +156,11 @@
   }
 }
 
+@media (max-width: 850px) {
+  .data-science-picture {
+    display: none;
+  }
+}
 
 @media (max-width: 750px) {
   .ds-block {
@@ -147,10 +168,6 @@
     
     section {
       flex-direction: column-reverse !important;
-    }
-  
-    .data-science-img {
-      display: none;
     }
   
     span {
