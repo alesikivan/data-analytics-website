@@ -208,9 +208,11 @@
 
   "introductionPageHeader": "Vítejte v programu pro analýzu dat!",
   "introductionPageInformationButton": "Kompletní informace o programu Data Analytics",
-  "introductionPageFormDescription": "Připojte se a pracujte s námi!<br />Zanechte svůj email a my vás upozorníme, až program začne. Hlavním cílem je zlepšit naši budoucnost.",
+  "introductionPageFormDescription": "Připojte se a pracujte s námi!<br />Zanechte svůj e-mail a my vás upozorníme, až program začne. Kompletní informace o programu Data Analytics naleznete ",
+  "introductionPageFormDescriptionLink": "tady.",
   "introductionPageFormSexToggleMale": "mužský",
   "introductionPageFormSexToggleFemale": "ženský",
+  "introductionPageFormSexToggleDiverse": "rozmanité",
   "introductionPageFormTypeToggleStudent": "student",
   "introductionPageFormTypeToggleCompany": "společnost",
   "introductionPageFormSendButton": "Informujte mě",

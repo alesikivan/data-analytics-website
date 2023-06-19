@@ -208,9 +208,11 @@
 
   "introductionPageHeader": "Welcome to Data Analytics Program!",
   "introductionPageInformationButton": "Full information about Data Analytics program",
-  "introductionPageFormDescription": "Let's join and work with us!<br />Leave your email and we will notify you when the program starts. The main goal is to make our future better.",
+  "introductionPageFormDescription": "Let's join and work with us!<br />Leave your email and we will notify you when the program starts. Full information about Data Analytics program you can find ",
+  "introductionPageFormDescriptionLink": "here.",
   "introductionPageFormSexToggleMale": "male",
   "introductionPageFormSexToggleFemale": "female",
+  "introductionPageFormSexToggleDiverse": "diverse",
   "introductionPageFormTypeToggleStudent": "student",
   "introductionPageFormTypeToggleCompany": "company",
   "introductionPageFormSendButton": "Notify me",

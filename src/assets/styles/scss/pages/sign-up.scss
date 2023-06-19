@@ -39,6 +39,12 @@ main.sign-up {
           font-size: 15px;
           font-family: bold;
           color: #2f2e43eb;
+
+          a {
+            font-family: bold;
+            color: #2f2e43eb;
+            text-decoration: underline;
+          }
         }
 
         input {

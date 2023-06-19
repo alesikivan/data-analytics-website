@@ -38,7 +38,7 @@ export const Gender = (
           src={images.home.sex.male[getValues('gender') === 'Male' ? 'active' : 'unactive']}
           alt="male" />
 
-        <span className="male">
+        <span>
           {
             translater("introductionPageFormSexToggleMale")
           }
@@ -54,12 +54,27 @@ export const Gender = (
           }
         )}>
         <img
-          src={images.home.sex.female[getValues('gender') === 'Male' ? 'unactive' : 'active']}
+          src={images.home.sex.female[getValues('gender') === 'Female' ? 'active' : 'unactive']}
           alt="female" />
 
-        <span className="female">
+        <span>
           {
             translater("introductionPageFormSexToggleFemale")
+          }
+        </span>
+      </div>
+      <div 
+        onClick={() => setGender('Diverse')} 
+        className={clsx(
+          'sex',
+          {
+            'active': getValues('gender') === 'Diverse'
+          }
+        )}>
+
+        <span>
+          {
+            translater("introductionPageFormSexToggleDiverse")
           }
         </span>
       </div>

@@ -7,11 +7,12 @@ import { Email } from "./fields/Email"
 import { Name } from "./fields/Name"
 import { Gender } from "./fields/Gender"
 import { Surname } from "./fields/Surname"
-import { ClientType, ClientGender, HubSpotLoginRequest, MessageServerResponse } from "../../../../../api/interfaces"
+import { ClientType, ClientGender, MessageServerResponse } from "../../../../../api/interfaces"
 import { API } from "../../../../../api/index"
 import { translater } from "../../../../../utils/localization/localization"
 import { PrivacyPolicy } from "./fields/PrivacyPolicy"
 import { Type } from "./fields/Type"
+import { Link } from "react-router-dom"
 
 type Props = {
   showDoneInterface: Function
@@ -96,6 +97,7 @@ export const Form = ({ showDoneInterface }: Props) => {
         {
           translater("introductionPageFormDescription")
         }
+        <Link to='/'>{ translater('introductionPageFormDescriptionLink') }</Link>
       </span>
 
       <div className="line">
@@ -105,7 +107,7 @@ export const Form = ({ showDoneInterface }: Props) => {
 
       <Email form={form} />
 
-      <div className="line">
+      <div className="line flex-column">
         <Type form={form} />
         <Gender form={form} />
       </div>

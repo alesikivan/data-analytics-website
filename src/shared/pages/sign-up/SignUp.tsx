@@ -31,14 +31,6 @@ export const SignUp = () => {
                   }
                 </h1>
 
-                <button
-                  onClick={() => navigate("/")}
-                  className="w-full app-button mb-3 app-elements-height">
-                    {
-                      translater("introductionPageInformationButton")
-                    }
-                </button>
-
                 <Form
                   showDoneInterface={() => setDoneInterfaceVisible(true)}/>
               </section>

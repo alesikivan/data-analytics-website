@@ -2,7 +2,7 @@ import { ObjectId } from "bson"
 
 export type MongoId = ObjectId | string
 
-export type ClientGender = 'Male' | 'Female'
+export type ClientGender = 'Male' | 'Female' | 'Diverse'
 export type ClientType = 'Student' | 'Company'
 
 export interface MessageServerResponse {
