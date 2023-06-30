@@ -1,11 +1,14 @@
+import { useState } from "react"
 import { translater } from "../../../utils/localization/localization"
 import { motion } from 'framer-motion'
-import { Link } from "react-router-dom"
 
 import '../../../assets/styles/scss/pages/bootcamp'
 import { images } from "../../../assets/images/imgs"
+import { FormModalWindow } from "./components/form/FormModalWindow"
 
 export const Bootcamp = () => {
+  const [dialogVisible, setDialogVisible] = useState(false)
+
   return (
     <>
       <h1 className="bootcamp-title app-header-color text-4xl text-center app-font-bold m-0 ms-auto">
@@ -111,7 +114,7 @@ export const Bootcamp = () => {
           </div>
         </section>
 
-        <section className="flex gap-5 align-items-center justify-content-center mt-6">
+        <section className="flex flex-column gap-5 align-items-center justify-content-center mt-6">
           <div className="resume-collection-text flex align-items-center gap-3">
             <img className='idea' src={images.students.idea} alt="lamp" />
 
@@ -119,7 +122,21 @@ export const Bootcamp = () => {
               {translater("bootcampPageResumeCollectionText")}
             </span>
           </div>
+          
+          <div>
+            <span 
+              className='app-button app-bg-color text-white px-5 mx-auto text-base mb-2 cursor-pointer'
+              onClick={() => {
+                setDialogVisible(true)
+              }}>
+                {translater("bootcampPageApplyButton")}
+            </span>
+          </div>
         </section>
+
+        <FormModalWindow 
+          dialogVisible={dialogVisible}
+          setDialogVisible={setDialogVisible} />
       </article>
     </>
   )

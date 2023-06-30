@@ -14,7 +14,7 @@ const validate = (value: string) => {
 
   const emailRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRegExp.test(value))
-    return 'Invalid email format'
+    return translater("FormEmailFieldValidate").toString()
 
   return true
 }

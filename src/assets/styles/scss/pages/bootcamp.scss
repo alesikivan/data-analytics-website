@@ -69,3 +69,13 @@
     margin-bottom: 30px;
   }
 }
+
+@media (max-width: 500px) {
+  .phases-block {
+    .bootcamp-phases-block, .result-block {
+      span {
+        max-width: 300px;
+      }
+    }
+  }
+}
