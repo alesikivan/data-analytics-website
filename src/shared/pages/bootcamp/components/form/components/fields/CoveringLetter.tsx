@@ -30,7 +30,8 @@ export const CoveringLetterField = ({ form: { register, formState: { errors } } 
         id="coveringLetter"
         rows={5}
         placeholder={ translater("bootcampPageResumeFormCoveringLetterFieldPlaceholder").toString() }
-        className="w-full mb-3" />
+        className="w-full mb-3"
+        style={{ minHeight: "48px" }} />
 
       <ErrorBlock errors={errors} keyword="coveringLetter" />
     </>

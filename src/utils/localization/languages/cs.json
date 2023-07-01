@@ -138,7 +138,7 @@
   "homePageSectionUniversityDescription": "V tuto chvíli zveme zájemce o studium na úvodní hybridní workshop (online první kolo s osobním finálním kolem), kde budou pracovat na projektových úlohách pod záštitou fakulty a seznámí se s našimi průmyslovými partnery a profesory a získají představu o tom, o co se v tomto programu jedná.",
   "homePageSectionUniversityLink": "Více informací!",
 
-  "bootcampPageTitle": "Bootcamp",
+  "bootcampPageTitle": "Bootcamp je pro <b>každého!</b>",
   "bootcampPageDescription": "Abychom potenciálním studentům představili náš program a jeho průmyslové partnery, zveme zájemce, aby se s námi zúčastnili online bootcampu!<br /> <b>Bootcamp</b> je <b>ZDARMA</b> pro předem vybrané účastníky.",
   "bootcampPageInfoBlockTitle": "Bootcamp má dvě fáze",
   "bootcampPageInfoBlockSpan1": "Individuální online projekt na <b>4-6 týdnů</b>, kdy student přistupuje k zajímavému <b>analytickému problému</b> na navrženém datovém souboru (nástroje se mohou lišit od MS Excel po Python a/nebo jiné programovací jazyky v závislosti na počáteční technické znalosti studenta).",
@@ -160,6 +160,8 @@
   "bootcampPageResumeFormCoveringLetterField": "Průvodní Dopis",
   "bootcampPageResumeFormCoveringLetterFieldPlaceholder": "Zadejte prosím průvodní dopis...",
   "bootcampPageResumeFormEmptyValidate": "Toto pole nemůže být prázdné.",
+  "bootcampPageResumeFormResumeField": "Životopis",
+  "bootcampPageResumeFormResumeFieldChooseLabel": "Vyberte soubor PDF",
   "FormEmailFieldValidate": "Neplatný formát e-mail.",
 
   "studentsPageTitle": "MUNI Data Analytics může být<br /> <b>vaší šancí!</b>",

@@ -9,6 +9,8 @@ import { CoveringLetterField } from "./fields/CoveringLetter"
 import { NameField } from "./fields/Name"
 import { SurnameField } from "./fields/Surname"
 import { EmailField } from "./fields/Email"
+import { ResumeField } from "./fields/Resume"
+import { successNotification } from "../../../../../../redux/actions/notificationsActions"
 
 type Props = {
   hideModal: Function,
@@ -18,6 +20,7 @@ export type FormData = {
   name: string,
   surname: string,
   email: string,
+  resume: File | null,
   coveringLetter: string,
 }
 
@@ -25,6 +28,7 @@ const defaultFormValues = {
   name: '',
   surname: '',
   email: '',
+  resume: null,
   coveringLetter: '',
 }
 
@@ -60,16 +64,22 @@ export const Form = ({ hideModal }: Props) => {
     formState: { isValid, submitCount }
   } = form
 
-  // const onSubmit: SubmitHandler<FormData> = data => sendRequest(data)
+  const onSubmit: SubmitHandler<FormData> = data => {
+    successNotification('Success')
+    console.log(data)
+  }
+  
+  // sendRequest(data)
 
   return (
     <form
-      // onSubmit={ handleSubmit(onSubmit) }
+      onSubmit={ handleSubmit(onSubmit) }
       className="w-full">
         <div>
           <NameField form={form} />
           <SurnameField form={form} />
           <EmailField form={form} />
+          <ResumeField form={form} />
           <CoveringLetterField form={form} />
         </div>
 

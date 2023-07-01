@@ -15,6 +15,7 @@ export const FormModalWindow = ({ dialogVisible, setDialogVisible }: Props) => {
         header={translater("bootcampPageResumeFormTitle")}
         visible={dialogVisible}
         modal
+        maximizable
         contentStyle={{ height: '400px', minWidth: '470px' }}
         onHide={() => setDialogVisible(false)}>
 

@@ -160,6 +160,8 @@
   "bootcampPageResumeFormCoveringLetterField": "Covering Letter",
   "bootcampPageResumeFormCoveringLetterFieldPlaceholder": "Please enter a cover letter...",
   "bootcampPageResumeFormEmptyValidate": "This field can not be empty.",
+  "bootcampPageResumeFormResumeField": "Resume",
+  "bootcampPageResumeFormResumeFieldChooseLabel": "Choose PDF file",
   "FormEmailFieldValidate": "Invalid email format.",
 
   "studentsPageTitle": "MUNI Data Analytics could be<br /> <b>your chance!</b>",
