@@ -32,7 +32,7 @@
   },
   "scripts": {
     "start": "webpack serve --mode development --open",
-    "build": "webpack --mode production && rm -rf ../data-analytics-server/dist && cp -Rf dist ../data-analytics-server"
+    "build": "webpack --mode production && rm -rf ../data-analytics-server/client/dist && cp -Rf dist ../data-analytics-server/client"
   },
   "eslintConfig": {
     "extends": [
