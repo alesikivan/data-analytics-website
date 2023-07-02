@@ -1,5 +1,4 @@
 import {  useState } from "react"
-import { useNavigate } from "react-router-dom"
 
 import { SuccessfullySaved } from "./components/SuccessfullySaved"
 import { translater } from "../../../utils/localization/localization"
@@ -10,7 +9,6 @@ import '../../../assets/styles/scss/pages/sign-up.scss'
 
 export const SignUp = () => {
   const [doneInterfaceVisible, setDoneInterfaceVisible] = useState(false)
-  const navigate = useNavigate()
 
   return (
     <main className="sign-up">

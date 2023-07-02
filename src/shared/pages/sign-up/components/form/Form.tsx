@@ -2,6 +2,7 @@ import { useState } from "react"
 import { AxiosResponse } from "axios"
 import clsx from "clsx"
 import { SubmitHandler, useForm } from "react-hook-form"
+import { Button } from 'primereact/button'
 
 import { Email } from "./fields/Email"
 import { Name } from "./fields/Name"
@@ -112,15 +113,14 @@ export const Form = ({ showDoneInterface }: Props) => {
         <Gender form={form} />
       </div>
 
-      <button
-        className={clsx('send-button app-elements-height', {
+      <Button 
+        loadingIcon=""
+        loading={false}
+        className={clsx('send-button app-elements-height bold-button-span', {
           'loading': loading,
           'disabled': submitCount > 0 && !isValid
-        })} >
-          {
-            translater("introductionPageFormSendButton")
-          }
-      </button>
+        })}
+        label={translater("introductionPageFormSendButton").toString()} />
 
       <PrivacyPolicy
         informationProcessing={informationProcessing}

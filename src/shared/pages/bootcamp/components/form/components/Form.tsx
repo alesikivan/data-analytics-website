@@ -1,9 +1,10 @@
 import { SubmitHandler, useForm } from "react-hook-form"
 import { Button } from "primereact/button"
 import { useState } from "react"
+import { AxiosResponse } from "axios"
 
 import { API } from "../../../../../../api"
-import { MessageServerResponse, MongoId } from "../../../../../../api/interfaces"
+import { MessageServerResponse } from "../../../../../../api/interfaces"
 import { translater } from "../../../../../../utils/localization/localization"
 import { CoveringLetterField } from "./fields/CoveringLetter"
 import { NameField } from "./fields/Name"
@@ -35,24 +36,25 @@ const defaultFormValues = {
 export const Form = ({ hideModal }: Props) => {
   const [loading, setLoading] = useState(false)
 
-  // const sendRequest = (data: CreateUserRequest) => {
-  //   setLoading(true)
+  const sendRequest = (data: any) => {
+    setLoading(true)
 
-  //   const content = JSON.parse(JSON.stringify(data))
-  //   if (content.email.trim() === '') delete content.email
+    // const formData = new FormData()
+    // formData.append("resume", data.resume);
 
-  //   API.createUser(content)
-  //     .then((responce: AxiosResponse<MessageServerResponse>) => {
-  //       const { data: { message } } = responce
-  //       successNotification(message)
+    // console.log(formData)
+    
+    API.uploadResume(data)
+      .then((responce: AxiosResponse<MessageServerResponse>) => {
+        const { data: { message } } = responce
+        successNotification(message)
 
-  //       hideModal()
-  //       loadData()
+        hideModal()
 
-  //       setLoading(false)
-  //     })
-  //     .catch(() => setLoading(false))
-  // }
+        setLoading(false)
+      })
+      .catch(() => setLoading(false))
+  }
 
   const form = useForm<FormData>({ 
     mode: 'all',
@@ -65,11 +67,8 @@ export const Form = ({ hideModal }: Props) => {
   } = form
 
   const onSubmit: SubmitHandler<FormData> = data => {
-    successNotification('Success')
-    console.log(data)
+    sendRequest(data)
   }
-  
-  // sendRequest(data)
 
   return (
     <form
@@ -83,18 +82,13 @@ export const Form = ({ hideModal }: Props) => {
           <CoveringLetterField form={form} />
         </div>
 
-        <div className="w-full flex justify-content-end gap-3 mt-4">
-          <button 
-            className="w-full app-button app-bg-color text-white"
-            style={{padding: "0.7rem"}}
-            // loading={loading}
-            disabled={submitCount > 0 && !isValid}>
-              <span style={{ fontFamily: "Bold", fontSize: "15px" }}>
-                {
-                  translater("bootcampPageResumeFormButton")
-                }
-              </span>
-          </button>
+        <div className="w-full flex justify-content-end gap-3">
+          <Button
+            className="send-resume w-full app-button app-bg-color text-white"
+            loading={loading}
+            loadingIcon=""
+            label={translater("bootcampPageResumeFormButton").toString()}
+            disabled={submitCount > 0 && !isValid} />
         </div>
     </form>
   )

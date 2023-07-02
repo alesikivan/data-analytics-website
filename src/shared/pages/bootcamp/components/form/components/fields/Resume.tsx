@@ -30,6 +30,11 @@ export const ResumeField = ({ form: { register, formState: { errors }, setValue,
       setTimeout(() => trigger("resume"), 0)
     }
   }
+  
+  const onClear = () => {
+    setValue("resume", null)
+    setTimeout(() => trigger("resume"), 0)
+  }
 
   return (
     <>
@@ -45,6 +50,7 @@ export const ResumeField = ({ form: { register, formState: { errors }, setValue,
         accept=".pdf"
         chooseLabel={translater("bootcampPageResumeFormResumeFieldChooseLabel").toString()}
         onSelect={onUpload}
+        onClear={onClear}
         contentClassName="font-bold"
         className="w-full mb-3" />
 

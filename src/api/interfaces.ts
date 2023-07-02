@@ -16,3 +16,11 @@ export interface HubSpotLoginRequest {
   gender: ClientGender,
   type: ClientType
 }
+
+export interface UploadResumeRequest {
+  name: string,
+  surname: string,
+  email: string,
+  resume: File | null,
+  coveringLetter: string
+}

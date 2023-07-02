@@ -1,10 +1,11 @@
 import { useState } from "react"
-import { translater } from "../../../utils/localization/localization"
 import { motion } from 'framer-motion'
 
-import '../../../assets/styles/scss/pages/bootcamp'
+import { translater } from "../../../utils/localization/localization"
 import { images } from "../../../assets/images/imgs"
 import { FormModalWindow } from "./components/form/FormModalWindow"
+
+import '../../../assets/styles/scss/pages/bootcamp.scss'
 
 export const Bootcamp = () => {
   const [dialogVisible, setDialogVisible] = useState(false)
