@@ -10,6 +10,7 @@ import { Students } from "./students/Students"
 
 import { MainLayout } from "../layouts/MainLayout"
 import { HomePageLayout } from "../layouts/HomePageLayout"
+import { Bootcamp } from "./bootcamp/Bootcamp"
 
 export const Pages = () => {
 
@@ -27,9 +28,11 @@ export const Pages = () => {
 
         <Route path="companies" element={<Companies />} />
 
-        <Route path="Students" element={<Students />} />
+        <Route path="students" element={<Students />} />
 
         <Route path="muni" element={<Muni />} />
+
+        <Route path="bootcamp" element={<Bootcamp />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />

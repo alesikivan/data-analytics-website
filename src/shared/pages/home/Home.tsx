@@ -65,6 +65,39 @@ export const Home = () => {
 
       <article className="app-content flex flex-column">
         <section>
+          <div className="app-width-limit mx-auto gap-2 flex mt-3 reverse">
+            <div className="flex flex-column align-items-start gap-3">
+              <h1 className="app-header-color text-3xl app-font-bold m-0">
+                {
+                  translater("homePageSectionBootcampTitle")
+                }
+              </h1>
+
+              <span className="description text-base app-gray-color max-w-30rem">
+                {
+                  translater("homePageSectionBootcampDescription")
+                }
+              </span>
+
+              <Link
+                className="get-started-button app-hover app-bg-color app-font-bold app-border-radius text-white"
+                to={'/bootcamp'}>
+                  {
+                    translater("homePageSectionBootcampLink").toString()
+                  }
+              </Link>
+            </div>
+
+            <div>
+              <img
+                className="program-preview"
+                src={images.home.camp}
+                alt="program-preview"></img>
+            </div>
+          </div>
+        </section>
+
+        <section>
           <div className="app-width-limit mx-auto gap-2 flex mt-3">
             <div className="flex flex-column align-items-start gap-3">
               <h1 className="app-header-color text-3xl app-font-bold m-0">

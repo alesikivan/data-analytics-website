@@ -1,4 +1,5 @@
 import Parser from 'html-react-parser'
+import { localeOption } from 'primereact/api'
 import { translater } from '../../../utils/localization/localization'
 import { RootState } from '../../../redux/reducers/rootReducer'
 import { store } from '../../../redux/store'
@@ -7,7 +8,6 @@ import { Link } from 'react-router-dom'
 
 import { images } from "../../../assets/images/imgs"
 import '../../../assets/styles/scss/pages/students.scss'
-import { localeOption } from 'primereact/api'
 
 export const Students = () => {
   const { language: { lang } }: RootState = store.getState()
@@ -30,7 +30,7 @@ export const Students = () => {
       </h1>
 
       <article className="info-block">
-        <section className="flex mt-5 gap-5 align-items-center justify-content-between">
+        <section className="flex mt-5 gap-6 align-items-center justify-content-between">
           <div className="flex flex-column data-science-block">
             <motion.h2 
               initial={{ opacity: 0, scale: 0.5 }}

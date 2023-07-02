@@ -5,6 +5,7 @@ import twitter from '../images/pages/home/twitter.png'
 import linkedin from '../images/pages/home/linkedin.png'
 
 import preview from '../images/pages/home/preview.png'
+import camp from '../images/pages/home/camp.png'
 import companies from '../images/pages/home/companies.png'
 import students from '../images/pages/home/students.png'
 import uni from '../images/pages/home/uni.png'
@@ -15,6 +16,8 @@ import research from '../images/pages/companies/research.png'
 import future from '../images/pages/companies/future.png'
 import relationship from '../images/pages/companies/relationship.png'
 import reputation from '../images/pages/companies/reputation.png'
+
+import bootcamp from '../images/pages/bootcamp/bootcamp.png'
 
 import prestigious from '../images/pages/muni/prestigious.png'
 import study from '../images/pages/muni/study.png'
@@ -84,8 +87,12 @@ export const images = {
     idea,
     structure
   },
+  bootcamp: {
+    bootcamp
+  },
   home: {
     preview,
+    camp,
     background,
     companies,
     students,

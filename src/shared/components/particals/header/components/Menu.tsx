@@ -26,6 +26,10 @@ export const Menu = () => {
       path: '/muni',
       title: translater("headerMenuMuni").toString()
     },
+    {
+      path: '/bootcamp',
+      title: translater("headerMenuBootcamp").toString()
+    },
   ]
 
   return (
