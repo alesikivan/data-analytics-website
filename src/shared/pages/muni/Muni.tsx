@@ -20,33 +20,33 @@ export const Muni = () => {
   const blocks: Blocks[] = [
     {
       img: images.muni.prestigious,
-      title: localeOption("muniPagePrestigiousTitle", lang).toString(),
-      description: localeOption("muniPagePrestigiousDescription", lang).toString()
+      title: 'muniPagePrestigiousTitle',
+      description: 'muniPagePrestigiousDescription'
     },
     {
       img: images.muni.study,
-      title: localeOption("muniPageStudyTitle", lang).toString(),
-      description: localeOption("muniPageStudyDescription", lang).toString()
+      title: 'muniPageStudyTitle',
+      description: 'muniPageStudyDescription'
     },
     {
       img: images.muni.lang,
-      title: localeOption("muniPageMultilanguageTitle", lang).toString(),
-      description: localeOption("muniPageMultilanguageDescription", lang).toString()
+      title: 'muniPageMultilanguageTitle',
+      description: 'muniPageMultilanguageDescription'
     },
     {
       img: images.muni.city,
-      title: localeOption("muniPageCityTitle", lang).toString(),
-      description: localeOption("muniPageCityDescription", lang).toString()
+      title: 'muniPageCityTitle',
+      description: 'muniPageCityDescription'
     },
     {
       img: images.muni.rocket,
-      title: localeOption("muniPageEducationTitle", lang).toString(),
-      description: localeOption("muniPageEducationDescription", lang).toString()
+      title: 'muniPageEducationTitle',
+      description: 'muniPageEducationDescription'
     },
     {
       img: images.muni.accomodation,
-      title: localeOption("muniPageAccomodationTitle", lang).toString(),
-      description: localeOption("muniPageAccomodationDescription", lang).toString()
+      title: 'muniPageAccomodationTitle',
+      description: 'muniPageAccomodationDescription'
     },
   ]
 
@@ -128,12 +128,12 @@ export const Muni = () => {
                 
                 <div className='flex flex-column align-items-start'>
                   <h2 className="app-header-color app-font-bold">
-                    { block.title }
+                    { translater(block.title) }
                   </h2>
 
                   <span className="app-gray-color">
                     {
-                      Parser(block.description)
+                      translater(block.description)
                     }
                   </span>
                 </div>

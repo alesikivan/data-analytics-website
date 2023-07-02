@@ -1,25 +1,20 @@
-import Parser from 'html-react-parser'
-import { localeOption } from 'primereact/api'
-import { translater } from '../../../utils/localization/localization'
-import { RootState } from '../../../redux/reducers/rootReducer'
-import { store } from '../../../redux/store'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
+import { translater } from '../../../utils/localization/localization'
 import { images } from "../../../assets/images/imgs"
+
 import '../../../assets/styles/scss/pages/students.scss'
 
 export const Students = () => {
-  const { language: { lang } }: RootState = store.getState()
-
   const structuresList = [
-    localeOption("studentsPageStructureBlockContent1", lang).toString(),
-    localeOption("studentsPageStructureBlockContent2", lang).toString(),
-    localeOption("studentsPageStructureBlockContent3", lang).toString(),
-    localeOption("studentsPageStructureBlockContent4", lang).toString(),
-    localeOption("studentsPageStructureBlockContent5", lang).toString(),
-    localeOption("studentsPageStructureBlockContent6", lang).toString(),
-    localeOption("studentsPageStructureBlockContent7", lang).toString(),
+    'studentsPageStructureBlockContent1',
+    'studentsPageStructureBlockContent2',
+    'studentsPageStructureBlockContent3',
+    'studentsPageStructureBlockContent4',
+    'studentsPageStructureBlockContent5',
+    'studentsPageStructureBlockContent6',
+    'studentsPageStructureBlockContent7',
   ]
   return (
     <>
@@ -125,9 +120,7 @@ export const Students = () => {
                 return (
                   <div key={index} className="mt-3 flex align-items-start gap-3">
                     <span className="app-gray-color app-line-height">
-                      {
-                        Parser(content)
-                      }
+                      { translater(content) }
                     </span>
                   </div>
                 )

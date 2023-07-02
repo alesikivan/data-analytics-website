@@ -3,8 +3,8 @@ import { initInterceptor } from "../axios/interceptor"
 import { setLanguage } from "../axios/languages"
 import { setLocalizations } from "../localization/localization"
 
-export const appUnilsInit = () => {
-  setLocalizations()
+export const appUnilsInit = async () => {
+  await setLocalizations()
   authInit()
   initInterceptor()
   setLanguage()

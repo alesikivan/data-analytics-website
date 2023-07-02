@@ -1,13 +1,10 @@
-import Parser from 'html-react-parser'
 import { Link } from "react-router-dom"
 import { motion } from 'framer-motion'
 
 import { images } from "../../../assets/images/imgs"
-import '../../../assets/styles/scss/pages/companies.scss'
-import { RootState } from '../../../redux/reducers/rootReducer'
-import { store } from '../../../redux/store'
-import { localeOption } from 'primereact/api'
 import { translater } from '../../../utils/localization/localization'
+
+import '../../../assets/styles/scss/pages/companies.scss'
 
 type companiesBlocks = {
   img: string,
@@ -16,38 +13,36 @@ type companiesBlocks = {
 }
 
 export const Companies = () => {
-  const { language: { lang } }: RootState = store.getState()
-
   const blocks: companiesBlocks[] = [
     {
       img: images.companies.benefits,
-      title: localeOption("companiesPageBenefitsTitle", lang).toString(),
-      description: localeOption("companiesPageBenefitsDescription", lang).toString()
+      title: 'companiesPageBenefitsTitle',
+      description: 'companiesPageBenefitsDescription'
     },
     {
       img: images.companies.talant,
-      title: localeOption("companiesPageTalentTitle", lang).toString(),
-      description: localeOption("companiesPageTalentDescription", lang).toString()
+      title: 'companiesPageTalentTitle',
+      description: 'companiesPageTalentDescription'
     },
     {
       img: images.companies.research,
-      title: localeOption("companiesPageResearchTitle", lang).toString(),
-      description: localeOption("companiesPageResearchDescription", lang).toString()
+      title: 'companiesPageResearchTitle',
+      description: 'companiesPageResearchDescription'
     },
     {
       img: images.companies.future,
-      title: localeOption("companiesPageFutureTitle", lang).toString(),
-      description: localeOption("companiesPageFutureDescription", lang).toString()
+      title: 'companiesPageFutureTitle',
+      description: 'companiesPageFutureDescription'
     },
     {
       img: images.companies.relationship,
-      title: localeOption("companiesPageRelationshipTitle", lang).toString(),
-      description: localeOption("companiesPageRelationshipDescription", lang).toString()
+      title: 'companiesPageRelationshipTitle',
+      description: 'companiesPageRelationshipDescription'
     },
     {
       img: images.companies.reputation,
-      title: localeOption("companiesPageReputationTitle", lang).toString(),
-      description: localeOption("companiesPageReputationDescription", lang).toString()
+      title: 'companiesPageReputationTitle',
+      description: 'companiesPageReputationDescription'
     }
   ]
   return (
@@ -72,12 +67,12 @@ export const Companies = () => {
                 <img src={ block.img } alt="business" />
                 
                 <h2 className="text-center app-header-color app-font-bold text-xl m-0">
-                  { block.title }
+                  { translater(block.title) }
                 </h2>
 
                 <span className="text-center app-gray-color">
                   {
-                    Parser(block.description)
+                    translater(block.description)
                   }
                 </span>
               </motion.section>

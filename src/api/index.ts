@@ -7,6 +7,11 @@ const path = (path: string) => process.env.SERVER_API + path
 const hubspotLogin = (data: HubSpotLoginRequest): Promise<AxiosResponse<MessageServerResponse>> => 
   axios.post( path('/auth/hubspot-login'), data )
 
+// CONTENT
+const getLanguages = (): Promise<AxiosResponse<any>> => 
+  axios.get( path('/content/languages') )
+
 export const API = {
-  hubspotLogin
+  hubspotLogin,
+  getLanguages
 }
