@@ -7,26 +7,27 @@ import { AxiosResponse } from 'axios'
 import { setAuthToken } from '../../utils/axios/token'
 import { API } from '../../api'
 import { Role } from '../reducers/authReducer'
+import { LoginRequest, LoginServerResponse } from '../../api/interfaces'
 
 // Логин - получение токена пользователя
-// export const login = (data: LoginRequest) => {
-//   return API.login(data)
-//     .then((res: AxiosResponse<LoginServerResponse>) => {
-//       // Заносим токен в localStorage
-//       const { token, message } = res.data
-//       localStorage.setItem('token', token)
+export const login = (data: LoginRequest) => {
+  return API.login(data)
+    .then((res: AxiosResponse<LoginServerResponse>) => {
+      // Заносим токен в localStorage
+      const { token, message } = res.data
+      localStorage.setItem('token', token)
 
-//       // Присваиваем токен в Auth header
-//       setAuthToken(token)
+      // Присваиваем токен в Auth header
+      setAuthToken(token)
 
-//       // Парсим токен и получаем пользователя
-//       const decoded: User = jwt_decode(token)
+      // Парсим токен и получаем пользователя
+      const decoded: User = jwt_decode(token)
 
-//       store.dispatch(setCurrentUser(decoded))
+      store.dispatch(setCurrentUser(decoded))
 
-//       successNotification(message)
-//     })
-// }
+      successNotification(message)
+    })
+}
 
 // Вернет true, если роли совпали
 export const compareRoles = (rolesList: UserRole[]): boolean => {

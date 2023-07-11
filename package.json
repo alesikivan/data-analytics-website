@@ -31,7 +31,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "webpack serve --mode development --open",
+    "start": "webpack serve --mode development --open --port 3001",
     "build": "webpack --mode production && rm -rf ../data-analytics-server/client/dist && cp -Rf dist ../data-analytics-server/client"
   },
   "eslintConfig": {

@@ -24,3 +24,13 @@ export interface UploadResumeRequest {
   resume: File | null,
   coveringLetter: string
 }
+
+export interface LoginRequest {
+  login: string,
+  password: string
+}
+
+export interface LoginServerResponse {
+  token: string,
+  message: string
+}

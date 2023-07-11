@@ -4,8 +4,8 @@ import { Header } from "../components/particals/header/Header"
 
 import { ScrollToTop } from "../../utils/components/ScrollToTop"
 
-export const MainLayout = () => (
-  <>
+export const MainLayout = () => {
+  return (
     <div className="application">
       <Header />
       
@@ -15,5 +15,5 @@ export const MainLayout = () => (
         <Outlet />
       </div>
     </div>
-  </>
-)
+  )
+}

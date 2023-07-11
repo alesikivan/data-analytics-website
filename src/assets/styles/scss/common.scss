@@ -6,6 +6,11 @@ body,
   height: 100%;
 }
 
+.editor-textarea {
+  resize: vertical !important;
+  min-height: 60px;
+}
+
 .application {
   height: 100%;
 
@@ -64,6 +69,10 @@ ul li {
   list-style-type: none;
 }
 
+.app-font {
+  font-family: 'Regular';
+}
+
 .app-font-bold {
   font-family: 'Bold';
 }
@@ -78,6 +87,20 @@ ul li {
 
 .app-bg-color {
   background-color: $appColor !important;
+}
+
+.app-button-colors {
+  background-color: $appColor !important;
+  border-color: $appColor !important;
+  transition: 0.3;
+
+  span {
+    font-family: 'Bold';
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .app-gray-color {
