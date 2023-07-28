@@ -15,6 +15,7 @@ import { successNotification } from "../../../../redux/actions/notificationsActi
 export const Editor = () => {
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
+  const [activeBoxKey, setActiveBoxKey] = useState('')
   const [finder, setFinder] = useState('')
   const toast = useRef<Toast>(null)
 
@@ -35,7 +36,7 @@ export const Editor = () => {
       const dirtyKeys = Object.keys(data.en)
       // Выбираем только элементы, у которых значения – это строки
       const filtedKeys = dirtyKeys.filter(key => typeof data.en[key] === 'string')
-      
+
       setKeys(filtedKeys)
     }
 
@@ -43,6 +44,7 @@ export const Editor = () => {
   }, [])
 
   const setEnglishUpdate = (key: string, value: string) => {
+    setActiveBoxKey(key)
     const translationClone = JSON.parse(JSON.stringify(translation.en))
 
     translationClone[key] = value
@@ -51,6 +53,7 @@ export const Editor = () => {
   }
 
   const setCzechUpdate = (key: string, value: string) => {
+    setActiveBoxKey(key)
     const translationClone = JSON.parse(JSON.stringify(translation.cs))
 
     translationClone[key] = value
@@ -69,7 +72,7 @@ export const Editor = () => {
 
         setLoading(false)
       })
-      .catch((error) =>  setLoading(false))
+      .catch((error) => setLoading(false))
   }
 
   const saveChanges = () => {
@@ -79,7 +82,7 @@ export const Editor = () => {
       header: 'Confirmation',
       icon: 'pi pi-exclamation-triangle',
       accept: () => saveData(translation),
-      reject: () => {}
+      reject: () => { }
     })
   }
 
@@ -112,33 +115,45 @@ export const Editor = () => {
       <article className="flex flex-column gap-5">
         {
           keys
-          .filter(key => {
-            const enValue = translation.en ? translation.en[key] : ''
-            const csValue = translation.cs ? translation.cs[key] : ''
+            .filter(key => {
+              const enValue = translation.en ? translation.en[key] : ''
+              const csValue = translation.cs ? translation.cs[key] : ''
 
-            return enValue.toLowerCase().includes(finder.toLowerCase()) 
-              || csValue.toLowerCase().includes(finder.toLowerCase())
+              const finderIncluding = enValue.toLowerCase().includes(finder.toLowerCase())
+                || csValue.toLowerCase().includes(finder.toLowerCase())
 
-          })
-          .map((key, index) => {
-            return (
-              <section key={index} className="flex flex-column gap-2">
-                <span className="app-color app-font-bold">{ key }</span>
+              const isKeyMaching = key === activeBoxKey
 
-                <InputTextarea
-                  className="editor-textarea"
-                  placeholder="EN"
-                  value={ translation.en ? translation.en[key] : ''}
-                  onChange={(e) => setEnglishUpdate(key, e.target.value)} rows={2} />
+              return finderIncluding || isKeyMaching
 
-                <InputTextarea
-                  placeholder="CS"
-                  className="editor-textarea"
-                  value={ translation.cs ? translation.cs[key] : '' }
-                  onChange={(e) => setCzechUpdate(key, e.target.value)} rows={2} />
-              </section>
-            )
-          })
+            })
+            .map((key, index) => {
+              return (
+                <section key={index} className="flex flex-column gap-2">
+                  <span className="app-color app-font-bold">{key}</span>
+
+                  <div className="editor-area">
+                    <span className="editor-area-label">EN</span>
+
+                    <InputTextarea
+                      className="editor-textarea en-editor-textarea"
+                      placeholder="EN"
+                      value={translation.en ? translation.en[key] : ''}
+                      onChange={(e) => setEnglishUpdate(key, e.target.value)} rows={2} />
+                  </div>
+
+                  <div className="editor-area">
+                    <span className="editor-area-label">CS</span>
+
+                    <InputTextarea
+                      placeholder="CS"
+                      className="editor-textarea cs-editor-textarea"
+                      value={translation.cs ? translation.cs[key] : ''}
+                      onChange={(e) => setCzechUpdate(key, e.target.value)} rows={2} />
+                  </div>
+                </section>
+              )
+            })
         }
       </article>
 

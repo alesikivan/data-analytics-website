@@ -6,9 +6,26 @@ body,
   height: 100%;
 }
 
+.editor-area {
+  position: relative;
+
+  .editor-area-label {
+    position: absolute;
+    z-index: 1;
+    user-select: none;
+    font-family: 'Bold';
+    color: #444444d6;
+    font-size: 11px;
+    left: -21px;
+    top: 0px;
+  }
+}
+
 .editor-textarea {
+  width: 100%;
   resize: vertical !important;
   min-height: 60px;
+  position: relative;
 }
 
 .application {

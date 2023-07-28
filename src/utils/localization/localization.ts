@@ -1,8 +1,6 @@
 import { addLocale, localeOption } from 'primereact/api'
 import Parser from 'html-react-parser'
 
-// import cs from './languages/cs.json'
-// import en from './languages/en.json'
 import { store } from '../../redux/store'
 import { RootState } from '../../redux/reducers/rootReducer'
 import { API } from '../../api'
