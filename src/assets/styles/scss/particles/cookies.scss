@@ -1,0 +1,77 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.cookies-area {
+  width: 100%;
+  background-color: #fffffff5;
+  padding: 18px 30px;
+  box-shadow: 1px 1px 6px #ccccccc2;
+
+  position: fixed;
+  bottom: 0;
+
+  .content-cookies-area {
+    span {
+      font-size: 14.5px;
+      color: #3f3d56;
+
+      .more {
+        font-family: Bold;
+        color: #337ab7;
+        text-decoration: underline;
+        cursor: pointer;
+        user-select: none;
+        padding: 0 4px;
+      }
+    }
+  }
+
+  .buttons {
+    button {
+      font-size: 15px;
+
+      &.accept {
+        background-color: $appColor;
+        border-color: $appColor;
+      }
+
+      &.reject {
+        
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      span {
+        white-space: nowrap;
+        font-family: 'Bold';
+      }
+    }
+  }
+}
+
+.cookies-item {
+  h4 {
+    color: $textColor;
+    font-family: Bold;
+    margin: 0;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 630px) {
+  .cookies-area {
+    flex-direction: column;
+
+    .content-cookies-area {
+      @include flex;
+      span {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom"
 
 import { Header } from "../components/particals/header/Header"
+import { Cookies } from "../components/particals/cookie/Cookies"
 
 export const HomePageLayout = () => (
   <>
@@ -8,6 +9,8 @@ export const HomePageLayout = () => (
       <Header />
 
       <Outlet />
+
+      <Cookies />
     </main>
   </>
 )

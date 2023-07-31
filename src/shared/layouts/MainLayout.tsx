@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom"
 import { Header } from "../components/particals/header/Header"
 
 import { ScrollToTop } from "../../utils/components/ScrollToTop"
+import { Cookies } from "../components/particals/cookie/Cookies"
 
 export const MainLayout = () => {
   return (
@@ -14,6 +15,8 @@ export const MainLayout = () => {
 
         <Outlet />
       </div>
+
+      <Cookies />
     </div>
   )
 }
