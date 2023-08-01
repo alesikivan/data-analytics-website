@@ -35,10 +35,6 @@
         border-color: $appColor;
       }
 
-      &.reject {
-        
-      }
-
       &:hover {
         opacity: 0.8;
       }
@@ -51,16 +47,58 @@
   }
 }
 
-.cookies-item {
-  h4 {
+.cookies-items {
+  gap: 8px;
+  margin-top: 25px;
+
+  &:first-child {
+    margin-top: 10px;
+  }
+
+  h4.cookies-item-title {
     color: $textColor;
     font-family: Bold;
     margin: 0;
   }
 
-  span {
-    font-size: 14px;
+  .app-switch {
+    .p-inputswitch-slider {
+      background: $appColor;
+      transition: 0.4s;
+
+      &:hover {
+        background: $appColor;
+        opacity: 0.8;
+      }
+    }
   }
+
+  span {
+    font-size: 10px;
+  }
+
+  .hidden-text-block {
+    gap: 10px;
+  }
+}
+
+.cookies-dialog {
+  width: 500px;
+  .accept {
+    background-color: $appColor;
+    border-color: $appColor;
+    transition: 0.4s;
+  
+    &:hover {
+      background-color: $appColor;
+      border-color: $appColor;
+      opacity: 0.8;
+    }
+  }
+}
+
+.p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover .p-inputswitch-slider {
+  background: $appColor;
 }
 
 @media (max-width: 630px) {
@@ -73,5 +111,9 @@
         text-align: center;
       }
     }
+  }
+
+  .cookies-dialog {
+    max-width: 400px;
   }
 }
