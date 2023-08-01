@@ -73,7 +73,7 @@ export const Form = ({ hideModal }: Props) => {
   return (
     <form
       onSubmit={ handleSubmit(onSubmit) }
-      className="w-full">
+      className="w-full mt-3">
         <div>
           <NameField form={form} />
           <SurnameField form={form} />
@@ -86,7 +86,6 @@ export const Form = ({ hideModal }: Props) => {
           <Button
             className="send-resume w-full app-button app-bg-color text-white"
             loading={loading}
-            loadingIcon=""
             label={translater("bootcampPageResumeFormButton").toString()}
             disabled={submitCount > 0 && !isValid} />
         </div>

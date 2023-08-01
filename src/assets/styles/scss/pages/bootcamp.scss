@@ -81,11 +81,17 @@
 }
 
 @media (max-width: 500px) {
-  .phases-block {
-    .bootcamp-phases-block, .result-block {
-      span {
-        // max-width: 300px;
-      }
+  .phases-block .bootcamp-phases-block span {
+    max-width: 300px;
+  }
+
+  .phases-block .result-block span {
+    max-width: 350px;
+  }
+
+  .resume-collection-text {
+    span {
+      min-width: 250px;
     }
   }
 }

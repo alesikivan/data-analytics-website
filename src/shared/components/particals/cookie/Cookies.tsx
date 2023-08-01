@@ -23,7 +23,7 @@ export const Cookies = () => {
     },
   ]
   
-  const [visible, setVisible] = useState<boolean>(!false)
+  const [visible, setVisible] = useState<boolean>(false)
 
   return (
     <>

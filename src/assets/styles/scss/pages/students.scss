@@ -213,3 +213,9 @@
     margin-top: 40px;
   }
 }
+
+@media (max-width: 500px) {
+  .info-block .data-science-block span {
+    max-width: 300px;
+  }
+}
