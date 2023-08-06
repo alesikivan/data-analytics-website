@@ -6,11 +6,11 @@ import { Menu } from './components/Menu'
 
 import '../../../../assets/styles/scss/particles/header.scss'
 
-export const Header = () => {
-  const twitter = 'https://twitter.com/masarykuni?lang=cs'
-  const facebook = 'https://www.facebook.com/ums.sci.muni'
-  const linkedin = 'https://www.linkedin.com/school/masarykova-univerzita-brno'
+export const twitter = 'https://twitter.com/masarykuni?lang=cs'
+export const facebook = 'https://www.facebook.com/ums.sci.muni'
+export const linkedin = 'https://www.linkedin.com/school/masarykova-univerzita-brno'
 
+export const Header = () => {
   return (
     <header className='main-header app-width-limit mx-auto flex flex-column'>
       <div className='cover'>

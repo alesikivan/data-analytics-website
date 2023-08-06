@@ -67,6 +67,12 @@
     font-family: 'Bold';
     padding: 3px;
   }
+
+  &.p-button-loading {
+    span:first-child {
+      font-family: 'primeicons';
+    }
+  }
 }
 
 @media (max-width: 850px) {

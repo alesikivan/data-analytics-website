@@ -52,7 +52,7 @@ export const ResumeField = ({ form: { register, formState: { errors }, setValue,
         onSelect={onUpload}
         onClear={onClear}
         contentClassName="font-bold"
-        className="w-full mb-3" />
+        className="w-full mb-3 app-font" />
 
       <ErrorBlock errors={errors} keyword="resume" />
     </>

@@ -1,11 +1,16 @@
 import { Outlet } from "react-router-dom"
 
 import { Header } from "../components/particals/header/Header"
+import { useSelector } from "react-redux"
 
 import { ScrollToTop } from "../../utils/components/ScrollToTop"
 import { Cookies } from "../components/particals/cookie/Cookies"
+import { RootState } from "../../redux/reducers/rootReducer"
+import { Footer } from "../components/particals/footer/Footer"
 
 export const MainLayout = () => {
+  const { cookiesVisible } = useSelector((state: RootState) => state.app)
+
   return (
     <div className="application">
       <Header />
@@ -16,7 +21,9 @@ export const MainLayout = () => {
         <Outlet />
       </div>
 
-      <Cookies />
+      { cookiesVisible && <Cookies /> }
+
+      <Footer />
     </div>
   )
 }

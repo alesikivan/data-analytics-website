@@ -4,6 +4,8 @@ import facebook from '../images/pages/home/facebook.png'
 import twitter from '../images/pages/home/twitter.png'
 import linkedin from '../images/pages/home/linkedin.png'
 
+import cookies from '../images/particals/footer/cookies.png'
+
 import preview from '../images/pages/home/preview.png'
 import camp from '../images/pages/home/camp.png'
 import companies from '../images/pages/home/companies.png'
@@ -30,7 +32,6 @@ import developer from '../images/pages/students/developer.png'
 import idea from '../images/pages/students/lamp.png'
 import structure from '../images/pages/students/structure.png'
 
-import background from '../images/pages/home/background.png'
 import unactiveSexMale from '../images/pages/home/unactive-sex-male.png'
 import unactiveSexFemale from '../images/pages/home/unactive-sex-female.png'
 import activeSexMale from '../images/pages/home/active-sex-male.png'
@@ -52,6 +53,7 @@ import notFound from '../images/pages/not-found/not-found.png'
 
 export const images = {
   logo,
+  cookies,
   particals: {
     header: {
       facebook,
@@ -93,7 +95,6 @@ export const images = {
   home: {
     preview,
     camp,
-    background,
     companies,
     students,
     uni,

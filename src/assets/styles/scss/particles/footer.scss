@@ -1,0 +1,84 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.app-footer {
+  width: 100%;
+  border: 1px solid #cccccc4d;
+  padding: 30px 0;
+
+  .cover {
+    max-width: $maxWidth !important;
+    margin: 0 auto;
+
+    color: $grayColor;
+
+    @include flex-column;
+    gap: 15px;
+
+    h3 {
+      margin: 0;
+      font-family: Bold;
+      color: $appColor;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .links {
+      gap: 20px;
+
+      a {
+        color: $grayColor;
+        font-size: 15px;
+        user-select: none;
+        transition: 0.7;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .social-nets {
+      display: flex;
+      gap: 25px;
+
+      padding: 0;
+      margin: 0;
+  
+      li {
+        @include flex;
+        list-style-type: none;
+        // background-color: $appColor;
+        padding: 2px;
+        border-radius: 50%;
+  
+        a {
+          @include flex;
+
+          img {
+            height: auto;
+            max-width: 16px;
+          }
+
+          i {
+            color: $appColor;
+            font-size: 19px;
+          }
+        }
+      }
+    }
+
+    span {
+      font-size: 15px;
+
+      a {
+        color: $grayColor;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

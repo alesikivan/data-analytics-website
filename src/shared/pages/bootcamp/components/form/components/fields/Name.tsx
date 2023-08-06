@@ -30,7 +30,7 @@ export const NameField = ({ form: { register, formState: { errors } } }: Props) 
         id="name"
         type='text'
         placeholder={ translater("bootcampPageResumeFormNameFieldPlaceholder").toString() }
-        className="w-full mb-3" />
+        className="w-full mb-3 app-font" />
 
       <ErrorBlock errors={errors} keyword="name" />
     </>

@@ -34,7 +34,7 @@ export const EmailField = ({ form: { register, formState: { errors } } }: Props)
         id="email"
         type='email'
         placeholder={ translater("bootcampPageResumeFormEmailFieldPlaceholder").toString() }
-        className="w-full mb-3" />
+        className="w-full mb-3 app-font" />
 
       <ErrorBlock errors={errors} keyword="email" />
     </>

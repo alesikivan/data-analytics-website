@@ -1,9 +1,9 @@
 import '../../../assets/styles/scss/pages/privacy-policy.scss'
 import { translater } from '../../../utils/localization/localization'
 
-export const PrivacyPolicy = () => {
+export const privacyPolicyLink = process.env.SERVER_API + '/docs/privacy-policy'
 
-  const privacyPolicyLink = process.env.SERVER_API + '/docs/privacy-policy'
+export const PrivacyPolicy = () => {
 
   return (
     <>

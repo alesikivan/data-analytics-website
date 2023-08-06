@@ -1,3 +1,7 @@
 import { store } from '../store'
-import { RootState } from '../reducers/rootReducer'
-import { adminPermission } from './authActions'
+import { SET_COOKIES_VISIBLE } from '../reducers/appReducer'
+
+export const hideCookies = () => store.dispatch({
+  type: SET_COOKIES_VISIBLE,
+  payload: false
+})

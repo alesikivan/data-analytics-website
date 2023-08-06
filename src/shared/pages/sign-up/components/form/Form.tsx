@@ -115,7 +115,7 @@ export const Form = ({ showDoneInterface }: Props) => {
 
       <Button 
         loadingIcon=""
-        loading={false}
+        loading={loading}
         className={clsx('send-button app-elements-height bold-button-span', {
           'loading': loading,
           'disabled': submitCount > 0 && !isValid

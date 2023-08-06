@@ -6,10 +6,13 @@ import clsx from "clsx"
 type Props = {
   text: string,
   title: string,
+  disableMode: boolean,
+  toggleMode: boolean,
+  toggleFunction: Function,
   id: number
 }
 
-export const HiddenText = ({ title, text, id }: Props) => {
+export const HiddenText = ({ title, text, disableMode, toggleMode, toggleFunction, id }: Props) => {
   const [isHidden, setIsHidden] = useState(id !== 0)
 
   const toggleText = () => {
@@ -23,8 +26,9 @@ export const HiddenText = ({ title, text, id }: Props) => {
 
         <InputSwitch
           className='app-switch'
-          checked={true} 
-          onChange={(e) => { }} />
+          disabled={disableMode}
+          checked={toggleMode} 
+          onChange={(e) => toggleFunction()} />
       </div>
 
       <div className="hidden-text-block flex flex-column">
