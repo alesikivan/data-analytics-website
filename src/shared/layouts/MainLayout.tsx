@@ -9,7 +9,7 @@ import { RootState } from "../../redux/reducers/rootReducer"
 import { Footer } from "../components/particals/footer/Footer"
 
 export const MainLayout = () => {
-  const { cookiesVisible } = useSelector((state: RootState) => state.app)
+  // const { cookiesVisible } = useSelector((state: RootState) => state.app)
 
   return (
     <div className="application">
@@ -23,7 +23,7 @@ export const MainLayout = () => {
         <Outlet />
       </div>
 
-      { cookiesVisible && <Cookies /> }
+      {/* { cookiesVisible && <Cookies /> } */}
 
       <Footer />
     </div>

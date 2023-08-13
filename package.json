@@ -32,7 +32,7 @@
   },
   "scripts": {
     "start": "webpack serve --mode development --open --port 3001",
-    "build": "webpack --mode production && rm -rf ../data-analytics-server/client/dist && cp -Rf dist ../data-analytics-server/client"
+    "build": "webpack --mode production && rm -rf ../data-analytics-server/client/dist && cp -Rf dist ../data-analytics-server/client && cp ./public/robots.txt ../data-analytics-server/client/dist && cp ./public/sitemap.xml ../data-analytics-server/client/dist && cp ./public/google04950781d55ec26e.html ../data-analytics-server/client/dist"
   },
   "eslintConfig": {
     "extends": [

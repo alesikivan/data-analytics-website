@@ -82,3 +82,21 @@
     }
   }
 }
+
+
+@media (max-width: 600px) {
+  .app-footer {
+    .links {
+      justify-content: center;
+      gap: 8px 20px !important;
+    }
+
+    span {
+      text-align: center;
+    }
+
+    .rights {
+      padding: 0 15px;
+    }
+  }
+}

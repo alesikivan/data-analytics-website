@@ -7,7 +7,7 @@ import { RootState } from "../../redux/reducers/rootReducer"
 import { Footer } from "../components/particals/footer/Footer"
 
 export const HomePageLayout = () => {
-  const { cookiesVisible } = useSelector((state: RootState) => state.app)
+  // const { cookiesVisible } = useSelector((state: RootState) => state.app)
 
   return (
     <>
@@ -18,7 +18,7 @@ export const HomePageLayout = () => {
   
         <Outlet />
   
-        { cookiesVisible && <Cookies /> }
+        {/* { cookiesVisible && <Cookies /> } */}
 
         <Footer />
       </main>
