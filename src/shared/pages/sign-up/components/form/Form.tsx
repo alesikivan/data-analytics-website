@@ -90,7 +90,6 @@ export const Form = ({ showDoneInterface }: Props) => {
     }
   }
 
-
   return (
     <form
       onSubmit={ handleSubmit(onSubmit) }>

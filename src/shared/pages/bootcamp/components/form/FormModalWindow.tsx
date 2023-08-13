@@ -16,6 +16,7 @@ export const FormModalWindow = ({ dialogVisible, setDialogVisible }: Props) => {
         visible={dialogVisible}
         modal
         maximizable
+        resizable={false}
         contentStyle={{ height: '400px', minWidth: '470px' }}
         onHide={() => setDialogVisible(false)}>
 

@@ -12,6 +12,8 @@ import { SurnameField } from "./fields/Surname"
 import { EmailField } from "./fields/Email"
 import { ResumeField } from "./fields/Resume"
 import { successNotification } from "../../../../../../redux/actions/notificationsActions"
+import { InformationProcessing, PrivacyTerms } from "../../../../sign-up/components/form/Form"
+import { PrivacyPolicy } from "./fields/PrivacyPolicy"
 
 type Props = {
   hideModal: Function,
@@ -33,9 +35,19 @@ const defaultFormValues = {
   coveringLetter: '',
 }
 
+const defaultPrivacyTerms = { selected: false, isTouched: false }
+const defaultInformationProcessing = { selected: false, isTouched: false }
+
 export const Form = ({ hideModal }: Props) => {
+  const [privacyTerms, setPrivacyTerms] = useState<PrivacyTerms>(defaultPrivacyTerms)
+  const [informationProcessing, setInformationProcessing] = useState<InformationProcessing>(defaultInformationProcessing)
   const [loading, setLoading] = useState(false)
 
+  const reset = () => {
+    setPrivacyTerms(defaultPrivacyTerms)
+    setInformationProcessing(defaultInformationProcessing)
+  }
+  
   const sendRequest = (data: any) => {
     setLoading(true)
 
@@ -50,6 +62,8 @@ export const Form = ({ hideModal }: Props) => {
         successNotification(message)
 
         hideModal()
+
+        reset()
 
         setLoading(false)
       })
@@ -67,22 +81,32 @@ export const Form = ({ hideModal }: Props) => {
   } = form
 
   const onSubmit: SubmitHandler<FormData> = data => {
-    sendRequest(data)
+    setPrivacyTerms(prev => ({ ...prev, isTouched: true }))
+    setInformationProcessing(prev => ({ ...prev, isTouched: true }))
+    
+    if (!loading && privacyTerms.selected && informationProcessing.selected) {
+      sendRequest(data)
+    }
   }
 
   return (
     <form
       onSubmit={ handleSubmit(onSubmit) }
-      className="w-full mt-3">
+      className="resume-form w-full mt-3">
         <div>
           <NameField form={form} />
           <SurnameField form={form} />
           <EmailField form={form} />
           <ResumeField form={form} />
           <CoveringLetterField form={form} />
+          <PrivacyPolicy
+            informationProcessing={informationProcessing}
+            setInformationProcessing={setInformationProcessing}
+            privacyTerms={privacyTerms}
+            setPrivacyTerms={setPrivacyTerms}/>
         </div>
 
-        <div className="w-full flex justify-content-end gap-3">
+        <div className="w-full flex justify-content-end mt-3 gap-3">
           <Button
             className="send-resume w-full app-button app-bg-color text-white"
             loading={loading}

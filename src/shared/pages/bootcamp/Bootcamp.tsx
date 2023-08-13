@@ -24,7 +24,7 @@ export const Bootcamp = () => {
         }
       </h4>
 
-      <article className="phases-block mb-7">
+      <article className="phases-block">
         <section className="flex gap-5 align-items-center justify-content-between">
           <div className="flex flex-column bootcamp-phases-block">
             <motion.h2 
