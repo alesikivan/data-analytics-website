@@ -64,6 +64,8 @@ export const Form = ({ showDoneInterface }: Props) => {
 
         showDoneInterface()
 
+        window.scrollTo(0, 0)
+
         reset()
       })
       .catch((error) => {
