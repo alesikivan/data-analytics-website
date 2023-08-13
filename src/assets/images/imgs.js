@@ -1,7 +1,7 @@
 import logo from '../images/common/logo.png'
 
 import facebook from '../images/pages/home/facebook.png'
-import twitter from '../images/pages/home/twitter.png'
+import insta from '../images/pages/home/insta.png'
 import linkedin from '../images/pages/home/linkedin.png'
 
 import cookies from '../images/particals/footer/cookies.png'
@@ -57,7 +57,7 @@ export const images = {
   particals: {
     header: {
       facebook,
-      twitter,
+      insta,
       linkedin
     }
   },

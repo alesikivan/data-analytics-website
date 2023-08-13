@@ -6,8 +6,8 @@ import { Menu } from './components/Menu'
 
 import '../../../../assets/styles/scss/particles/header.scss'
 
-export const twitter = 'https://twitter.com/masarykuni?lang=cs'
-export const facebook = 'https://www.facebook.com/ums.sci.muni'
+export const insta = 'https://www.instagram.com/muni_data_analytics/'
+export const facebook = 'https://www.facebook.com/muni.data.analytics/'
 export const linkedin = 'https://www.linkedin.com/school/masarykova-univerzita-brno'
 
 export const Header = () => {
@@ -25,8 +25,8 @@ export const Header = () => {
               <Translater />
           </li>
           <li className='app-hover'>
-            <a href={twitter} target='_blank'>
-              <img src={images.particals.header.twitter} alt="twitter" />
+            <a href={insta} target='_blank'>
+              <img src={images.particals.header.insta} alt="insta" />
             </a>
           </li>
           <li className='app-hover'>

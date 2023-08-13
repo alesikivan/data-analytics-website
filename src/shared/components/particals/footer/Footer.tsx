@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 import '../../../../assets/styles/scss/particles/footer.scss'
-import { facebook, linkedin, twitter } from '../header/Header'
+import { facebook, linkedin, insta } from '../header/Header'
 import { privacyPolicyLink } from '../../../pages/privacy-policy/PrivacyPolicy'
 
 export const dataProcessingConsent = process.env.SERVER_API + '/docs/data-processing-consent'
@@ -22,8 +22,8 @@ export const Footer = () => {
 
         <ul className='social-nets'>
           <li className='app-hover'>
-            <a href={twitter} target='_blank'>
-              <i className='pi pi-twitter'></i>
+            <a href={insta} target='_blank'>
+              <i className='pi pi-instagram'></i>
             </a>
           </li>
           <li className='app-hover'>
