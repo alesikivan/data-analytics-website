@@ -57,8 +57,8 @@ export const Footer = () => {
           All rights reserved | <Link to={'/privacy-policy'} target='_blank' >Privacy Policy</Link> – <a href={dataProcessingConsent} target='_blank'>Consent to Data Processing</a>
           <span className=''> – </span>
           <a 
-            href="https://www.iubenda.com/privacy-policy/79801931" 
-            className="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " 
+            href={translater("privacyPolicyCookiesLink").toString()} 
+            className="iubenda-white iubenda-noiframe privacy-policy-iubenda iubenda-embed iubenda-noiframe " 
             title="Privacy Policy ">
               Cookies Policy
           </a>

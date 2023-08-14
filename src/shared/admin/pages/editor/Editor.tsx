@@ -112,7 +112,7 @@ export const Editor = () => {
           label="Log out" />
       </nav>
 
-      <article className="flex flex-column gap-5">
+      <article className="flex flex-column gap-5 pl-4">
         {
           keys
             .filter(key => {
