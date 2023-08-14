@@ -121,6 +121,7 @@ export const Editor = () => {
 
               const finderIncluding = enValue.toLowerCase().includes(finder.toLowerCase())
                 || csValue.toLowerCase().includes(finder.toLowerCase())
+                || key.toLowerCase().includes(finder.toLowerCase())
 
               const isKeyMaching = key === activeBoxKey
 
