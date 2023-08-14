@@ -61,55 +61,6 @@
   }
 }
 
-.resume-form {
-  .policy-block {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    .policy-area {
-      width: 100%;
-      display: flex;
-      gap: 10px;
-    
-      .flag-area {
-        min-width: 20px;
-        height: 20px;
-        border: 1px solid $appColor;
-        border-radius: 4px;
-        cursor: pointer;
-    
-        @include flex;
-    
-        &.error {
-          border-color: #E76161;
-        }
-    
-        .flag {
-          height: auto;
-          max-width: 15px;
-          user-select: none;
-        }
-      }
-    
-      span {
-        font-size: 15px;
-        max-width: 480px;
-    
-        a {
-          color: $textColor;
-          text-decoration: underline;
-          transition: 0.3s;
-    
-          &:hover {
-            opacity: 0.8;
-          }
-        }
-      }
-    }
-  }
-}
-
 .send-resume {
   border-color: $appColor !important;
 

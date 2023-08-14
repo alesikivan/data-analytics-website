@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios"
-import { HubSpotLoginRequest, LoginRequest, LoginServerResponse, MessageServerResponse, UploadResumeRequest } from "./interfaces"
+import { FeedbackRequest, HubSpotLoginRequest, LoginRequest, LoginServerResponse, MessageServerResponse, UploadResumeRequest } from "./interfaces"
 
 const path = (path: string) => process.env.SERVER_API + path
 
@@ -25,11 +25,15 @@ const uploadResume = (data: UploadResumeRequest): Promise<AxiosResponse<MessageS
       'Content-Type': 'multipart/form-data'
     }
   })
+  
+const contactUs = (data: FeedbackRequest): Promise<AxiosResponse<MessageServerResponse>> => 
+  axios.post( path('/feedback/contact-us'), data)
 
 export const API = {
   hubspotLogin,
   getLanguages,
   uploadResume,
+  contactUs,
   login,
   setLanguages
 }

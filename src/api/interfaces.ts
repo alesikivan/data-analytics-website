@@ -25,6 +25,13 @@ export interface UploadResumeRequest {
   coveringLetter: string
 }
 
+export interface FeedbackRequest {
+  name: string,
+  surname: string,
+  email: string,
+  question: string
+}
+
 export interface LoginRequest {
   login: string,
   password: string
