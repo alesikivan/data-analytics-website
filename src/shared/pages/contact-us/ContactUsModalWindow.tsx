@@ -1,18 +1,18 @@
 import { Dialog } from 'primereact/dialog'
 
-import { Form } from './components/Form'
-import { translater } from '../../../../../utils/localization/localization'
+import { translater } from '../../../utils/localization/localization'
+import { Form } from './components/form/Form'
 
 type Props = {
   dialogVisible: boolean,
   setDialogVisible: Function,
 }
 
-export const FormModalWindow = ({ dialogVisible, setDialogVisible }: Props) => {
+export const ContactUsModalWindow = ({ dialogVisible, setDialogVisible }: Props) => {
   return (
     <div className="card">
       <Dialog
-        header={translater("bootcampPageResumeFormTitle")}
+        header={translater("contactUsDialogFormTitle")}
         visible={dialogVisible}
         modal
         maximizable

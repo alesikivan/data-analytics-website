@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom'
 
 import '../../../../assets/styles/scss/particles/footer.scss'
-import { facebook, linkedin, twitter } from '../header/Header'
-import { privacyPolicyLink } from '../../../pages/privacy-policy/PrivacyPolicy'
+import { ContactUsModalWindow } from '../../../pages/contact-us/ContactUsModalWindow'
+import { useState } from 'react'
+import { translater } from '../../../../utils/localization/localization'
 
 export const dataProcessingConsent = process.env.SERVER_API + '/docs/data-processing-consent'
 
 export const Footer = () => {
+  const [dialogVisible, setDialogVisible] = useState(false)
+
   return (
     <div className='app-footer'>
       <div className="cover">
@@ -18,21 +21,33 @@ export const Footer = () => {
           <Link to={'/muni'}>Masaryk University</Link>
           <Link to={'/bootcamp'}>Bootcamp</Link>
           <Link to={'/'}>Introduction</Link>
+
+          <span 
+            onClick={() => {
+              setDialogVisible(true)
+            }}
+            className='contact-us-button cursor-pointer'>
+              Contact Us
+          </span>
+
+          <ContactUsModalWindow 
+            dialogVisible={dialogVisible}
+            setDialogVisible={setDialogVisible}/>
         </div>
 
         <ul className='social-nets'>
           <li className='app-hover'>
-            <a href={twitter} target='_blank'>
-              <i className='pi pi-twitter'></i>
+            <a href={translater("socialMediaLinkInstagram").toString()} target='_blank'>
+              <i className='pi pi-instagram'></i>
             </a>
           </li>
           <li className='app-hover'>
-            <a href={facebook} target='_blank'>
+            <a href={translater("socialMediaLinkFacebook").toString()} target='_blank'>
               <i className='pi pi-facebook'></i>
             </a>
           </li>
           <li className='app-hover'>
-            <a href={linkedin} target='_blank'>
+            <a href={translater("socialMediaLinkLinkedin").toString()} target='_blank'>
               <i className='pi pi-linkedin'></i>  
             </a>
           </li>

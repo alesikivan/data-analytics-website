@@ -3,16 +3,15 @@ import { Button } from "primereact/button"
 import { useState } from "react"
 import { AxiosResponse } from "axios"
 
-import { API } from "../../../../../../api"
-import { MessageServerResponse } from "../../../../../../api/interfaces"
-import { translater } from "../../../../../../utils/localization/localization"
-import { CoveringLetterField } from "./fields/CoveringLetter"
+import { successNotification } from "../../../../../redux/actions/notificationsActions"
+import { API } from "../../../../../api"
+import { InformationProcessing, PrivacyTerms } from "../../../sign-up/components/form/Form"
+import { MessageServerResponse } from "../../../../../api/interfaces"
+import { translater } from "../../../../../utils/localization/localization"
 import { NameField } from "./fields/Name"
 import { SurnameField } from "./fields/Surname"
 import { EmailField } from "./fields/Email"
-import { ResumeField } from "./fields/Resume"
-import { successNotification } from "../../../../../../redux/actions/notificationsActions"
-import { InformationProcessing, PrivacyTerms } from "../../../../sign-up/components/form/Form"
+import { QuestionField } from "./fields/Question"
 import { PrivacyPolicy } from "./fields/PrivacyPolicy"
 
 type Props = {
@@ -23,16 +22,14 @@ export type FormData = {
   name: string,
   surname: string,
   email: string,
-  resume: File | null,
-  coveringLetter: string,
+  question: string,
 }
 
 const defaultFormValues = {
   name: '',
   surname: '',
   email: '',
-  resume: null,
-  coveringLetter: '',
+  question: '',
 }
 
 const defaultPrivacyTerms = { selected: false, isTouched: false }
@@ -54,9 +51,9 @@ export const Form = ({ hideModal }: Props) => {
     // const formData = new FormData()
     // formData.append("resume", data.resume);
 
-    // console.log(formData)
+    console.log(data)
     
-    API.uploadResume(data)
+    API.contactUs(data)
       .then((responce: AxiosResponse<MessageServerResponse>) => {
         const { data: { message } } = responce
         successNotification(message)
@@ -92,13 +89,12 @@ export const Form = ({ hideModal }: Props) => {
   return (
     <form
       onSubmit={ handleSubmit(onSubmit) }
-      className="resume-form w-full mt-3">
+      className="dialog-form w-full mt-3">
         <div>
-          <NameField form={form} />
-          <SurnameField form={form} />
-          <EmailField form={form} />
-          <ResumeField form={form} />
-          <CoveringLetterField form={form} />
+          <NameField form={form}/>
+          <SurnameField form={form}/>
+          <EmailField form={form}/>
+          <QuestionField form={form}/>
           <PrivacyPolicy
             informationProcessing={informationProcessing}
             setInformationProcessing={setInformationProcessing}
@@ -110,7 +106,7 @@ export const Form = ({ hideModal }: Props) => {
           <Button
             className="send-resume w-full app-button app-bg-color text-white"
             loading={loading}
-            label={translater("bootcampPageResumeFormButton").toString()}
+            label={translater("contactUsDialogFormButton").toString()}
             disabled={submitCount > 0 && !isValid} />
         </div>
     </form>
