@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Parser from 'html-react-parser'
 
 import '../../../../assets/styles/scss/particles/footer.scss'
 import { ContactUsModalWindow } from '../../../pages/contact-us/ContactUsModalWindow'
@@ -53,15 +54,13 @@ export const Footer = () => {
           </li>
         </ul>
 
-        <span className='rights'>
-          All rights reserved | <Link to={'/privacy-policy'} target='_blank' >Privacy Policy</Link> – <a href={dataProcessingConsent} target='_blank'>Consent to Data Processing</a>
-          <span className=''> – </span>
-          <a 
-            href={translater("privacyPolicyCookiesLink").toString()} 
-            className="iubenda-white iubenda-noiframe privacy-policy-iubenda iubenda-embed iubenda-noiframe " 
-            title="Privacy Policy ">
-              Cookies Policy
-          </a>
+        <span className='rights flex align-items-center gap-3'>
+          { Parser(`<a href="https://www.iubenda.com/privacy-policy/56143986" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>`) }
+
+          { Parser(`<a href="https://www.iubenda.com/privacy-policy/56143986/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Cookie Policy ">Cookie Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>`) }
+
+          { Parser(`<a href="https://www.iubenda.com/terms-and-conditions/56143986" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Terms and Conditions ">Terms and Conditions</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>`) }
+          
         </span>
       </div>
     </div>

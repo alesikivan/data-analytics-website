@@ -12,7 +12,7 @@ export const setLocalizations = async () => {
   // Добавляем английский язык
   addLocale('en', {})
   
-  // Добавляем русский язык
+  // Добавляем чешский язык
   addLocale('cs', {})
 }
 

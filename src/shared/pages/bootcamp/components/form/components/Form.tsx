@@ -92,7 +92,7 @@ export const Form = ({ hideModal }: Props) => {
   return (
     <form
       onSubmit={ handleSubmit(onSubmit) }
-      className="resume-form w-full mt-3">
+      className="resume-form dialog-form w-full mt-3">
         <div>
           <NameField form={form} />
           <SurnameField form={form} />
