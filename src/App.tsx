@@ -1,6 +1,7 @@
 import {  useSelector } from 'react-redux'
 import { locale } from 'primereact/api'
 import { updateLocaleOptions } from 'primereact/api'
+import ReactGA from 'react-ga'
 
 import { Pages } from './shared/pages/Pages'
 
@@ -11,6 +12,20 @@ import { appUnilsInit } from './utils/initialization/app'
 import './App.scss'
 import { useEffect, useReducer } from 'react'
 import { API } from './api'
+import { useLocation } from 'react-router-dom'
+
+ReactGA.initialize('G-Y1S57BYLGP');
+
+// Обертка для отслеживания переходов между страницами
+function TrackPageViews() {
+  const location = useLocation()
+
+  useEffect(() => {
+    ReactGA.pageview(location.pathname + location.search)
+  }, [location])
+
+  return null
+}
 
 (async function () { await appUnilsInit() })()
 
@@ -37,6 +52,7 @@ export const App = () => {
   return (
     <>
       <Notifications />
+      <TrackPageViews /> 
       <Pages />
     </>
   )

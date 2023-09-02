@@ -1,5 +1,6 @@
-import { Routes, Route, Navigate } from "react-router-dom"
+import { Routes, Route, Navigate, useLocation } from "react-router-dom"
 import { useSelector } from "react-redux"
+import ReactGA from 'react-ga'
 
 import { NotFound } from "./not-found/NotFound"
 import { Home } from "./home/Home"
