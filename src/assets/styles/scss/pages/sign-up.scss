@@ -76,6 +76,10 @@ main.sign-up {
             background-position-x: 10px;
           }
 
+          &.company-field {
+            background-size: 15px;
+          }
+
           &.error {
             border-color: #ff4c4c91;
           }

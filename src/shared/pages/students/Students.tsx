@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { Tooltip } from 'primereact/tooltip'
 
 import { translater } from '../../../utils/localization/localization'
 import { images } from "../../../assets/images/imgs"
@@ -27,72 +28,72 @@ export const Students = () => {
       <article className="info-block">
         <section className="flex mt-5 gap-6 align-items-center justify-content-between">
           <div className="flex flex-column data-science-block">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="m-0 app-header-color app-font-bold students-header">
-                {translater("studentsPageInfoBlockTitle")}
+              {translater("studentsPageInfoBlockTitle")}
             </motion.h2>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="mt-4 flex align-items-start gap-3">
-                <img
-                  src={images.home.check}
-                  alt="check"
-                  className="check" />
+              <img
+                src={images.home.check}
+                alt="check"
+                className="check" />
 
-                <span className="app-gray-color app-line-height">
-                  {translater("studentsPageInfoBlockSpan1")}
-                </span>
+              <span className="app-gray-color app-line-height">
+                {translater("studentsPageInfoBlockSpan1")}
+              </span>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="mt-3 flex align-items-start gap-3">
-                <img
-                  src={images.home.check}
-                  alt="check"
-                  className="check" />
+              <img
+                src={images.home.check}
+                alt="check"
+                className="check" />
 
-                <span className="app-gray-color app-line-height">
-                  {translater("studentsPageInfoBlockSpan2")}
-                </span>
+              <span className="app-gray-color app-line-height">
+                {translater("studentsPageInfoBlockSpan2")}
+              </span>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="mt-3 flex align-items-start gap-3">
-                <img
-                  src={images.home.check}
-                  alt="check"
-                  className="check" />
+              <img
+                src={images.home.check}
+                alt="check"
+                className="check" />
 
-                <span className="app-gray-color app-line-height">
-                  {translater("studentsPageInfoBlockSpan3")}
-                </span>
+              <span className="app-gray-color app-line-height">
+                {translater("studentsPageInfoBlockSpan3")}
+              </span>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="mt-3 flex align-items-start gap-3">
-                <img
-                  src={images.home.check}
-                  alt="check"
-                  className="check" />
+              <img
+                src={images.home.check}
+                alt="check"
+                className="check" />
 
-                <span className="app-gray-color app-line-height">
-                  {translater("studentsPageInfoBlockSpan4")}
-                </span>
+              <span className="app-gray-color app-line-height">
+                {translater("studentsPageInfoBlockSpan4")}
+              </span>
             </motion.div>
           </div>
 
@@ -101,7 +102,7 @@ export const Students = () => {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              style={{maxWidth: "350px"}}
+              style={{ maxWidth: "350px" }}
               src={images.students.developer}
               alt="program-preview"></motion.img>
           </div>
@@ -120,7 +121,7 @@ export const Students = () => {
                 return (
                   <div key={index} className="mt-3 flex align-items-start gap-3">
                     <span className="app-gray-color app-line-height">
-                      { translater(content) }
+                      {translater(content)}
                     </span>
                   </div>
                 )
@@ -132,7 +133,7 @@ export const Students = () => {
               <span className="app-gray-color app-line-height program-finish">
                 {
                   translater("studentsPageStructureBlockHelp")
-                } 
+                }
               </span>
             </div>
           </div>
@@ -163,7 +164,7 @@ export const Students = () => {
               <span className="app-gray-color app-line-height">
                 <Link to={'/muni'} className='app-link-color'>
                   {translater("studentsPageDescriptionBlockSpan1Link")}
-                </Link> 
+                </Link>
                 {translater("studentsPageDescriptionBlockSpan1")}
               </span>
             </div>
@@ -216,10 +217,10 @@ export const Students = () => {
           {translater("studentsPageValuePropositionTitle")}
         </h3>
 
-        <Link 
+        <Link
           className='app-button app-bg-color text-white px-4 mx-auto text-base mb-2'
           to={'/sign-up'}>
-            {translater("studentsPageValuePropositionButton")}
+          {translater("studentsPageValuePropositionButton")}
         </Link>
 
         <div className='flex flex-wrap value-proposition-content'>
@@ -235,13 +236,13 @@ export const Students = () => {
             }
           </span>
 
-          <span className='app-gray-color' style={{minHeight: "184px"}}>
+          <span className='app-gray-color'>
             {
               translater("studentsPageValuePropositionBlock3")
             }
           </span>
 
-          <span className='app-gray-color' style={{minHeight: "184px"}}>
+          <span className='app-gray-color'>
             {
               translater("studentsPageValuePropositionBlock4")
             }
@@ -269,6 +270,36 @@ export const Students = () => {
                 translater("studentsPageDataScienceBlockSpan2")
               }
             </span>
+          </div>
+        </section>
+      </article>
+
+      <article className="description-block">
+        <section className="flex mt-5 gap-5 align-items-center justify-content-between">
+          <div className="flex flex-column">
+            <h2 className="m-0 app-header-color app-font-bold students-header">
+              {translater("studentPageApplicationBlockHeader")}
+            </h2>
+
+            <div className="mt-4 flex align-items-start gap-3">
+
+              <a
+                data-pr-tooltip={translater("studentPageApplicationBlockButton1Hint")}
+                data-pr-position="bottom"
+                data-pr-at="center bottom+25"
+                data-pr-my="center"
+                className='custom-target-button app-button app-bg-color text-white px-4 mx-auto text-base mb-2 disabled-link'>
+                {translater("studentsPageValuePropositionButton")}
+              </a>
+              
+              <Tooltip target=".custom-target-button" />
+
+              <Link
+                className='app-button app-bg-color text-white px-4 mx-auto text-base mb-2'
+                to={'/bootcamp'}>
+                {translater("studentPageApplicationBlockButton2")}
+              </Link>
+            </div>
           </div>
         </section>
       </article>

@@ -7,6 +7,14 @@ body,
   height: 100%;
 }
 
+a.disabled-link {
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
 .editor-area {
   position: relative;
 
@@ -76,6 +84,10 @@ a {
 input, button, textarea {
   outline: none;
   font-family: 'Regular', Arial;
+}
+
+.important-hidden {
+  display: none !important;
 }
 
 button {

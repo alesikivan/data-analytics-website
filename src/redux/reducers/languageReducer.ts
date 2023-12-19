@@ -12,11 +12,11 @@ const initialState: InitialState = {
 }
 
 // Set default language
-const language = localStorage.getItem('app-language')
-if (language)
-  initialState.lang = language
-else
-  localStorage.setItem('app-language', 'en')
+// const language = localStorage.getItem('app-language')
+// if (language)
+//   initialState.lang = language
+// else
+//   localStorage.setItem('app-language', 'en')
 
 export const SET_LANGUAGE = "SET_LANGUAGE"
 

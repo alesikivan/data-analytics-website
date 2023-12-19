@@ -1,5 +1,23 @@
 @import '../utils/variables.scss';
 
+.companies-header {
+  font-size: 20px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 3px;
+    border-radius: 5px;
+    margin-right: 2px;
+    background-color: $appColor;
+  }
+}
+
 .content {
   margin-top: 25px;
   gap: 48px;
@@ -22,6 +40,47 @@
       }
     }
   }
+}
+
+.tiers-header {
+  margin-top: 70px !important;
+}
+
+.tier {
+  min-height: auto !important;
+  margin-top: 20px !important;
+  border-bottom: 1px solid #cccccc7d;
+  padding-bottom: 40px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.tier-circle {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 19px;
+
+  border-radius: 50%;
+  background-color: $appColor;
+  color: white;
+  font-size: 16px !important;
+  font-family: 'Bold';
+}
+
+.show-more-info {
+  color: $appColor;
+  font-family: 'Bold';
+  border-radius: $borderRadius;
+  user-select: none;
+  cursor: pointer;
 }
 
 @media (max-width: 670px) {

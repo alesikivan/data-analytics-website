@@ -24,7 +24,7 @@ export const Surname = ({ form: { register, formState: { errors } } }: Props) =>
       <input
         { ...register('surname', validations) }
         style={{ backgroundImage: `url(${images.signUp.form.surnameFieldIcon})` }}
-        className={`app-elements-height surname ${errors && errors.surname?.message ? 'error' : ''}`}
+        className={`app-elements-height surname company-field ${errors && errors.surname?.message ? 'error' : ''}`}
         type="text"
         name="surname"
         placeholder={translater("introductionPageFormSurnameFieldPlaceholder").toString()}

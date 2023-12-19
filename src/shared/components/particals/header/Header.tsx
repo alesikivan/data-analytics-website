@@ -16,11 +16,11 @@ export const Header = () => {
         </Link>
 
         <ul>
-          <li
+          {/* <li
             className='app-color-border app-hover'
             style={{background: "none"}}>
               <Translater />
-          </li>
+          </li> */}
           <li className='app-hover'>
             <a href={translater("socialMediaLinkInstagram").toString()} target='_blank'>
               <img src={images.particals.header.insta} alt="insta" />

@@ -100,3 +100,11 @@
     }
   }
 }
+
+@media (max-width: 420px) {
+  .app-footer {
+    .rights {
+      @include flex-column;
+    }
+  }
+}

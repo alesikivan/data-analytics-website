@@ -12,6 +12,7 @@ import companies from '../images/pages/home/companies.png'
 import students from '../images/pages/home/students.png'
 import uni from '../images/pages/home/uni.png'
 
+import experientiaLearning from '../images/pages/companies/experiential-learning.png'
 import benefits from '../images/pages/companies/benefits.png'
 import talant from '../images/pages/companies/talant.png'
 import research from '../images/pages/companies/research.png'
@@ -20,6 +21,7 @@ import relationship from '../images/pages/companies/relationship.png'
 import reputation from '../images/pages/companies/reputation.png'
 
 import bootcamp from '../images/pages/bootcamp/bootcamp.png'
+import logolink from '../images/pages/bootcamp/logolink.jpeg'
 
 import prestigious from '../images/pages/muni/prestigious.png'
 import study from '../images/pages/muni/study.png'
@@ -41,6 +43,8 @@ import check from '../images/pages/home/check.png'
 import success from '../images/pages/home/success.png'
 
 import nameFieldIcon from '../images/pages/home/name-field-preview.png'
+import companyNameFieldIcon from '../images/pages/signUp/tie.png'
+import companyScopeFieldIcon from '../images/pages/signUp/scope.png'
 import surnameFieldIcon from '../images/pages/home/surname-field-preview.png'
 import emailldIcon from '../images/pages/home/email-field-preview.png'
 
@@ -65,10 +69,13 @@ export const images = {
     form: {
       nameFieldIcon,
       surnameFieldIcon,
-      emailldIcon
+      emailldIcon,
+      companyNameFieldIcon,
+      companyScopeFieldIcon
     }
   },
   companies: {
+    experientiaLearning,
     benefits,
     talant,
     research,
@@ -90,7 +97,8 @@ export const images = {
     structure
   },
   bootcamp: {
-    bootcamp
+    bootcamp,
+    logolink
   },
   home: {
     preview,

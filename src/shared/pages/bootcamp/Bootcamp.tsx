@@ -18,7 +18,7 @@ export const Bootcamp = () => {
         }
       </h1>
 
-      <h4 className="bootcamp-description app-header-color text-center mt-3 ms-auto w-9">
+      <h4 className="bootcamp-description app-header-color text-center mt-3 ms-auto w-9 mb-5">
         {
           translater("bootcampPageDescription")
         }
@@ -27,38 +27,32 @@ export const Bootcamp = () => {
       <article className="phases-block">
         <section className="flex gap-5 align-items-center justify-content-between">
           <div className="flex flex-column bootcamp-phases-block">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="bootcamp-header m-0 app-header-color app-font-bold">
-                {translater("bootcampPageInfoBlockTitle")}
+              {translater("bootcampPageInfoBlockGeneralTitle")}
             </motion.h2>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="mt-4 flex align-items-start gap-3">
-                <span className="app-color app-line-height">
-                  1.
-                </span>
-                <span className="app-gray-color app-line-height">
-                  {translater("bootcampPageInfoBlockSpan1")}
-                </span>
+              <span className="app-gray-color app-line-height">
+                {translater("bootcampPageInfoBlockGeneralItem1")}
+              </span>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="mt-3 flex align-items-start gap-3">
-                <span className="app-color app-line-height">
-                  2.
-                </span>
-                <span className="app-gray-color app-line-height">
-                  {translater("bootcampPageInfoBlockSpan2")}
-                </span>
+              <span className="app-gray-color app-line-height">
+                {translater("bootcampPageInfoBlockGeneralItem2")}
+              </span>
             </motion.div>
           </div>
 
@@ -67,7 +61,7 @@ export const Bootcamp = () => {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              style={{maxWidth: "460px"}}
+              style={{ maxWidth: "280px" }}
               src={images.bootcamp.bootcamp}
               alt="program-preview"></motion.img>
           </div>
@@ -75,42 +69,123 @@ export const Bootcamp = () => {
 
         <section className="flex gap-5 align-items-center justify-content-between mt-3">
           <div className="flex flex-column result-block">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="bootcamp-header m-0 app-header-color app-font-bold">
-                {translater("bootcampPageResultBlockTitle")}
+              {translater("bootcampPageResultBlockGeneralTitle")}
             </motion.h2>
 
-            <motion.div 
+            {
+              [
+                'bootcampPageResultBlockGeneralItem1',
+                'bootcampPageResultBlockGeneralItem2',
+                'bootcampPageResultBlockGeneralItem3',
+                'bootcampPageResultBlockGeneralItem4',
+                'bootcampPageResultBlockGeneralItem5'
+              ].map(translate => {
+                return (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="mt-4 flex align-items-start gap-3">
+                    <span className="app-gray-color app-line-height">
+                      {translater(translate)}
+                    </span>
+                  </motion.div>
+                )
+              })
+            }
+          </div>
+        </section>
+
+        <section className="flex gap-5 align-items-center justify-content-between mt-5">
+          <div className="flex flex-column result-block">
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="bootcamp-header m-0 app-header-color app-font-bold">
+              {translater("bootcampPageAdmissionProcedureTitle")}
+            </motion.h2>
+
+            <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="mt-4 flex align-items-start gap-3">
-                <span className="app-gray-color app-line-height">
-                  {translater("bootcampPageResultBlockSpan1")}
-                </span>
+              <span className="app-gray-color app-line-height">
+                {translater('bootcampPageAdmissionProcedureDescription')}
+              </span>
             </motion.div>
 
-            <motion.div 
+            {
+              [
+                'bootcampPageAdmissionProcedureItem1',
+                'bootcampPageAdmissionProcedureItem2',
+                'bootcampPageAdmissionProcedureItem3',
+                'bootcampPageAdmissionProcedureItem4',
+                'bootcampPageAdmissionProcedureItem5',
+                'bootcampPageAdmissionProcedureItem6',
+              ].map(translate => {
+                return (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="mt-4 flex align-items-start gap-3">
+                    <span className="app-gray-color app-line-height">
+                      {translater(translate)}
+                    </span>
+                  </motion.div>
+                )
+              })
+            }
+          </div>
+        </section>
+
+        <section className="flex gap-5 align-items-center justify-content-between mt-5">
+          <div className="flex flex-column result-block">
+            <motion.h2
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="mt-3 flex align-items-start gap-3">
-                <span className="app-gray-color app-line-height">
-                  {translater("bootcampPageResultBlockSpan2")}
-                </span>
-            </motion.div>
+              className="bootcamp-header m-0 app-header-color app-font-bold">
+              {translater("bootcampPageTimeLineTitle")}
+            </motion.h2>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="mt-3 flex align-items-start gap-3">
-                <span className="app-gray-color app-line-height">
-                  {translater("bootcampPageResultBlockSpan3")}
-                </span>
+              className="mt-4 flex align-items-start gap-3">
+              <span className="app-gray-color app-line-height">
+                {translater('bootcampPageTimeLineDescription')}
+              </span>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="flex gap-5 align-items-center justify-content-between mt-5">
+          <div className="flex flex-column result-block">
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="bootcamp-header m-0 app-header-color app-font-bold">
+              {translater("bootcampPageFormalAdmissionTitle")}
+            </motion.h2>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="mt-4 flex align-items-start gap-3">
+              <span className="app-gray-color app-line-height">
+                {translater('bootcampPageFormalAdmissionDescription')}
+              </span>
             </motion.div>
           </div>
         </section>
@@ -123,19 +198,29 @@ export const Bootcamp = () => {
               {translater("bootcampPageResumeCollectionText")}
             </span>
           </div>
-          
+
           <div>
-            <span 
+            <span
               className='app-button app-bg-color text-white px-5 mx-auto text-base mb-2 cursor-pointer'
               onClick={() => {
                 setDialogVisible(true)
               }}>
-                {translater("bootcampPageApplyButton")}
+              {translater("bootcampPageApplyButton")}
             </span>
           </div>
         </section>
 
-        <FormModalWindow 
+        <div className="first-company mt-4">
+          <img src={images.bootcamp.logolink} alt="company" />
+
+          <span className="app-gray-color app-line-height">
+            NPO_MUNI_MSMT-16606/2022
+          </span>
+        </div>
+
+
+
+        <FormModalWindow
           dialogVisible={dialogVisible}
           setDialogVisible={setDialogVisible} />
       </article>
