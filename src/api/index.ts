@@ -1,7 +1,18 @@
 import axios, { AxiosResponse } from "axios"
 import { FeedbackRequest, HubSpotLoginRequest, LoginRequest, LoginServerResponse, MessageServerResponse, UploadResumeRequest } from "./interfaces"
 
-const path = (path: string) => process.env.SERVER_API + path
+const getWebsiteUrl = () => {
+  const website = `${location.origin}/api`
+
+  if (website.includes('localhost'))
+    return 'http://localhost:4004/api'
+
+  return website
+}
+
+const urlPath = getWebsiteUrl()
+
+const path = (path: string) => urlPath + path
 
 // AUTH
 const hubspotLogin = (data: HubSpotLoginRequest): Promise<AxiosResponse<MessageServerResponse>> => 
