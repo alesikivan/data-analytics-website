@@ -21,13 +21,15 @@ export const Header = () => {
             style={{background: "none"}}>
               <Translater />
           </li> */}
-          <li className='app-hover'>
-            <a href={translater("socialMediaLinkInstagram").toString()} target='_blank'>
+          <li className='app-hover opacity-50'>
+            {/* <a href={translater("socialMediaLinkInstagram").toString()} target='_blank'> */}
+            <a href={'#'} className='cursor-default'>
               <img src={images.particals.header.insta} alt="insta" />
             </a>
           </li>
-          <li className='app-hover'>
-            <a href={translater("socialMediaLinkFacebook").toString()} target='_blank'>
+          <li className='app-hover opacity-50'>
+            {/* <a href={translater("socialMediaLinkFacebook").toString()} target='_blank'> */}
+            <a href={'#'} className='cursor-default'>
               <img src={images.particals.header.facebook} alt="facebook" />
             </a>
           </li>

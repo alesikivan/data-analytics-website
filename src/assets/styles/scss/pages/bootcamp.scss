@@ -78,6 +78,20 @@
       max-width: 32px;
     }
   }
+
+  .bootcamp-info-block {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1px solid $appColor;
+    border-radius: 5px;
+    padding-bottom: 15px;
+
+    .idea {
+      background-color: white;
+    }
+  }
 }
 
 .send-resume {

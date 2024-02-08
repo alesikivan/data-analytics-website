@@ -37,13 +37,25 @@ export const Footer = () => {
         </div>
 
         <ul className='social-nets'>
-          <li className='app-hover'>
+          {/* <li className='app-hover'>
             <a href={translater("socialMediaLinkInstagram").toString()} target='_blank'>
               <i className='pi pi-instagram'></i>
             </a>
           </li>
           <li className='app-hover'>
             <a href={translater("socialMediaLinkFacebook").toString()} target='_blank'>
+              <i className='pi pi-facebook'></i>
+            </a>
+          </li> */}
+          <li className='app-hover opacity-50'>
+            {/* <a href={translater("socialMediaLinkInstagram").toString()} target='_blank'> */}
+            <a href={'#'} className='cursor-default'>
+              <i className='pi pi-instagram'></i>
+            </a>
+          </li>
+          <li className='app-hover opacity-50'>
+            {/* <a href={translater("socialMediaLinkFacebook").toString()} target='_blank'> */}
+            <a href={'#'} className='cursor-default'>
               <i className='pi pi-facebook'></i>
             </a>
           </li>

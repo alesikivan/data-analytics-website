@@ -67,7 +67,34 @@ export const Bootcamp = () => {
           </div>
         </section>
 
-        <section className="flex gap-5 align-items-center justify-content-between mt-3">
+        <motion.section 
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-column gap-3 mt-3">
+
+          <div className="flex flex-column resume-collection-text bootcamp-info-block text-center w-full">
+            <img 
+              className='idea mx-auto' 
+              src={images.students.idea} 
+              style={{ position: "absolute", top: -15, left: "50%", transform: "translateX(-50%)" }}
+              alt="lamp" />
+
+            <span className="mt-4">
+              New cohort starts now - apply by Jan, 31!
+            </span>
+          </div>
+
+          <span
+            className='app-button app-bg-color text-white px-5 mx-auto text-lg mb-2 cursor-pointer'
+            onClick={() => {
+              setDialogVisible(true)
+            }}>
+            { translater("bootcampPageApplyButton") }
+          </span>
+        </motion.section>
+
+        <section className="flex gap-5 align-items-center justify-content-between mt-5">
           <div className="flex flex-column result-block">
             <motion.h2
               initial={{ opacity: 0, scale: 0.5 }}
@@ -101,95 +128,6 @@ export const Bootcamp = () => {
           </div>
         </section>
 
-        <section className="flex gap-5 align-items-center justify-content-between mt-5">
-          <div className="flex flex-column result-block">
-            <motion.h2
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="bootcamp-header m-0 app-header-color app-font-bold">
-              {translater("bootcampPageAdmissionProcedureTitle")}
-            </motion.h2>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="mt-4 flex align-items-start gap-3">
-              <span className="app-gray-color app-line-height">
-                {translater('bootcampPageAdmissionProcedureDescription')}
-              </span>
-            </motion.div>
-
-            {
-              [
-                'bootcampPageAdmissionProcedureItem1',
-                'bootcampPageAdmissionProcedureItem2',
-                'bootcampPageAdmissionProcedureItem3',
-                'bootcampPageAdmissionProcedureItem4',
-                'bootcampPageAdmissionProcedureItem5',
-                'bootcampPageAdmissionProcedureItem6',
-              ].map(translate => {
-                return (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6 }}
-                    className="mt-4 flex align-items-start gap-3">
-                    <span className="app-gray-color app-line-height">
-                      {translater(translate)}
-                    </span>
-                  </motion.div>
-                )
-              })
-            }
-          </div>
-        </section>
-
-        <section className="flex gap-5 align-items-center justify-content-between mt-5">
-          <div className="flex flex-column result-block">
-            <motion.h2
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="bootcamp-header m-0 app-header-color app-font-bold">
-              {translater("bootcampPageTimeLineTitle")}
-            </motion.h2>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="mt-4 flex align-items-start gap-3">
-              <span className="app-gray-color app-line-height">
-                {translater('bootcampPageTimeLineDescription')}
-              </span>
-            </motion.div>
-          </div>
-        </section>
-
-        <section className="flex gap-5 align-items-center justify-content-between mt-5">
-          <div className="flex flex-column result-block">
-            <motion.h2
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="bootcamp-header m-0 app-header-color app-font-bold">
-              {translater("bootcampPageFormalAdmissionTitle")}
-            </motion.h2>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="mt-4 flex align-items-start gap-3">
-              <span className="app-gray-color app-line-height">
-                {translater('bootcampPageFormalAdmissionDescription')}
-              </span>
-            </motion.div>
-          </div>
-        </section>
-
         <section className="flex flex-column gap-5 align-items-center justify-content-center mt-6">
           <div className="resume-collection-text flex align-items-center gap-3">
             <img className='idea' src={images.students.idea} alt="lamp" />
@@ -217,8 +155,6 @@ export const Bootcamp = () => {
             NPO_MUNI_MSMT-16606/2022
           </span>
         </div>
-
-
 
         <FormModalWindow
           dialogVisible={dialogVisible}

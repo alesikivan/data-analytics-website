@@ -1,3 +1,5 @@
+import clsx from 'clsx'
+import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Tooltip } from 'primereact/tooltip'
@@ -8,6 +10,15 @@ import { images } from "../../../assets/images/imgs"
 import '../../../assets/styles/scss/pages/students.scss'
 
 export const Students = () => {
+  const applicationSectionRef = useRef<HTMLHeadingElement>(null)
+
+  const [appVisible, setAppVisible] = useState(false)
+
+  // Функция для прокрутки
+  const scrollToApplicationSection = () => {
+    applicationSectionRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   const structuresList = [
     'studentsPageStructureBlockContent1',
     'studentsPageStructureBlockContent2',
@@ -108,6 +119,15 @@ export const Students = () => {
           </div>
         </section>
       </article>
+
+      <div className='mt-5 flex justify-content-center'>
+        <Link 
+          to="#application-section" 
+          className="app-button app-bg-color text-white px-5 mx-auto text-base cursor-pointer"
+          onClick={scrollToApplicationSection}>
+            Apply Now
+        </Link>
+      </div>
 
       <article className="structure-block">
         <section className="structure-block-info flex mt-5 gap-5 align-items-center justify-content-between">
@@ -253,11 +273,9 @@ export const Students = () => {
       <article className="ds-block">
         <section className="flex mt-5 gap-5 align-items-center justify-content-between">
           <div className="flex flex-column">
-            <h2 className="m-0 app-header-color app-font-bold students-header">
-              {
-                translater("studentsPageDataScienceBlockTitle")
-              }
-            </h2>
+            <h3 className="w-full flex flex-column justify-content-center align-items-center value-proposition m-0 app-header-color app-font-bold text-3xl">
+              {translater("studentsPageDataScienceBlockTitle")}
+            </h3>
 
             <span className="app-gray-color app-line-height mt-4">
               {
@@ -265,7 +283,7 @@ export const Students = () => {
               }
             </span>
 
-            <span className="app-gray-color app-line-height mt-3">
+            <span className="app-gray-color app-line-height">
               {
                 translater("studentsPageDataScienceBlockSpan2")
               }
@@ -274,28 +292,165 @@ export const Students = () => {
         </section>
       </article>
 
-      <article className="description-block">
-        <section className="flex mt-5 gap-5 align-items-center justify-content-between">
-          <div className="flex flex-column">
-            <h2 className="m-0 app-header-color app-font-bold students-header">
-              {translater("studentPageApplicationBlockHeader")}
-            </h2>
+      <h3 
+        ref={applicationSectionRef}
+        id="application-section"
+        className="application-header w-full flex flex-column justify-content-center align-items-center value-proposition app-header-color app-font-bold text-3xl">
 
-            <div className="mt-4 flex align-items-start gap-3">
+        {translater("studentPageApplicationBlockHeader")}
+      </h3>
+
+      <article className="phases-block">
+        <section className="flex gap-5 align-items-center justify-content-between mt-5">
+          <div className="flex flex-column result-block">
+            <div className="flex align-items-start gap-3 mb-3">
+              <span className="app-gray-color app-line-height">
+                {translater('studentPageAdmissionProcedure')}
+              </span>
+            </div>
+
+            <div className="flex align-items-start gap-3">
+              <span className="app-gray-color app-line-height">
+                {translater('studentPageAdmissionProcedureSecondPart')}
+              </span>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <article className={clsx(
+        'phases-block',
+        {
+          'hidden': !appVisible
+        }
+      )}>
+        <section className="flex gap-5 align-items-center justify-content-between mt-5">
+          <div className="flex flex-column result-block">
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="bootcamp-header m-0 app-header-color app-font-bold">
+              {translater("bootcampPageAdmissionProcedureTitle")}
+            </motion.h2>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="mt-4 flex align-items-start gap-3">
+              <span className="app-gray-color app-line-height">
+                {translater('bootcampPageAdmissionProcedureDescription')}
+              </span>
+            </motion.div>
+
+            {
+              [
+                'bootcampPageAdmissionProcedureItem1',
+                'bootcampPageAdmissionProcedureItem2',
+                'bootcampPageAdmissionProcedureItem3',
+                'bootcampPageAdmissionProcedureItem4',
+                'bootcampPageAdmissionProcedureItem5',
+                'bootcampPageAdmissionProcedureItem6',
+              ].map(translate => {
+                return (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="mt-4 flex align-items-start gap-3">
+                    <span className="app-gray-color app-line-height">
+                      {translater(translate)}
+                    </span>
+                  </motion.div>
+                )
+              })
+            }
+          </div>
+        </section>
+
+        <section className="flex gap-5 align-items-center justify-content-between mt-5">
+          <div className="flex flex-column result-block">
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="bootcamp-header m-0 app-header-color app-font-bold">
+              {translater("bootcampPageTimeLineTitle")}
+            </motion.h2>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="mt-4 flex align-items-start gap-3">
+              <span className="app-gray-color app-line-height">
+                {translater('bootcampPageTimeLineDescription')}
+              </span>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="flex gap-5 align-items-center justify-content-between mt-5">
+          <div className="flex flex-column result-block">
+            <motion.h2
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="bootcamp-header m-0 app-header-color app-font-bold">
+              {translater("bootcampPageFormalAdmissionTitle")}
+            </motion.h2>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="mt-4 flex align-items-start gap-3">
+              <span className="app-gray-color app-line-height">
+                {translater('bootcampPageFormalAdmissionDescription')}
+              </span>
+            </motion.div>
+          </div>
+        </section>
+      </article>
+
+      <span
+        onClick={() => setAppVisible(!appVisible)}
+        className="show-more-info mt-3 flex gap-2 align-items-center">
+        {
+          appVisible
+            ? translater("companiesPageSeeLessButton")
+            : translater("companiesPageSeeAllButton")
+        }
+
+        <li className={clsx(
+          'pi',
+          {
+            'pi-angle-down': !appVisible,
+            'pi-angle-up': appVisible,
+          }
+        )}></li>
+      </span>
+
+      <article className="description-block m-0 mt-5">
+        <section className="flex gap-5 align-items-center justify-content-between">
+
+          <div className="flex flex-column w-full">
+
+            <div className="flex align-items-center justify-content-center gap-3 w-full ">
 
               <a
                 data-pr-tooltip={translater("studentPageApplicationBlockButton1Hint")}
                 data-pr-position="bottom"
-                data-pr-at="center bottom+25"
-                data-pr-my="center"
-                className='custom-target-button app-button app-bg-color text-white px-4 mx-auto text-base mb-2 disabled-link'>
+                data-pr-at="center bottom+6"
+                className='custom-target-button app-button app-bg-color text-white px-4 text-base mb-2 disabled-link'>
                 {translater("studentsPageValuePropositionButton")}
               </a>
-              
+
               <Tooltip target=".custom-target-button" />
 
               <Link
-                className='app-button app-bg-color text-white px-4 mx-auto text-base mb-2'
+                className='app-button app-bg-color text-white px-4 text-base mb-2'
                 to={'/bootcamp'}>
                 {translater("studentPageApplicationBlockButton2")}
               </Link>

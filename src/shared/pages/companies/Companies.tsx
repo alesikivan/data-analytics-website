@@ -6,7 +6,7 @@ import { images } from "../../../assets/images/imgs"
 import { translater } from '../../../utils/localization/localization'
 
 import '../../../assets/styles/scss/pages/companies.scss'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 type companiesBlocks = {
   img: string,
@@ -15,7 +15,17 @@ type companiesBlocks = {
 }
 
 export const Companies = () => {
+  const navigate = useNavigate()
   const [tiers, setTiers] = useState({ collaborator: false, consortiumMember: false, generalSponsor: false })
+
+  const countUsersClicks = () => {
+    window.gtag('event', 'click', {
+      'event_category': 'Companies',
+      'event_label': 'Get it touch button'
+    });
+
+    navigate('/sign-up?type=company')
+  }
 
   const blocks: companiesBlocks[] = [
     {
@@ -139,13 +149,14 @@ export const Companies = () => {
       </article>
 
       <div className="w-full flex align-items-center justify-content-center my-5">
-        <Link
-          className="app-button app-bg-color text-white px-4 mx-auto text-base"
-          to="/sign-up?type=company">
+        <a
+          className="app-button app-bg-color text-white px-4 mx-auto text-base cursor-pointer"
+          id="get-in-touch-company-page"
+          onClick={countUsersClicks}>
           {
             translater("companiesPageButton")
           }
-        </Link>
+        </a>
       </div>
 
       <h1 className="app-header-color text-4xl text-center app-font-bold m-0 ms-auto">
@@ -561,7 +572,7 @@ export const Companies = () => {
                 onClick={() => setTiers((prev) => ({ ...prev, consortiumMember: !prev.consortiumMember  }))} 
                 className="show-more-info flex gap-2 align-items-center mt-4">
                   {
-                    tiers.collaborator 
+                    tiers.consortiumMember 
                     ? translater("companiesPageSeeLessButton")
                     : translater("companiesPageSeeAllButton")
                   }
@@ -702,7 +713,7 @@ export const Companies = () => {
                 onClick={() => setTiers((prev) => ({ ...prev, generalSponsor: !prev.generalSponsor  }))} 
                 className="show-more-info flex gap-2 align-items-center mt-4">
                   {
-                    tiers.collaborator 
+                    tiers.generalSponsor 
                     ? translater("companiesPageSeeLessButton")
                     : translater("companiesPageSeeAllButton")
                   }
