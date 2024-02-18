@@ -8,6 +8,7 @@ import { translater } from '../../../utils/localization/localization'
 import { images } from "../../../assets/images/imgs"
 
 import '../../../assets/styles/scss/pages/students.scss'
+import { YouTubeVideo } from '../../components/particals/video/youtube/YouTubeVideo'
 
 export const Students = () => {
   const applicationSectionRef = useRef<HTMLHeadingElement>(null)
@@ -232,6 +233,10 @@ export const Students = () => {
         </section>
       </article>
 
+      <article className="app-content flex flex-column justify-content-center align-items-center">
+        <YouTubeVideo videoId={translater("studentPageYouTubeLinkId").toString()} />
+      </article>
+
       <article className='flex flex-wrap gap-4 mt-7'>
         <h3 className="w-full flex flex-column justify-content-center align-items-center value-proposition m-0 app-header-color app-font-bold text-3xl">
           {translater("studentsPageValuePropositionTitle")}
@@ -439,15 +444,17 @@ export const Students = () => {
 
             <div className="flex align-items-center justify-content-center gap-3 w-full ">
 
-              <a
-                data-pr-tooltip={translater("studentPageApplicationBlockButton1Hint")}
-                data-pr-position="bottom"
-                data-pr-at="center bottom+6"
-                className='custom-target-button app-button app-bg-color text-white px-4 text-base mb-2 disabled-link'>
-                {translater("studentsPageValuePropositionButton")}
-              </a>
+              {/* <a
+                // data-pr-tooltip={translater("studentPageApplicationBlockButton1Hint")}
+                // data-pr-position="bottom"
+                // data-pr-at="center bottom+6"
+                target='_blank'
+                href={translater("studentsPageApplicationButtonLink").toString()}
+                className='custom-target-button app-button app-bg-color text-white px-4 text-base mb-2 cursor-pointer'>
+                {translater("studentsPageApplicationButton")}
+              </a> */}
 
-              <Tooltip target=".custom-target-button" />
+              {/* <Tooltip target=".custom-target-button" /> */}
 
               <Link
                 className='app-button app-bg-color text-white px-4 text-base mb-2'

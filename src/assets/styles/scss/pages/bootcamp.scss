@@ -91,6 +91,11 @@
     .idea {
       background-color: white;
     }
+
+    b {
+      font-family: "Bold";
+      color: #0D7D74;
+    }
   }
 }
 
@@ -126,7 +131,7 @@
   }
 
   .phases-block .result-block span {
-    max-width: 350px;
+    // max-width: 350px;
   }
 
   .resume-collection-text {

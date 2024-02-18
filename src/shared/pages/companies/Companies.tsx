@@ -7,6 +7,7 @@ import { translater } from '../../../utils/localization/localization'
 
 import '../../../assets/styles/scss/pages/companies.scss'
 import { Link, useNavigate } from "react-router-dom"
+import { YouTubeVideo } from "../../components/particals/video/youtube/YouTubeVideo"
 
 type companiesBlocks = {
   img: string,
@@ -117,9 +118,9 @@ export const Companies = () => {
   return (
     <>
       <h1 className="app-header-color text-4xl text-center app-font-bold m-0 ms-auto">
-        { translater("companiesPageTitle") }
+        {translater("companiesPageTitle")}
         <span className="app-font-bold app-color">
-          { translater("companiesPageTitleSpecial") }
+          {translater("companiesPageTitleSpecial")}
         </span>
       </h1>
 
@@ -136,16 +137,20 @@ export const Companies = () => {
                 <img src={block.img} alt="business" />
 
                 <h2 className="text-center app-header-color app-font-bold text-xl m-0">
-                  { translater(block.title) }
+                  {translater(block.title)}
                 </h2>
 
                 <span className="text-center app-gray-color">
-                  { translater(block.description) }
+                  {translater(block.description)}
                 </span>
               </motion.section>
             )
           })
         }
+      </article>
+
+      <article className="app-content flex flex-column justify-content-center align-items-center">
+        <YouTubeVideo videoId={translater("companiesPageYouTubeLinkId").toString()} />
       </article>
 
       <div className="w-full flex align-items-center justify-content-center my-5">
@@ -160,7 +165,7 @@ export const Companies = () => {
       </div>
 
       <h1 className="app-header-color text-4xl text-center app-font-bold m-0 ms-auto">
-        { translater("companiesPageCompanyOfferingTitle") }
+        {translater("companiesPageCompanyOfferingTitle")}
       </h1>
 
       <article className="info-block">
@@ -171,7 +176,7 @@ export const Companies = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="m-0 app-header-color app-font-bold students-header">
-              { translater("companiesPageHybridExperientialLearningTitle") }
+              {translater("companiesPageHybridExperientialLearningTitle")}
             </motion.h2>
 
             {
@@ -216,7 +221,7 @@ export const Companies = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="m-0 app-header-color app-font-bold students-header">
-              { translater("companiesPageInnovativeEnrollmentProgramTitle") }
+              {translater("companiesPageInnovativeEnrollmentProgramTitle")}
             </motion.h2>
 
             {
@@ -251,7 +256,7 @@ export const Companies = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               className="m-0 app-header-color app-font-bold students-header">
-              { translater("companiesPageAccessToTalentTitle") }
+              {translater("companiesPageAccessToTalentTitle")}
             </motion.h2>
 
             {
@@ -282,18 +287,18 @@ export const Companies = () => {
         <section className="flex mt-5 gap-5 align-items-center justify-content-between">
           <div className="flex flex-column">
             <h2 className="m-0 app-header-color app-font-bold students-header">
-              { translater("companiesPageCaseTitle") }
+              {translater("companiesPageCaseTitle")}
             </h2>
 
             <div className="mt-3 flex align-items-start gap-3">
               <span className="app-gray-color app-line-height">
-                { translater("companiesPageCaseItem1") }
+                {translater("companiesPageCaseItem1")}
               </span>
             </div>
 
             <div className="mt-3 flex align-items-start gap-3">
               <span className="app-gray-color app-line-height">
-                { translater("companiesPageCaseItem2") }
+                {translater("companiesPageCaseItem2")}
               </span>
             </div>
           </div>
@@ -301,7 +306,7 @@ export const Companies = () => {
       </article>
 
       <h1 className="tiers-header app-header-color text-4xl text-center app-font-bold ms-auto">
-        { translater("companiesPageParticipationTiers") }
+        {translater("companiesPageParticipationTiers")}
       </h1>
 
       <div className="flex flex-column gap-3">
@@ -313,15 +318,15 @@ export const Companies = () => {
               </span>
 
               <h2 className="m-0 app-header-color app-font-bold students-header">
-                { translater("companiesPageParticipationTiersCollaborator") }
+                {translater("companiesPageParticipationTiersCollaborator")}
               </h2>
 
               <span className="app-gray-color app-line-height mt-4 mb-3 w-10">
-                { translater("companiesPageParticipationTiersCollaboratorItem1") }
+                {translater("companiesPageParticipationTiersCollaboratorItem1")}
               </span>
 
               <span className="app-gray-color app-line-height">
-                { translater("companiesPageParticipationTiersCollaboratorItem2") }
+                {translater("companiesPageParticipationTiersCollaboratorItem2")}
               </span>
 
               <div className={clsx(
@@ -334,12 +339,12 @@ export const Companies = () => {
                 <div className="w-full flex flex-column gap-1 my-3 align-items-center">
                   <span className="app-gray-color app-line-height">
                     <b className="text-base">
-                      { translater("companiesPageParticipationTiersCollaboratorTasks") }
+                      {translater("companiesPageParticipationTiersCollaboratorTasks")}
                     </b>
                   </span>
 
                   <span className="app-gray-color app-line-height">
-                    { translater("companiesPageParticipationTiersCollaboratorTasksItem") }
+                    {translater("companiesPageParticipationTiersCollaboratorTasksItem")}
                   </span>
                 </div>
 
@@ -351,7 +356,7 @@ export const Companies = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6 }}
                         className="m-0 app-header-color app-font-bold text-left p-0 companies-header pl-2">
-                          { translater("companiesPageBenefits") }
+                        {translater("companiesPageBenefits")}
                       </motion.h2>
 
                       {
@@ -368,7 +373,7 @@ export const Companies = () => {
                                 className="check" />
 
                               <span className="app-gray-color app-line-height text-left">
-                                { content }
+                                {content}
                               </span>
                             </motion.div>
                           )
@@ -386,7 +391,7 @@ export const Companies = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6 }}
                         className="m-0 app-header-color app-font-bold text-left p-0 companies-header pl-2">
-                          { translater("companiesPageOfferings") }
+                        {translater("companiesPageOfferings")}
                       </motion.h2>
 
                       {
@@ -403,7 +408,7 @@ export const Companies = () => {
                                 className="check" />
 
                               <span className="app-gray-color app-line-height text-left">
-                                { content }
+                                {content}
                               </span>
                             </motion.div>
                           )
@@ -418,7 +423,7 @@ export const Companies = () => {
                     <div className="flex flex-column">
                       <div className="mt-3 flex align-items-start gap-3">
                         <span className="app-gray-color app-line-height text-left">
-                          { translater("companiesPageCostItem1") } 
+                          {translater("companiesPageCostItem1")}
                         </span>
                       </div>
                     </div>
@@ -426,14 +431,14 @@ export const Companies = () => {
                 </article>
               </div>
 
-              <span 
-                onClick={() => setTiers((prev) => ({ ...prev, collaborator: !prev.collaborator  }))} 
+              <span
+                onClick={() => setTiers((prev) => ({ ...prev, collaborator: !prev.collaborator }))}
                 className="show-more-info flex gap-2 align-items-center mt-4">
-                  {
-                    tiers.collaborator 
+                {
+                  tiers.collaborator
                     ? translater("companiesPageSeeLessButton")
                     : translater("companiesPageSeeAllButton")
-                  }
+                }
 
                 <li className={clsx(
                   'pi',
@@ -455,15 +460,15 @@ export const Companies = () => {
               </span>
 
               <h2 className="m-0 app-header-color app-font-bold students-header">
-                { translater("companiesPageParticipationTiersConsortiumMember") }
+                {translater("companiesPageParticipationTiersConsortiumMember")}
               </h2>
 
               <span className="app-gray-color app-line-height mt-4 mb-3 w-10">
-                { translater("companiesPageParticipationTiersConsortiumMemberItem1") }
+                {translater("companiesPageParticipationTiersConsortiumMemberItem1")}
               </span>
 
               <span className="app-gray-color app-line-height">
-                { translater("companiesPageParticipationTiersConsortiumMemberItem2") }
+                {translater("companiesPageParticipationTiersConsortiumMemberItem2")}
               </span>
 
               <div className={clsx(
@@ -476,12 +481,12 @@ export const Companies = () => {
                 <div className="w-full flex flex-column gap-1 my-3 align-items-center">
                   <span className="app-line-height">
                     <b className="text-base">
-                      { translater("companiesPageParticipationTiersConsortiumMemberTasks") }
+                      {translater("companiesPageParticipationTiersConsortiumMemberTasks")}
                     </b>
                   </span>
 
                   <span className="app-gray-color app-line-height">
-                    { translater("companiesPageParticipationTiersConsortiumMemberTasksItem") }
+                    {translater("companiesPageParticipationTiersConsortiumMemberTasksItem")}
                   </span>
                 </div>
 
@@ -493,7 +498,7 @@ export const Companies = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6 }}
                         className="m-0 app-header-color app-font-bold text-left p-0 companies-header pl-2">
-                          { translater("companiesPageBenefits") }
+                        {translater("companiesPageBenefits")}
                       </motion.h2>
 
                       {
@@ -510,7 +515,7 @@ export const Companies = () => {
                                 className="check" />
 
                               <span className="app-gray-color app-line-height text-left">
-                                { content }
+                                {content}
                               </span>
                             </motion.div>
                           )
@@ -528,7 +533,7 @@ export const Companies = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6 }}
                         className="m-0 app-header-color app-font-bold text-left p-0 companies-header pl-2">
-                          { translater("companiesPageOfferings") }
+                        {translater("companiesPageOfferings")}
                       </motion.h2>
 
                       {
@@ -545,7 +550,7 @@ export const Companies = () => {
                                 className="check" />
 
                               <span className="app-gray-color app-line-height text-left">
-                                { content }
+                                {content}
                               </span>
                             </motion.div>
                           )
@@ -560,7 +565,7 @@ export const Companies = () => {
                     <div className="flex flex-column">
                       <div className="mt-3 flex align-items-start gap-3">
                         <span className="app-gray-color app-line-height text-left">
-                          { translater("companiesPageCostItem2") }
+                          {translater("companiesPageCostItem2")}
                         </span>
                       </div>
                     </div>
@@ -568,14 +573,14 @@ export const Companies = () => {
                 </article>
               </div>
 
-              <span 
-                onClick={() => setTiers((prev) => ({ ...prev, consortiumMember: !prev.consortiumMember  }))} 
+              <span
+                onClick={() => setTiers((prev) => ({ ...prev, consortiumMember: !prev.consortiumMember }))}
                 className="show-more-info flex gap-2 align-items-center mt-4">
-                  {
-                    tiers.consortiumMember 
+                {
+                  tiers.consortiumMember
                     ? translater("companiesPageSeeLessButton")
                     : translater("companiesPageSeeAllButton")
-                  }
+                }
                 <li className={clsx(
                   'pi',
                   {
@@ -596,15 +601,15 @@ export const Companies = () => {
               </span>
 
               <h2 className="m-0 app-header-color app-font-bold students-header">
-                { translater("companiesPageParticipationTiersGeneralsSponsor") }
+                {translater("companiesPageParticipationTiersGeneralsSponsor")}
               </h2>
 
               <span className="app-gray-color app-line-height mt-4 mb-3 w-10">
-                { translater("companiesPageParticipationTiersGeneralsSponsorItem1") }
+                {translater("companiesPageParticipationTiersGeneralsSponsorItem1")}
               </span>
 
               <span className="app-gray-color app-line-height">
-                { translater("companiesPageParticipationTiersGeneralsSponsorItem2") }
+                {translater("companiesPageParticipationTiersGeneralsSponsorItem2")}
               </span>
 
               <div className={clsx(
@@ -617,12 +622,12 @@ export const Companies = () => {
                 <div className="w-full flex flex-column gap-1 my-3 align-items-center">
                   <span className="app-line-height">
                     <b className="text-base">
-                      { translater("companiesPageParticipationTiersGeneralsSponsorTasks") }
+                      {translater("companiesPageParticipationTiersGeneralsSponsorTasks")}
                     </b>
                   </span>
 
                   <span className="app-gray-color app-line-height">
-                    { translater("companiesPageParticipationTiersGeneralsSponsorTasksItem") }
+                    {translater("companiesPageParticipationTiersGeneralsSponsorTasksItem")}
                   </span>
                 </div>
 
@@ -634,7 +639,7 @@ export const Companies = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6 }}
                         className="m-0 app-header-color app-font-bold text-left p-0 companies-header pl-2">
-                          { translater("companiesPageBenefits") }
+                        {translater("companiesPageBenefits")}
                       </motion.h2>
 
                       {
@@ -651,7 +656,7 @@ export const Companies = () => {
                                 className="check" />
 
                               <span className="app-gray-color app-line-height text-left">
-                                { content }
+                                {content}
                               </span>
                             </motion.div>
                           )
@@ -669,7 +674,7 @@ export const Companies = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6 }}
                         className="m-0 app-header-color app-font-bold text-left p-0 companies-header pl-2">
-                          { translater("companiesPageOfferings") }
+                        {translater("companiesPageOfferings")}
                       </motion.h2>
 
                       {
@@ -686,7 +691,7 @@ export const Companies = () => {
                                 className="check" />
 
                               <span className="app-gray-color app-line-height text-left">
-                                { content }
+                                {content}
                               </span>
                             </motion.div>
                           )
@@ -701,7 +706,7 @@ export const Companies = () => {
                     <div className="flex flex-column">
                       <div className="mt-3 flex align-items-start gap-3">
                         <span className="app-gray-color app-line-height text-left">
-                          { translater("companiesPageCostItem3") }
+                          {translater("companiesPageCostItem3")}
                         </span>
                       </div>
                     </div>
@@ -709,14 +714,14 @@ export const Companies = () => {
                 </article>
               </div>
 
-              <span 
-                onClick={() => setTiers((prev) => ({ ...prev, generalSponsor: !prev.generalSponsor  }))} 
+              <span
+                onClick={() => setTiers((prev) => ({ ...prev, generalSponsor: !prev.generalSponsor }))}
                 className="show-more-info flex gap-2 align-items-center mt-4">
-                  {
-                    tiers.generalSponsor 
+                {
+                  tiers.generalSponsor
                     ? translater("companiesPageSeeLessButton")
                     : translater("companiesPageSeeAllButton")
-                  }
+                }
                 <li className={clsx(
                   'pi',
                   {

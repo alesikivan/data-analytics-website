@@ -6,6 +6,7 @@ import { images } from "../../../assets/images/imgs"
 import { FormModalWindow } from "./components/form/FormModalWindow"
 
 import '../../../assets/styles/scss/pages/bootcamp.scss'
+import { YouTubeVideo } from "../../components/particals/video/youtube/YouTubeVideo"
 
 export const Bootcamp = () => {
   const [dialogVisible, setDialogVisible] = useState(false)
@@ -73,7 +74,9 @@ export const Bootcamp = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-column gap-3 mt-3">
 
-          <div className="flex flex-column resume-collection-text bootcamp-info-block text-center w-full">
+          <div 
+            onClick={() => setDialogVisible(true)}
+            className="cursor-pointer flex flex-column resume-collection-text bootcamp-info-block text-center w-full">
             <img 
               className='idea mx-auto' 
               src={images.students.idea} 
@@ -81,9 +84,41 @@ export const Bootcamp = () => {
               alt="lamp" />
 
             <span className="mt-4">
-              New cohort starts now - apply by Jan, 31!
+              { translater("bootcampPageAdmissionProcedureDate") }
             </span>
           </div>
+        </motion.section>
+
+        <section className="flex gap-5 align-items-center justify-content-between mb-5">
+          <div className="flex flex-column result-block">
+            {
+              [
+                'bootcampPageInfoBlock1',
+                'bootcampPageInfoBlock2',
+                'bootcampPageInfoBlock3',
+                'bootcampPageInfoBlock4',
+              ].map(translate => {
+                return (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="mt-4 flex align-items-start gap-3">
+                    <span className="app-gray-color app-line-height">
+                      {translater(translate)}
+                    </span>
+                  </motion.div>
+                )
+              })
+            }
+          </div>
+        </section>
+
+        <motion.section 
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-column gap-3 mt-3">
 
           <span
             className='app-button app-bg-color text-white px-5 mx-auto text-lg mb-2 cursor-pointer'
@@ -93,6 +128,10 @@ export const Bootcamp = () => {
             { translater("bootcampPageApplyButton") }
           </span>
         </motion.section>
+
+        <article className="app-content flex flex-column justify-content-center align-items-center">
+          <YouTubeVideo videoId={translater("bootcampPageYouTubeLinkId").toString()} />
+        </article>
 
         <section className="flex gap-5 align-items-center justify-content-between mt-5">
           <div className="flex flex-column result-block">

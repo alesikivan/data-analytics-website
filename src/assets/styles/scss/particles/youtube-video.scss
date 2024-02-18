@@ -1,0 +1,27 @@
+.youtube-video {
+  iframe {
+    width: 560px !important;
+    height: 315px !important;
+    border-radius: 10px;
+  }
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .youtube-video {
+    iframe {
+      width: 400px !important;
+      height: 255px !important;
+    }
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .youtube-video {
+    iframe {
+      width: 300px !important;
+      height: 205px !important;
+    }
+  }
+}

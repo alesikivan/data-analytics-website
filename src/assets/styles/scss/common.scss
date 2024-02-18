@@ -7,6 +7,10 @@ body,
   height: 100%;
 }
 
+a {
+  color: $linkColor;
+}
+
 a.disabled-link {
   opacity: 0.6;
 
@@ -280,3 +284,33 @@ div.p-fileupload-basic {
   }
 }
 
+.animated-button {
+  outline: none;
+  color: #fff;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, #0D7D74 0%, #239e94 50%, #03a99c 100%);
+  transition: background-position 0.5s, color 0.5s;
+  animation: gradient-animation 3s infinite alternate, scale-animation 1.5s infinite alternate;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes scale-animation {
+  0%, 100% {
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+}

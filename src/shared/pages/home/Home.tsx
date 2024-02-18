@@ -5,10 +5,11 @@ import { images } from "../../../assets/images/imgs"
 import { translater } from "../../../utils/localization/localization"
 
 import '../../../assets/styles/scss/pages/home.scss'
+import { YouTubeVideo } from "../../components/particals/video/youtube/YouTubeVideo"
 
 export const Home = () => {
   return (
-    <main  className="flex flex-column justify-content-start pb-6">
+    <main className="flex flex-column justify-content-start pb-6">
       <article className="introduction mb-7">
         <div className="home-info app-width-limit mx-auto flex gap-2 mt-3">
           <motion.section
@@ -16,35 +17,43 @@ export const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             className="flex flex-column  align-items-start gap-5">
-              <h1 className="app-header-color text-6xl app-font-bold m-0">
-                {
-                  translater("homePageTitle")
-                }
-              </h1>
+            <h1 className="app-header-color text-6xl app-font-bold m-0">
+              {
+                translater("homePageTitle")
+              }
+            </h1>
 
-              <span className="description text-lg app-gray-color">
+            <span className="description text-lg app-gray-color">
+              {
+                translater("homePageDescription")
+              }
+            </span>
+
+            <article className="flex flex-column gap-2 sm:flex-row">
+              <Link
+                className="get-started-button app-hover app-bg-color app-font-bold app-border-radius text-white white-space-nowrap"
+                to={'/sign-up'}>
                 {
-                  translater("homePageDescription")
+                  translater("homePageSignUpLink")
                 }
-              </span>
+              </Link>
 
               <Link
-                className="get-started-button app-hover app-bg-color app-font-bold app-border-radius text-white"
-                to={'/sign-up'}>
-                  {
-                    translater("homePageSignUpLink")
-                  }
+                to={'/bootcamp'}
+                className='custom-target-button text-center app-button border-2 px-4 text-base cursor-pointer white-space-nowrap '>
+                {translater("homePageJoiningMUNIBootcamp")}
               </Link>
+            </article>
           </motion.section>
 
           <motion.section
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}>
-              <img
-                className="program-preview"
-                src={images.home.preview}
-                alt="program-preview"></img>
+            <img
+              className="program-preview"
+              src={images.home.preview}
+              alt="program-preview"></img>
           </motion.section>
         </div>
       </article>
@@ -63,9 +72,13 @@ export const Home = () => {
         </span>
       </article>
 
+      <article className="app-content flex flex-column justify-content-center align-items-center">
+        <YouTubeVideo videoId={translater("homePageYouTubeLinkId").toString()} />
+      </article>
+
       <article className="app-content flex flex-column">
         <section>
-          <div className="app-width-limit mx-auto gap-2 flex mt-3 reverse">
+          <div className="app-width-limit mx-auto gap-2 flex reverse">
             <div className="flex flex-column align-items-start gap-3">
               <h1 className="app-header-color text-3xl app-font-bold m-0">
                 {
@@ -82,9 +95,9 @@ export const Home = () => {
               <Link
                 className="get-started-button app-hover app-bg-color app-font-bold app-border-radius text-white"
                 to={'/bootcamp'}>
-                  {
-                    translater("homePageSectionBootcampLink").toString()
-                  }
+                {
+                  translater("homePageSectionBootcampLink").toString()
+                }
               </Link>
             </div>
 
@@ -115,9 +128,9 @@ export const Home = () => {
               <Link
                 className="get-started-button app-hover app-bg-color app-font-bold app-border-radius text-white"
                 to={'/students'}>
-                  {
-                    translater("homePageSectionStudentsLink").toString()
-                  }
+                {
+                  translater("homePageSectionStudentsLink").toString()
+                }
               </Link>
             </div>
 
@@ -148,9 +161,9 @@ export const Home = () => {
               <Link
                 className="get-started-button app-hover app-bg-color app-font-bold app-border-radius text-white"
                 to={'/companies'}>
-                  {
-                    translater("homePageSectionCompaniesLink").toString()
-                  }
+                {
+                  translater("homePageSectionCompaniesLink").toString()
+                }
               </Link>
             </div>
 
@@ -181,9 +194,9 @@ export const Home = () => {
               <Link
                 className="get-started-button app-hover app-bg-color app-font-bold app-border-radius text-white"
                 to={'/muni'}>
-                  {
-                    translater("homePageSectionUniversityLink")
-                  }
+                {
+                  translater("homePageSectionUniversityLink")
+                }
               </Link>
             </div>
 
