@@ -17,11 +17,14 @@
     "primeicons": "5.0.0",
     "primereact": "^8.5.0",
     "prismjs": "^1.29.0",
+    "quill-blot-formatter": "^1.0.5",
+    "quill-image-resize-module-react": "^3.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-ga": "^3.3.1",
     "react-h5-audio-player": "^3.8.6",
     "react-hook-form": "^7.45.1",
+    "react-quill": "^2.0.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.7.0",
     "react-transition-group": "^4.4.1",
@@ -33,8 +36,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "webpack serve --mode development --open --port 3001",
-    "build": "webpack --mode production && rm -rf ../data-analytics-server/client/dist && cp -Rf dist ../data-analytics-server/client && cp ./public/robots.txt ../data-analytics-server/client/dist && cp ./public/sitemap.xml ../data-analytics-server/client/dist && cp ./public/google04950781d55ec26e.html ../data-analytics-server/client/dist"
+    "start": "webpack serve --mode development --open --port 3000",
+    "build": "webpack --mode production && rm -rf ../data-analytics-server/client/dist && cp -Rf dist ../data-analytics-server/client && cp ./public/robots.txt ../data-analytics-server/client/dist && cp ./public/sitemap.xml ../data-analytics-server/client/dist && cp ./public/googleebf743cf36b74130.html ../data-analytics-server/client/dist"
   },
   "eslintConfig": {
     "extends": [

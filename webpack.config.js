@@ -26,6 +26,10 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       }
     ],
   },
@@ -34,6 +38,7 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
+    publicPath: '/', // Указываем абсолютный путь
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: '[name].[ext]'
   },
@@ -59,7 +64,9 @@ module.exports = {
     })
   ],
   devServer: {
-    historyApiFallback: true,
+    historyApiFallback: {
+      index: '/', // Обеспечиваем возврат index.html для всех путей
+    },
     port: 3000,
     compress: true,
     hot: true,

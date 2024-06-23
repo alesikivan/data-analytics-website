@@ -41,3 +41,11 @@ export interface LoginServerResponse {
   token: string,
   message: string
 }
+
+export interface News {
+  id: string,
+  img: string,
+  title: string,
+  date: string
+  content: string
+}

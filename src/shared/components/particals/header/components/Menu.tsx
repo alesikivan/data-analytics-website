@@ -30,12 +30,16 @@ export const Menu = () => {
       path: '/bootcamp',
       title: translater("headerMenuBootcamp").toString()
     },
+    {
+      path: '/news',
+      title: translater("headerMenuNews").toString()
+    },
   ]
 
   return (
     <>
       {
-        ['/sign-up', '/privacy-policy', '/login', '/panel'].includes(location.pathname)
+        ['/sign-up', '/privacy-policy', '/login', '/panel', '/news-list'].includes(location.pathname)
         ? ''
         : (
           <ul className="menu flex mt-5">

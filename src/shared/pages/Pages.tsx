@@ -17,6 +17,9 @@ import { AdminRoute } from "../components/particals/AdminRoute"
 import { Editor } from "../admin/pages/editor/Editor"
 import { Login } from "../admin/pages/login/Login"
 import { RootState } from "../../redux/reducers/rootReducer"
+import { News } from "./news/News"
+import { NewsItem } from "./news/components/NewsItem"
+import { NewsList } from "../admin/pages/news/news-list/NewsList"
 
 export const Pages = () => {
   const {
@@ -44,12 +47,18 @@ export const Pages = () => {
         <Route path="muni" element={<Muni />} />
 
         <Route path="bootcamp" element={<Bootcamp />} />
+
+        <Route path="news" element={<News />} />
+
+        <Route path="current-news/:id" element={<NewsItem />} />
       </Route>
 
 
       <Route path='/' element={<AdminRoute />}>
         <Route path="/" element={<MainLayout />}>
           <Route path="panel" element={<Editor />} />
+
+          <Route path="news-list" element={<NewsList />} />
         </Route>
       </Route>
 

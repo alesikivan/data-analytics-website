@@ -11,6 +11,7 @@ import { logout } from "../../../../redux/actions/authActions"
 import { AxiosResponse } from "axios"
 import { MessageServerResponse } from "../../../../api/interfaces"
 import { successNotification } from "../../../../redux/actions/notificationsActions"
+import { Menu } from "../../components/Menu"
 
 export const Editor = () => {
   const navigate = useNavigate()
@@ -88,6 +89,8 @@ export const Editor = () => {
 
   return (
     <main className="flex flex-column gap-4">
+      <Menu />
+
       <nav className="w-full flex justify-content-between align-items-center gap-2">
         <Button
           style={{ whiteSpace: 'nowrap' }}

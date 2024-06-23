@@ -27,6 +27,16 @@ export const Bootcamp = () => {
 
       <article className="phases-block">
         <section className="flex gap-5 align-items-center justify-content-between">
+          <div className="flex flex-column result-block">
+            <span className="app-gray-color app-line-height">
+              {translater('bootcampPagePreviewInfo')}
+            </span>
+          </div>
+        </section>
+      </article>
+
+      <article className="phases-block">
+        <section className="flex gap-5 align-items-center justify-content-between">
           <div className="flex flex-column bootcamp-phases-block">
             <motion.h2
               initial={{ opacity: 0, scale: 0.5 }}
@@ -68,23 +78,23 @@ export const Bootcamp = () => {
           </div>
         </section>
 
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           className="flex flex-column gap-3 mt-3">
 
-          <div 
+          <div
             onClick={() => setDialogVisible(true)}
             className="cursor-pointer flex flex-column resume-collection-text bootcamp-info-block text-center w-full">
-            <img 
-              className='idea mx-auto' 
-              src={images.students.idea} 
+            <img
+              className='idea mx-auto'
+              src={images.students.idea}
               style={{ position: "absolute", top: -15, left: "50%", transform: "translateX(-50%)" }}
               alt="lamp" />
 
             <span className="mt-4">
-              { translater("bootcampPageAdmissionProcedureDate") }
+              {translater("bootcampPageAdmissionProcedureDate")}
             </span>
           </div>
         </motion.section>
@@ -114,7 +124,7 @@ export const Bootcamp = () => {
           </div>
         </section>
 
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
@@ -125,7 +135,7 @@ export const Bootcamp = () => {
             onClick={() => {
               setDialogVisible(true)
             }}>
-            { translater("bootcampPageApplyButton") }
+            {translater("bootcampPageApplyButton")}
           </span>
         </motion.section>
 

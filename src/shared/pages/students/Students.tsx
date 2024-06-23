@@ -2,13 +2,12 @@ import clsx from 'clsx'
 import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Tooltip } from 'primereact/tooltip'
 
 import { translater } from '../../../utils/localization/localization'
 import { images } from "../../../assets/images/imgs"
+import { YouTubeVideo } from '../../components/particals/video/youtube/YouTubeVideo'
 
 import '../../../assets/styles/scss/pages/students.scss'
-import { YouTubeVideo } from '../../components/particals/video/youtube/YouTubeVideo'
 
 export const Students = () => {
   const applicationSectionRef = useRef<HTMLHeadingElement>(null)
@@ -124,9 +123,10 @@ export const Students = () => {
       <div className='mt-5 flex justify-content-center'>
         <Link 
           to="#application-section" 
-          className="app-button app-bg-color text-white px-5 mx-auto text-base cursor-pointer"
+          className="app-button app-bg-color text-white px-5 mx-auto text-base cursor-pointer flex align-items-center gap-2"
           onClick={scrollToApplicationSection}>
-            Apply Now
+            Move to Application
+            <i className='pi pi-arrow-down text-sm font-bold'></i>
         </Link>
       </div>
 
@@ -243,9 +243,10 @@ export const Students = () => {
         </h3>
 
         <Link
-          className='app-button app-bg-color text-white px-4 mx-auto text-base mb-2'
+          className='app-button app-bg-color text-white px-4 mx-auto text-base mb-2 flex align-items-center gap-2 animated-button'
           to={'/sign-up'}>
           {translater("studentsPageValuePropositionButton")}
+          <i className='pi pi-check-square text-sm font-bold'></i>
         </Link>
 
         <div className='flex flex-wrap value-proposition-content'>
